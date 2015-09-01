@@ -8,9 +8,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.top10downloader.MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnParse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:text="Parse XML" />
+
+    <ListView
+        android:id="@+id/listApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnParse"
+        android:layout_below="@+id/btnParse"
+        android:layout_marginTop="24dp" 
+        android:visibility="invisible">
+    </ListView>
 
 </RelativeLayout>
