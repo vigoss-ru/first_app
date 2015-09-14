@@ -8,9 +8,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.example.youtubeplayer.MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Play Video" />
+
+    <Button
+        android:id="@+id/btnSubMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_below="@+id/btnPlay"
+        android:layout_marginTop="26dp"
+        android:text="Standalone submenu" />
 
 </RelativeLayout>
