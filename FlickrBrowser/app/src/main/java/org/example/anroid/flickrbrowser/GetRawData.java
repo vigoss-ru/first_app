@@ -46,8 +46,9 @@ public class GetRawData {
     }
 
     public class DownloadRawData extends AsyncTask<String, Void, String> {
-        protected  void onPostExcute(String webData) {
+        protected  void onPostExecute(String webData) {
             mData = webData;
+            Log.v(LOG_DATA, "Data returned was: " + mData);
             if(mData == null) {
                 if(mRawUrl == null) {
                     mDownloadStatus = DownloadStatus.NOT_INITIALISED;
