@@ -31,7 +31,18 @@ public class GetFlickrJsonData extends GetRawData {
         return mDestinationURI != null;
     }
 
-    public class DownloadJsonData extends DownloadRawData {
+    public List<Photo> getMPhotos() {
+        return mPhotos;
+    }
 
+    public class DownloadJsonData extends DownloadRawData {
+        protected void onPostExecute(String webData) {
+            super.onPostExecute(webData);
+        }
+
+        protected String doInBackground(String... params) {
+            String[] par = {mDestinationURI.toString()};
+            return super.doInBackground(par);
+        }
     }
 }
