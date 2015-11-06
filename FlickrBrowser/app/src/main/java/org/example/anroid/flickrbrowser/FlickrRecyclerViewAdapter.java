@@ -1,11 +1,15 @@
 package org.example.anroid.flickrbrowser;
 
 import android.content.Context;
+import android.graphics.Picture;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -15,10 +19,11 @@ import java.util.List;
 public class FlickrRecyclerViewAdapter extends RecyclerView.Adapter<FlickrImageViewHolder> {
     private List<Photo> mPhotoList;
     private Context mContext;
+    private final String LOG_TAG = FlickrRecyclerViewAdapter.class.getSimpleName();
 
     public FlickrRecyclerViewAdapter(Context context, List<Photo> photoList) {
         this.mContext = context;
-        this.mPhotoList = mPhotoList;
+        this.mPhotoList = photoList;
     }
 
     @Override
@@ -35,7 +40,13 @@ public class FlickrRecyclerViewAdapter extends RecyclerView.Adapter<FlickrImageV
     }
 
     @Override
-    public void onBindViewHolder(FlickrImageViewHolder holder, int position) {
-
+    public void onBindViewHolder(FlickrImageViewHolder holder, int i) {
+        Photo photoItem = mPhotoList.get(i);
+        Log.d(LOG_TAG, "Processing: "+photoItem.getmTitle()+" --> " + Integer.toString(i));
+        Picasso.with(mContext).load(photoItem.getmImage())
+                .error(R.drawable.placeholder)
+                .placeholder(R.drawable.placeholder)
+                .into(holder.thumbnail);
+        holder.title.setText(photoItem.getmTitle());
     }
 }

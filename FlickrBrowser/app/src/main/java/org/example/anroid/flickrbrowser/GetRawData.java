@@ -41,6 +41,10 @@ public class GetRawData {
         return mData;
     }
 
+    public void setmRawUrl(String mRawUrl) {
+        this.mRawUrl = mRawUrl;
+    }
+
     public DownloadStatus getmDownloadStatus() {
         return mDownloadStatus;
     }

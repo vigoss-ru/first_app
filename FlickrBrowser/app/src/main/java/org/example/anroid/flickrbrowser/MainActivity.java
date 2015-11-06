@@ -3,6 +3,7 @@ package org.example.anroid.flickrbrowser;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        GetRawData getRawData = new GetRawData("https://api.flickr.com/services/feeds/photos_public.gne?tags=android&format=json&nojsoncallback=1");
-        getRawData.execute();
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ProcessPhotos processPhotos = new ProcessPhotos("assassins,creed,unity", true);
+        processPhotos.execute();
     }
 
 
@@ -64,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
         public class ProcessData extends  DownloadJsonData {
             protected void onPostExecute(String webData) {
                 super.onPostExecute(webData);
-                flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this, getMPhotos());
+                List<Photo> mPhotos = getMPhotos();
+                flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this, mPhotos);
                 mRecyclerView.setAdapter(flickrRecyclerViewAdapter);
             }
         }
