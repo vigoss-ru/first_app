@@ -2,4 +2,9 @@
     <string name="app_name">Flickr Browser</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="search_menu">Search Menu</string>
+    <string name="searchable_label">Search Query</string>
+    <string name="searchable_hint">Enter photo tags</string>
 </resources>

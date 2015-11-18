@@ -1,6 +1,9 @@
 package org.example.anroid.flickrbrowser;
 
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +14,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private  static  final String LOG_TAG = "MainActivity";
     private List<Photo> mPhotoList = new ArrayList<Photo>();
@@ -23,10 +26,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activateToolbar();
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ProcessPhotos processPhotos = new ProcessPhotos("assassins,creed,unity", true);
-        processPhotos.execute();
+
+        flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this, new ArrayList<Photo>());
+        mRecyclerView.setAdapter(flickrRecyclerViewAdapter);
+
+        //mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        //mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //ProcessPhotos processPhotos = new ProcessPhotos("google", true);
+        //processPhotos.execute();
     }
 
 
@@ -49,9 +62,29 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if(id == R.id.menu_search) {
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String query = getSavedPreferenceData(FLICKR_QUERY);
+        if(query.length()>0) {
+            ProcessPhotos processPhotos = new ProcessPhotos(query, true);
+            processPhotos.execute();
+        }
+    }
+
+    private String getSavedPreferenceData(String key) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        return sharedPreferences.getString(key, "");
+    }
 
     public class ProcessPhotos extends GetFlickrJsonData {
         public ProcessPhotos(String searchCriteria, boolean matchAll) {
@@ -66,9 +99,11 @@ public class MainActivity extends AppCompatActivity {
         public class ProcessData extends  DownloadJsonData {
             protected void onPostExecute(String webData) {
                 super.onPostExecute(webData);
-                List<Photo> mPhotos = getMPhotos();
+                flickrRecyclerViewAdapter.loadNewData(getMPhotos());
+
+                /*List<Photo> mPhotos = getMPhotos();
                 flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this, mPhotos);
-                mRecyclerView.setAdapter(flickrRecyclerViewAdapter);
+                mRecyclerView.setAdapter(flickrRecyclerViewAdapter);*/
             }
         }
     }
