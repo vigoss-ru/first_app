@@ -25,12 +25,24 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.example.anroid.flickrbrowser.MainActivity" />
+
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
-                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ViewPhotoDetailsActivity"
+            android:label="@string/title_activity_view_photo_details"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.example.anroid.flickrbrowser.MainActivity" />
         </activity>
     </application>
 
