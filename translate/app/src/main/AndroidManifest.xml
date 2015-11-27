@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Add new Activity class name here -->
+        <activity android:name=".MainPage"></activity>
     </application>
 
 </manifest>

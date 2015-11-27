@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">translate</string>
+    <string name="app_name">PiscesT</string>
 
     <string name="hello_world">Pisces Translate</string>
     <string name="action_settings">Settings</string>
+    <string name="user_name">Email or username</string>
+    <string name="user_password">Password</string>
+    <string name="text_login">Login</string>
+    <string name="text_sign_up">Sign up >></string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="text_error_msg">Invalid Username or password !</string>
 </resources>
