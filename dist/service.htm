@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/combobox.css">
+		<link rel="stylesheet" href="css/custom/checkbox.css">
+		<link rel="stylesheet" href="css/custom/attribute.css">
+		<script src="vendor/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>	
+	
+	<body>
+		<div class="cookie">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-5-10">For a better shopping experience uses cookies FRANKE</div>
+					<div class="uk-width-medium-5-10"><a href="#">I agree with FRANKE</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="selling-points">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-3-10">30 days return</div>
+					<div class="uk-width-medium-3-10 uk-text-center">FREE SHIPPING & RETURNS</div>
+					<div class="uk-width-medium-4-10 uk-text-right">Many discount products</div>
+				</div>
+			</div>
+		</div>
+		<div id="page-wrap">			
+			<div class="header">
+				<span class="accountHeader">
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-medium-2-10"><img id="logo" src="images/logo-franke.png"></div>
+						<div class="uk-width-medium-4-10">
+							<form class="uk-form">
+								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+								<!--<img src="images/icons-05.png"/>-->
+								<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
+							</form>
+						</div>
+						<div class="uk-width-medium-4-10 user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>SHOPPING CART</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>MY FAVORITES</div>
+							</span>
+							
+							<span>
+								<div><img src="images/contact.png"></div>
+								<div>CONTACT</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>MY ACCOUNT</div>
+							</span>
+						</div>
+					</div>
+				</span>
+			</div>
+			
+			<div class="body">
+				<span class="menu">
+					<ul class="main-navigation">
+						<li>
+							<a href="">Main products</a>
+							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
+								<div class="uk-width-1-3">
+									Sink<br/>
+									Armature<br/>
+									Waste separation
+								</div>
+								<div class="uk-width-1-3">
+									Hoods<br/>
+									Hobs
+								</div>								
+								<div class="uk-width-1-3">
+									<img src="images/category2.png"/>
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<a href="">Cleaning products</a>
+						</li>
+						<li><a href="">Accessories</a></li>
+						<li><a href="">Spare parts</a></li>
+						<li><a href="">Service</a></li>
+					</ul>
+				</span>
+			</div>
+			<div class="uk-slidenav-position slide-show" data-uk-slideshow="{autoplay:true}">
+				<ul class="uk-slideshow">
+					<li><img src="images/kitchen.jpg" width="770" height="194" alt=""></li>
+					<li><img src="images/kitchen2.jpg" width="770" height="194" alt=""></li>
+					<li><img src="images/kitchen3.jpg" width="770" height="194" alt=""></li>
+					<li><img src="images/kitchen4.jpg" width="770" height="194" alt=""></li>
+				</ul>
+			</div>
+			<div class="main_container">
+				<div class="service_header">
+					<label class="active_arrow">Documents</label>
+					<label>Frequently Questions</label>
+					<label>Customer service</label>
+				</div>
+				
+				<!--<div class="service_filter">
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-1-3">
+							<div class="combobox">
+								<select>
+									<option selected> Product range </option>
+									<option> Sink </option>
+									<option> Armature </option>
+									<option> Waste separation </option>
+									<option> Hoods </option>
+									<option> Hobs </option>
+								</select>
+							</div>
+						</div>
+						<div class="uk-width-1-3">
+							<div class="combobox">
+								<select>
+									<option selected> Select Box </option>
+									<option> Short Option </option>
+									<option> This Is A Longer Option </option>
+								</select>
+							</div>
+						</div>
+						<div class="uk-width-1-3">
+							<div class="combobox">
+								<select>
+									<option selected> Select Box </option>
+									<option> Short Option </option>
+									<option> This Is A Longer Option </option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="serivceList">
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-medium-2-10">
+							<div class="uk-accordion" data-uk-accordion>
+								<h3 class="uk-accordion-title">Product line</h3>
+								<div class="uk-accordion-content uk-accordion-content-custom product_line">
+									<div class="uk-form-controls">
+										<span>
+											<input type="checkbox" id="cboSink" class="css-checkbox med"/>
+											<label for="cboSink" name="cboSink_lbl" class="css-label med elegant">Sink</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboArmature" class="css-checkbox med"/>
+											<label for="cboArmature" name="cboArmature_lbl" class="css-label med elegant">Armature</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboWaste" class="css-checkbox med"/>
+											<label for="cboWaste" name="cboWaste_lbl" class="css-label med elegant">Waste separation</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboHood" class="css-checkbox med"/>
+											<label for="cboHood" name="cboHood_lbl" class="css-label med elegant">Hoods</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboHobs" class="css-checkbox med"/>
+											<label for="cboHobs" name="cboHobs_lbl" class="css-label med elegant">Hobs</label>
+										</span>
+										<!--<span class="uk-panel uk-panel-box"><img src="images/sinks_filter.jpg"></span>
+										<span class="uk-panel uk-panel-box"><img src="images/tabs_filter.jpg"></span>
+										<span class="uk-panel uk-panel-box"><img src="images/cooker_hoods_filter.jpg"></span>
+										<span class="uk-panel uk-panel-box"><img src="images/hob.jpg"></span>
+										<span class="uk-panel uk-panel-box"><img src="images/waste_management_filter.jpg"></span>-->
+									</div>
+								</div>
+							</div>
+							
+							<div class="uk-accordion" data-uk-accordion>
+								<h3 class="uk-accordion-title">Article Family</h3>
+								<div class="uk-accordion-content uk-accordion-content-custom product_line">
+									<div class="uk-form-controls">
+										<span>
+											<input type="checkbox" id="cboAquatik" class="css-checkbox med"/>
+											<label for="cboAquatik" name="cboAquatik_lbl" class="css-label med elegant">Aquatik</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboArgos" class="css-checkbox med"/>
+											<label for="cboArgos" name="cboArgos_lbl" class="css-label med elegant">Argos</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboAscona" class="css-checkbox med"/>
+											<label for="cboAscona" name="cboArgos_lbl" class="css-label med elegant">Ascona</label>
+										</span>
+										<br/>
+									</div>
+								</div>
+							</div>	
+							
+						</div>
+						<div class="uk-width-medium-8-10">
+							<!--<input type="checkbox" id="checkbox65" class="css-checkbox med" checked="checked"/>
+							<label for="checkbox65" name="checkbox65_lbl" class="css-label med elegant">Sleek Checkbox</label>-->
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		
+		<div class="footer">
+			<div class="footer_content">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-1-4">
+						<span class="footer_box_header">My Account</span>
+						<span class="footer_box_content">
+							<a href="#">Contact us</a><br/>
+							<a href="#">My Contact</a><br/>
+							<a href="#">My favorites</a><br/>
+							<a href="#">Orders history</a>
+						</span>
+					</div>
+					<div class="uk-width-1-4">
+						<span class="footer_box_header">
+							Contact Information
+						</span>
+						<span class="footer_box_content">							
+							<div>
+								<strong>Phone:</strong>
+							</div>
+							<div class="small-line-height">
+								Tel: 07761/ 52-0<br/>
+								Fax: 07761/ 52-294
+							</div>
+							<p></p>
+							<div>
+								<strong>Email:</strong>
+							</div>
+							<div class="small-line-height">
+								info.fbs@franke.com
+							</div>
+						</span>
+					</div>
+					<div class="uk-width-1-4">
+						<span class="footer_box_header">About Franke</span>
+						<span class="footer_box_content">
+							<a href="#">Imprint</a><br/>
+							<a href="#">Data protection</a><br/>
+							<a href="#">Legal notice</a><br/>
+							<a href="#">Youtube channel</a>
+						</span>
+					</div>
+					<div class="uk-width-1-4">
+						<span class="footer_box_header">We delivery with</span>
+						<span class="footer_box_content">
+							<img src="images/dhl.png"/>
+							<img src="images/gls.png"/>
+						</span>
+					</div>
+				</div>	
+			</div>
+		</div>	
+		
+	</body>
+	
+</html>

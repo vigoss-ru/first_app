@@ -1,0 +1,44 @@
+/** service page **/
+
+.category_title {
+	margin-top: 30px;
+}
+
+.service_header {
+	border-bottom: 1px solid #a8a8a8;
+	margin-top: 30px;
+}
+
+.service_header .active_arrow  {
+	background: url("../../images/sprite_transparent.png") no-repeat scroll center -155px transparent;
+    padding-bottom: 12px;    
+	color: #dc281e;
+}
+
+.service_header label {
+	margin-right: 50px;
+}
+
+.breadcumb_attribute {
+	border-bottom: 1px solid #a8a8a8;
+	text-align: justify;        
+	line-height: 0;
+	padding-top: 10px;
+}
+
+.service_filter {
+	width: 800px;    
+    height: 25px;
+    margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.serivceList {
+	margin-top: 50px;
+}
+
+.product_line span {	
+    display: inline-block;
+    padding: 0 5px 10px 3px;
+}
