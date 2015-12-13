@@ -7,6 +7,7 @@
 .service_header {
 	border-bottom: 1px solid #a8a8a8;
 	margin-top: 30px;
+	text-transform: uppercase;
 }
 
 .service_header .active_arrow  {
@@ -38,7 +39,20 @@
 	margin-top: 50px;
 }
 
-.product_line span {	
+.icon_download {
+	background: url("../../images/download.png") no-repeat right top;
+	height: 16px;
+    width: 16px;
     display: inline-block;
-    padding: 0 5px 10px 3px;
+    float: left;
+	position: relative;
+    left: 12px;
+}
+
+.uk-box-custom {
+	background: #ffffff;
+}
+
+.uk-slide-show-main {
+	height: 300px;
 }

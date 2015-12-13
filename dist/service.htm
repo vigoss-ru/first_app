@@ -44,7 +44,7 @@
 			<div class="header">
 				<span class="accountHeader">
 					<div class="uk-grid" data-uk-grid-match>
-						<div class="uk-width-medium-2-10"><img id="logo" src="images/logo-franke.png"></div>
+						<div class="uk-width-medium-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
 						<div class="uk-width-medium-4-10">
 							<form class="uk-form">
 								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
@@ -99,7 +99,7 @@
 							
 						</li>
 						<li>
-							<a href="">Cleaning products</a>
+							<a href="clean_product.htm">Cleaning products</a>
 						</li>
 						<li><a href="">Accessories</a></li>
 						<li><a href="">Spare parts</a></li>
@@ -108,7 +108,7 @@
 				</span>
 			</div>
 			<div class="uk-slidenav-position slide-show" data-uk-slideshow="{autoplay:true}">
-				<ul class="uk-slideshow">
+				<ul class="uk-slideshow" style ="height: 300px;">
 					<li><img src="images/kitchen.jpg" width="770" height="194" alt=""></li>
 					<li><img src="images/kitchen2.jpg" width="770" height="194" alt=""></li>
 					<li><img src="images/kitchen3.jpg" width="770" height="194" alt=""></li>
@@ -160,8 +160,10 @@
 					<div class="uk-grid" data-uk-grid-match>
 						<div class="uk-width-medium-2-10">
 							<div class="uk-accordion" data-uk-accordion>
-								<h3 class="uk-accordion-title">Product line</h3>
-								<div class="uk-accordion-content uk-accordion-content-custom product_line">
+								<h3 class="uk-accordion-title">
+									Product line
+								</h3>
+								<div class="uk-accordion-content uk-accordion-content-custom">
 									<div class="uk-form-controls">
 										<span>
 											<input type="checkbox" id="cboSink" class="css-checkbox med"/>
@@ -187,11 +189,6 @@
 											<input type="checkbox" id="cboHobs" class="css-checkbox med"/>
 											<label for="cboHobs" name="cboHobs_lbl" class="css-label med elegant">Hobs</label>
 										</span>
-										<!--<span class="uk-panel uk-panel-box"><img src="images/sinks_filter.jpg"></span>
-										<span class="uk-panel uk-panel-box"><img src="images/tabs_filter.jpg"></span>
-										<span class="uk-panel uk-panel-box"><img src="images/cooker_hoods_filter.jpg"></span>
-										<span class="uk-panel uk-panel-box"><img src="images/hob.jpg"></span>
-										<span class="uk-panel uk-panel-box"><img src="images/waste_management_filter.jpg"></span>-->
 									</div>
 								</div>
 							</div>
@@ -215,14 +212,163 @@
 											<label for="cboAscona" name="cboArgos_lbl" class="css-label med elegant">Ascona</label>
 										</span>
 										<br/>
+										<span>
+											<input type="checkbox" id="cboCrystalLine" class="css-checkbox med"/>
+											<label for="cboCrystalLine" name="cboCrystalLine_lbl" class="css-label med elegant">Crystal Line</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboEurostar" class="css-checkbox med"/>
+											<label for="cboEurostar" name="cboEurostar_lbl" class="css-label med elegant">Eurostar</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboRotondo" class="css-checkbox med"/>
+											<label for="cboRotondo" name="cboRotondo_lbl" class="css-label med elegant">Eurostar</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboKubus" class="css-checkbox med"/>
+											<label for="cboKubus" name="cboKubus_lbl" class="css-label med elegant">Kubus</label>
+										</span>
+										<br/>
 									</div>
 								</div>
 							</div>	
 							
+							
+							<div class="uk-accordion" data-uk-accordion>
+								<h3 class="uk-accordion-title">Product Type</h3>
+								<div class="uk-accordion-content uk-accordion-content-custom product_line">
+									<div class="uk-form-controls">
+										<span>
+											<input type="checkbox" id="cboAquatik" class="css-checkbox med"/>
+											<label for="cboAquatik" name="cboAquatik_lbl" class="css-label med elegant">Aquatik</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboArgos" class="css-checkbox med"/>
+											<label for="cboArgos" name="cboArgos_lbl" class="css-label med elegant">Argos</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboAscona" class="css-checkbox med"/>
+											<label for="cboAscona" name="cboArgos_lbl" class="css-label med elegant">Ascona</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboCrystalLine" class="css-checkbox med"/>
+											<label for="cboCrystalLine" name="cboCrystalLine_lbl" class="css-label med elegant">Crystal Line</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboEurostar" class="css-checkbox med"/>
+											<label for="cboEurostar" name="cboEurostar_lbl" class="css-label med elegant">Eurostar</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboRotondo" class="css-checkbox med"/>
+											<label for="cboRotondo" name="cboRotondo_lbl" class="css-label med elegant">Eurostar</label>
+										</span>
+										<br/>
+										<span>
+											<input type="checkbox" id="cboKubus" class="css-checkbox med"/>
+											<label for="cboKubus" name="cboKubus_lbl" class="css-label med elegant">Kubus</label>
+										</span>
+										<br/>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="uk-width-medium-8-10">
-							<!--<input type="checkbox" id="checkbox65" class="css-checkbox med" checked="checked"/>
-							<label for="checkbox65" name="checkbox65_lbl" class="css-label med elegant">Sleek Checkbox</label>-->
+						<div class="uk-width-medium-8-10">							
+							<div class="uk-panel uk-panel-box uk-box-custom">
+								<div class="uk-article-block">									
+									<div class="uk-grid inline_block" data-uk-grid-match>
+										<div class="uk-width-medium-2-10 article_image_block">
+											<span><img src="images/1100200789.jpg"/></span>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_description_block">
+												Abzugshaube FLE 605 XS XS, Leto, Kopffreiheit, 60 cm, Milchglas
+											</div>
+											<br/>
+											<div>
+												Document type: Document type
+											</div>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_action_block">
+												<label>Artikelnummer: 110.0197.433</label>
+												<div class="addToBasket">
+													<span class="button">
+														<div class="icon_download"></div>
+														Download
+													</span>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>								
+								<hr class="uk-article-divider">
+								
+								<div class="uk-article-block">									
+									<div class="uk-grid inline_block" data-uk-grid-match>
+										<div class="uk-width-medium-2-10 article_image_block">
+											<span><img src="images/1100051194.jpg"/></span>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_description_block">
+												AGX 660 G 3 1/2" I MAV REV EXC 2BL AB
+											</div>
+											<br/>
+											<div>
+												Document type: Document type
+											</div>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_action_block">
+												<label>Artikelnummer: 110.0197.433</label>
+												<div class="addToBasket">													
+													<span class="button">
+														<div class="icon_download"></div>
+														Download
+													</span>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr class="uk-article-divider">
+								
+								<div class="uk-article-block">									
+									<div class="uk-grid inline_block" data-uk-grid-match>
+										<div class="uk-width-medium-2-10 article_image_block">
+											<span><img src="images/1150197445.jpg"/></span>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_description_block">
+												AGX 260 G 3 1/2" I MAV REV BL DKL AB
+											</div>
+											<br/>
+											<div>
+												Document type: Document type
+											</div>
+										</div>
+										<div class="uk-width-medium-4-10">
+											<div class="article_action_block">
+												<label>Artikelnummer: 115.0016.321</label>
+												<div class="addToBasket">
+													<span class="button">
+														<div class="icon_download"></div>
+														Download
+													</span>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
 						</div>
 					</div>
 				</div>

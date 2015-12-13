@@ -225,6 +225,11 @@ a {
 	font-size: 13px;
 }
 
+.uk-accordion-content-custom span {
+	display: inline-block;
+    padding: 0 5px 10px 3px;
+}
+
 .uk-accordion-title-custom {
 	font-size: 13px;
 }
@@ -485,7 +490,7 @@ a.lnk_3 {
  
 .addToBasket  {
 	margin-top: 50px;
-	margin-bottom: 10px;
+	margin-bottom: 10px;	
 }
 
 .addToBasket span  {
@@ -578,7 +583,6 @@ a.lnk_3 {
 	margin-left: -11px;
 }
 
-
 /**
 	For Home page
 **/
@@ -665,3 +669,5 @@ a.lnk_3 {
 	width: 60px;
 	height: 50px;
 }
+
+

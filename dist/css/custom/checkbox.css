@@ -72,7 +72,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 
 
 .depressed-lite-small{background-image:url(http://csscheckbox.com/checkboxes/depressed-lite-small.png);}
-.elegant{background-image:url(http://csscheckbox.com/checkboxes/elegant.png);}
+.elegant{background-image:url("../../images/checkbox.png");}
 .depressed{background-image:url(http://csscheckbox.com/checkboxes/depressed.png);}
 .chrome-style{background-image:url(http://csscheckbox.com/checkboxes/chrome-style.png);}
 .web-two-style{background-image:url(http://csscheckbox.com/checkboxes/web-two-style.png);}
@@ -81,9 +81,9 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 
 input[type=checkbox].css-checkbox.med + label.css-label.med {
 	padding-left:26px;
-    height:17px; 
+    height:13px; 
 	display:inline-block;
-	line-height:17px;
+	line-height:13px;
 	background-repeat:no-repeat;
 	background-position: 0 0;
 	font-size:13px;
@@ -92,8 +92,7 @@ input[type=checkbox].css-checkbox.med + label.css-label.med {
 }
 
 input[type=checkbox].css-checkbox.med:checked + label.css-label.med {
-
-    background-position: 0 -17px;
+    background-position: 0 -13px;
 }
 input[type=checkbox].css-checkbox.sme + label.css-label.sme {
 	padding-left:22px;

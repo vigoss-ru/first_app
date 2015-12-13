@@ -1,4 +1,4 @@
-var rangeSliderPrice = document.getElementById('rangeSliderPrice');
+/*var rangeSliderPrice = document.getElementById('rangeSliderPrice');
 noUiSlider.create(rangeSliderPrice, {
 	start: [ 0, 100 ],
 	margin: 30,
@@ -37,7 +37,7 @@ rangeSliderWidth.noUiSlider.on('update', function ( values, handle ) {
 	} else {
 		marginWidthMin.value = values[handle];
 	}
-});
+});*/
 
 function facettenFilter(filterName, filterValue) {
 	var htmlStr = '<div class="filterElement">'+filterName+': ';	
