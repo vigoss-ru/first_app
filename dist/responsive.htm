@@ -1,79 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Bootstrap 3 Responsive Layout Example</title>	
-
-	<!-- basic components -->
-	<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
-	<link rel="stylesheet" href="css/custom/main.css">
-	<script src="vendor/jquery.js"></script>
-	<script src="js/uikit.min.js"></script>		
-	<!-- accordion components-->
-	<script src="js/components/accordion.js"></script>
-	<link rel="stylesheet" href="css/components/accordion.almost-flat.css">		
-	<!-- range slider components -->
-	<link href="css/custom/nouislider.min.css" rel="stylesheet">
-	<script src="js/custom/nouislider.min.js"></script>
-	<!--  Slide show components-->
-	<script src="js/components/slideshow.js"></script>
-	<script src="js/components/slideshow-fx.js"></script>
-	<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
-</head>
-<body class="tm-background">
-
-	<div class="cookie">
-		<div class="uk-container uk-container-center">
-			<div class="uk-grid" data-uk-grid-match>
-				<div class="uk-width-medium-5-10">For a better shopping experience uses cookies FRANKE</div>
-				<div class="uk-width-medium-5-10"><a href="#">I agree with FRANKE</a></div>
-			</div>
-		</div>
-	</div>	
-			
-	<div class="selling-points">
-		<div class="uk-container uk-container-center">
-			<div class="uk-grid" data-uk-grid-match>
-				<div class="uk-width-medium-3-10">30 days return</div>
-				<div class="uk-width-medium-3-10 uk-text-center">FREE SHIPPING & RETURNS</div>
-				<div class="uk-width-medium-4-10 uk-text-right">Many discount products</div>
-			</div>
-		</div>
-	</div>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">		
+		<script src="vendor/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>
 	
-	<div class="accountHeader">
-			<div class="uk-grid" data-uk-grid-match>
-				<div class="uk-width-medium-2-10"><img id="logo" src="images/logo-franke.png"></div>
-				<div class="uk-width-medium-4-10">
-					<form class="uk-form">
-						<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
-						<!--<img src="images/icons-05.png"/>-->
-						<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
-					</form>
-				</div>
-				<div class="uk-width-medium-4-10 user-list-info">
-					<span>
-						<div><img src="images/cart.png"></div>
-						<div>SHOPPING CART</div>
-					</span>
-					
-					<span>
-						<div><img src="images/favorite.png"></div>
-						<div>MY FAVORITES</div>
-					</span>
-					
-					<span>
-						<div><img src="images/contact.png"></div>
-						<div>CONTACT</div>
-					</span>
-					
-					<span>
-						<div><img src="images/account.png"></div>
-						<div>MY ACCOUNT</div>
-					</span>
+	<body>
+		<div class="cookie">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
+					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
 				</div>
 			</div>
-	</div>
-	<div style="display: none;"></div>
-</body>
-</html>                                		
+		</div>
+		<div class="selling-points">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-3-10">30 TAGE RÜCKGABERECHT</div>
+					<div class="uk-width-medium-3-10 uk-text-center">KOSTENLOSER VERSAND & RÜCKVERSAND</div>
+					<div class="uk-width-medium-4-10 uk-text-right">VIELE PRODUKTE 40% REDUZIERT</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page-wrap">
+			<div class="header">
+				<span class="accountHeader">
+					<div id="normalAccountHead" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-medium-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-medium-4-10">
+							<form class="uk-form">
+								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+								<!--<img src="images/icons-05.png"/>-->
+								<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
+							</form>
+						</div>
+						<div class="uk-width-medium-4-10 user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>WARENKORB</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>MERKLISTE</div>
+							</span>
+							
+							<span>
+								<div><img src="images/contact.png"></div>
+								<div>KONTAKT</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>MEIN KONTO</div>
+							</span>
+						</div>
+						
+					</div>
+					
+					<div id="mobileAccount">
+						<div>
+							<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							<a href="#"><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+								<span class="device_info">
+								<div class="device_info_slider">
+									<label>MY ACCOUNT</label>
+									<hr class="uk-article-divider">
+									<label>KONTAKT</label>
+									<hr class="uk-article-divider">
+									<label>MERKLISTE</label>
+									<hr class="uk-article-divider">
+									<label>WARENKORB</label>
+								</div>	
+							</span>
+							</a>							
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
+					</div>
+					
+				</span>
+			</div>
+		</div>
+	</body>	
+</html>	

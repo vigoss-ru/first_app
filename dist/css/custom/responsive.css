@@ -1,0 +1,117 @@
+#mobileAccount {
+	display: none;
+}
+
+.device_info {
+	display: inline-block;
+    position: relative;
+    left: -202px;
+    top: 38px;
+}
+
+.device_info_slider {
+	visibility: hidden;
+	position: absolute;
+    background: #fff;    
+    height: auto;
+    width:250px;
+	-webkit-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    -moz-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    border-radius: 0 0 2px 2px;
+    z-index: 1000;
+	border: 1px solid #fafafa;
+	border-top: 5px solid #E13B3F;
+	padding-top: 20px;
+    padding-bottom: 20px;
+	margin-top: 5px;
+}
+
+.device_info_slider label {	
+    margin-left: 20px;
+    display: inline-block;
+}
+
+@media only screen 
+and (min-width: 1200px)
+and (max-width: 1500px) {
+	.page-center, #page-wrap, .footer_content {
+		width: 78%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen 
+and (min-width: 667px)
+and (max-width: 775px) {
+	.page-center, #page-wrap, .footer_content {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.user-list-info span {
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 8px;
+	}
+}
+
+@media only screen 
+and (min-width: 775px)
+and (max-width: 920px) {
+	.page-center, #page-wrap, .footer_content {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.user-list-info span {
+		display: inline-block;
+		margin-left: 15px;
+		font-size: 9px;
+	}
+}
+
+@media only screen 
+and (min-width: 920px)
+and (max-width: 1200px) {
+	.page-center, #page-wrap, .footer_content {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.user-list-info span {
+		display: inline-block;
+		margin-left: 20px;
+		font-size: 10px;
+	}
+}
+
+@media only screen 
+and (min-width: 667px)
+and (max-width: 769px) {
+	.accountHeader .uk-form input[type="text"] {
+		width: 250px;
+	}
+}
+
+@media only screen
+and (max-width: 667px) { 
+	.page-center, #page-wrap, .footer_content {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	#normalAccountHead  {
+		display: none;
+	}
+	
+	#mobileAccount {
+		display: block;
+	}
+	
+	#mobileAccount .uk-form  input[type="text"] {
+		width: 598px;
+		margin-top: 20px;
+	}
+	
+	#mobileAccount a:nth-child(2) img {
+		float: right;
+	}
+}

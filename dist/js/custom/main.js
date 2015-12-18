@@ -39,6 +39,11 @@ rangeSliderWidth.noUiSlider.on('update', function ( values, handle ) {
 	}
 });*/
 
+$(document).ready(function() {
+	
+});
+
+
 function facettenFilter(filterName, filterValue) {
 	var htmlStr = '<div class="filterElement">'+filterName+': ';	
 	htmlStr += '<div class="filterValue">'+filterValue;
@@ -68,4 +73,15 @@ function viewGridArticle() {
 		$('#articleGridView').css('display','block');
 		$('#articlelisting-loading').css('display', 'none');
 	}, 3000);
+}
+
+function showMenuAccount() {
+	var obj = $('.device_info_slider');
+	if(obj.css('visibility') == 'hidden') {
+		obj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},1000);
+	} else {
+		obj.animate({opacity: 0.0}, 500, function(){
+			obj.css("visibility","hidden");
+		});
+	}
 }
