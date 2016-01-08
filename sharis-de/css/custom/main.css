@@ -1,0 +1,116 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a.lnk_1 {
+    background: transparent url(../../images/franke-icons-kitchen_systems.png) no-repeat 0 -498px;
+    color: black;
+    font-size: 11px;
+    padding-left: 11px;
+	margin-left: 5px;
+    text-decoration: none;
+}
+
+a:hover{
+	color: #e13b3f;
+}
+
+
+.inline_block {
+	display: block;
+}
+
+.right {
+	float: right;
+}
+
+#page-wrap {
+	width: 1000px;
+    margin: 0 auto;
+}
+
+#header .content_block{
+	width: 970px;
+	margin: 0 auto;
+}
+
+.content_summary, .footer_content, .last_footer  {
+	width: 940px;
+	margin: 0 auto;
+}
+
+
+#header .content_block  span:nth-child(2){
+	float: right;
+	margin-top: 12px;
+}
+
+body {
+	color: #939393;
+    font: 14px/24px "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#header {
+    display: block;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 12px rgba(0,0,0, 0.09);
+    z-index: 10000;
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content_slider {
+	background-color: #f0f0f0;
+	display: none;
+	/*background-color: #eaeef2;*/
+    box-shadow: inset 0 6px 8px #dde3ea;
+	margin-top: 20px;
+}
+.footer {
+	background-color: #f0f0f0;
+	box-shadow: inset 0 6px 8px #dde3ea;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.summary_head table tr td:first-child {
+	vertical-align: top;
+}
+
+.summary_head table tr td:first-child img {
+	margin-right: 10px;
+}
+
+.summary_head table tr td:last-child label:nth-child(1){
+	font-weight: bold;
+    font-size: 18px;
+}
+
+.content_summary .summary_content {
+	margin-top:15px;
+	margin-bottom: 30px;
+}
+
+.summary_content label:nth-child(1) {
+	/*height: 185px;
+    display: inline-block;*/
+}
+
+.footer_header {
+	font-weight: bold;
+    font-size: 18px;
+    color: #C01B0D;
+	margin-bottom: 10px;
+    display: inline-block;
+}
+
+.last_footer label {
+	padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+}

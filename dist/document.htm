@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/attribute.css">
+		<link rel="stylesheet" href="css/custom/checkbox.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">		
+		<script src="vendor/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>
+	
+	<body>
+		<!--<div class="cookie">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
+					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
+				</div>
+			</div>
+		</div>-->
+		<div class="selling-points">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-3-10">30 TAGE RÜCKGABERECHT</div>
+					<div class="uk-width-medium-3-10 uk-text-center">KOSTENLOSER VERSAND & RÜCKVERSAND</div>
+					<div class="uk-width-medium-4-10 uk-text-right">VIELE PRODUKTE 40% REDUZIERT</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page-wrap">
+			<!-- header with my account, contact, shopping cart-->
+			<div class="header">
+				<span class="accountHeader">
+					<div id="normalAccountHead" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-medium-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-medium-4-10">
+							<form class="uk-form">
+								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+								<!--<img src="images/icons-05.png"/>-->
+								<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
+							</form>
+						</div>
+						<div class="uk-width-medium-4-10 user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>WARENKORB</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>MERKLISTE</div>
+							</span>
+							
+							<span>
+								<div><img src="images/contact.png"></div>
+								<div>KONTAKT</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>MEIN KONTO</div>
+							</span>
+						</div>
+						
+					</div>
+					
+					<div id="mobileAccount">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-2-10">
+								<div><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+									<span class="device_info">
+										<div class="device_info_slider">
+											<label>Hauptartikel</label>
+											<hr class="uk-article-divider">
+											<label>Pflegeprodukte</label>
+											<hr class="uk-article-divider">
+											<label>Zubehör</label>
+											<hr class="uk-article-divider">
+											<label>Ersatzteile</label>
+											<hr class="uk-article-divider">
+											<label>Service</label>
+										</div>	
+									</span>
+								</div>
+							</div>
+							<div class="uk-width-6-10 uk-right">
+								<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							</div>
+							<div class="uk-width-2-10">
+								<span id="mobileMyAccount">
+									<div><img src="images/account.png"></div>
+								</span>
+							</div>
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
+					</div>
+				</span>
+			</div>
+			
+			<!-- start body -->
+			<div class="body">
+				<!-- menu navigation -->
+				<span class="menu">
+					<ul class="main-navigation">
+						<li>
+							<a href="">Hauptartikel</a>
+							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
+								<div class="uk-width-1-3">
+									Spülen<br/>
+									Armaturen<br/>
+									Hauben
+								</div>
+								<div class="uk-width-1-3">
+									Kochfelder<br/>
+									Abfallsysteme
+								</div>								
+								<div class="uk-width-1-3">
+									<img src="images/category2.png"/>
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<a href="clean_product.htm">Pflegeprodukte</a>
+						</li>
+						<li><a href="">Zubehör</a></li>
+						<li><a href="">Ersatzteile</a></li>
+						<li><a href="document.htm">Unterlagen</a></li>
+					</ul>
+				</span>
+				<!-- breadcumb -->
+				<div class="breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="">Startseite</a></li>
+						<li class="uk-active"><span>Unterlagen</span></li>
+					</ul>
+				</div>
+				<!-- list of article -->
+				<div class="main_content">
+					<!-- accordion 1, accordion document product range -->
+					<div class="uk-accordion documentAttributeFilter" data-uk-accordion id="accordion-document-product-range">
+						<h3 class="uk-accordion-title uk-accordion-title-custom">Produktbereich</h3>
+						<div class="uk-accordion-content uk-accordion-content-custom">
+							<div class="uk-form-controls">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-medium-2-10">
+										<span>
+											<div><img src="images/spuele.jpg" onclick="documentAccordion();"></div>
+											<div>Spülen</div>
+										</span>
+									</div>
+									<div class="uk-width-medium-2-10">
+										<span>
+											<div><img src="images/armaturen.jpg"></div>
+											<div>Armaturen</div>
+										</span>
+									</div>
+									<div class="uk-width-medium-2-10">
+										<span>
+											<div><img src="images/haube.jpg"></div>
+											<div>Hauben</div>
+										</span>
+									</div>
+									<div class="uk-width-medium-2-10">
+										<span>
+											<div><img src="images/hobs.jpg"></div>
+											<div>Kochfelder</div>
+										</span>
+									</div>
+									<div class="uk-width-medium-2-10">
+										<span>
+											<div><img src="images/spuele.jpg"></div>
+											<div>Abfallsysteme</div>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+										
+					<!-- accordion 2, accordion document article family -->
+					<div class="uk-accordion" data-uk-accordion="{collapse: false}" id="document-accordion-article-family">
+						<h3 class="uk-accordion-title uk-accordion-title-custom">Artikelfamilie</h3>
+						<div class="uk-accordion-content uk-accordion-content-custom">
+							<div class="uk-form-controls">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-medium-2-10">
+										
+										<div class="uk-accordion" data-uk-accordion>
+											<h3 class="uk-accordion-title">Herstellungsjahr</h3>
+											<div class="uk-accordion-content uk-accordion-content-custom">
+												<div class="uk-form-controls">
+													<span>
+														<input type="checkbox" id="cbo1"><label for="cbo1">Nachdem 2010</label>
+													</span>
+													<br/>
+													<span>
+														<input type="checkbox" id="cbo2"><label for="cbo2">2000 - 2010</label>
+													</span>
+													<br/>
+													<span>
+														<input type="checkbox" id="cbo3"><label for="cbo3">Bevor 2000</label>
+													</span>
+													
+												</div>
+											</div>
+										</div>
+																				
+									</div>
+									<div class="uk-width-medium-8-10">
+										<div class="uk-panel uk-panel-box uk-article-box">
+											<div class="uk-form-controls documentAttributeFilter">
+												<div class="uk-grid" data-uk-grid-match>
+												
+													<div class="uk-width-medium-2-10">
+														<span>
+															<div><img src="images/spuele.jpg"></div>
+															<div>AMX</div>
+														</span>
+													</div>
+													
+													
+												</div>
+											</div>
+
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- accordion 3, accordion document product list -->
+					<div class="uk-accordion" data-uk-accordion="{collapse: false}" id="document-accordion-product-list">
+						<h3 class="uk-accordion-title uk-accordion-title-custom">Produktliste</h3>
+						<div class="uk-accordion-content uk-accordion-content-custom">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-medium-1-4">
+								
+									<div class="uk-accordion" data-uk-accordion>
+										<h3 class="uk-accordion-title">Ersatzteile</h3>
+										<div class="uk-accordion-content uk-accordion-content-custom">
+											<div class="uk-form-controls">
+												<span>
+													<input type="checkbox" id="cbo16" onclick="facettenFilter('Ersatzteile', 'Abdeckkappe');"><label for="cbo16">Abdeckkappe</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo17" onclick="facettenFilter('Ersatzteile', 'Abdeckkappe');"><label for="cbo17">Abdeckkappe</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo18" onclick="facettenFilter('Ersatzteile', 'Abdeckkappe');"><label for="cbo18">Abdeckung</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo19" onclick="facettenFilter('Ersatzteile', 'Abdeckkappe');"><label for="cbo19">Abfallbehälter</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo20" onclick="facettenFilter('Ersatzteile', 'Abdeckkappe');"><label for="cbo20">Abgangsbogen</label>
+												</span>
+												<br/>
+											</div>
+										</div>
+									</div>
+									
+									
+									<div class="uk-accordion" data-uk-accordion>
+										<h3 class="uk-accordion-title">Plegeprodukte</h3>
+										<div class="uk-accordion-content uk-accordion-content-custom">
+											<div class="uk-form-controls">
+												<span>
+													<input type="checkbox" id="cbo9"><label for="cbo9">Putzstein</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo10"><label for="cbo10">Entkalker</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo11"><label for="cbo11">Reinigungssets</label>
+												</span>
+												<br/>
+												<span>
+													<input type="checkbox" id="cbo12"><label for="cbo12">Glossclean</label>
+												</span>
+												<br/>
+																				
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="uk-width-medium-3-4">
+									<div>
+										<div class="uk-grid" data-uk-grid-match>
+											<div class="uk-width-1-3">
+												<div class="uk-panel uk-panel-box uk-document-grid-box">
+													<label>Artikelnummer: 110.0157.489</label>
+													<div class="article_grid_image_block"><img src="images/1150197445.jpg"/></div>
+													<div class="article_grid_description_block">
+														Arm 010 Fest Seite HD Chrom
+													</div>														
+													<div class="addToBasketGrid"><span class="button">Dokument ansicht</span></div>
+												</div>
+											</div>
+											<div class="uk-width-1-3">
+												<div class="uk-panel uk-panel-box uk-document-grid-box">
+													<label>Artikelnummer: 110.0157.489</label>
+													<div class="article_grid_image_block"><img src="images/1150197445.jpg"/></div>
+													<div class="article_grid_description_block">
+														Arm 010 Fest Seite HD Chrom
+													</div>														
+													<div class="addToBasketGrid"><span class="button">Dokument ansicht</span></div>
+												</div>
+											</div>
+											<div class="uk-width-1-3">
+												<div class="uk-panel uk-panel-box uk-document-grid-box">
+													<label>Artikelnummer: 110.0157.489</label>
+													<div class="article_grid_image_block"><img src="images/1150197445.jpg"/></div>
+													<div class="article_grid_description_block">
+														Arm 010 Fest Seite HD Chrom
+													</div>														
+													<div class="addToBasketGrid"><span class="button">Dokument ansicht</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<script>
+						var accordion = UIkit.accordion(UIkit.$('#document-accordion-article-family'), {collapse:false, showfirst: false});
+						$('#document-accordion-article-family .uk-accordion-content-custom').css('display', 'block');
+						var accordion = UIkit.accordion(UIkit.$('#document-accordion-product-list'), {collapse:false, showfirst: false});
+						$('#document-accordion-product-list .uk-accordion-content-custom').css('display', 'block');
+					</script>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+	</body>	
+</html>	

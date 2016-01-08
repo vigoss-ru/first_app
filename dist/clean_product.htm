@@ -5,6 +5,8 @@
 		<!-- basic components -->
 		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
 		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/combobox.css">
 		<script src="vendor/jquery.js"></script>
         <script src="js/uikit.min.js"></script>
 		<!-- accordion components-->
@@ -20,37 +22,38 @@
 	</head>
 	
 	<body>
-		<div class="cookie">
+		<!--<div class="cookie">
 			<div class="page-center">
 				<div class="uk-grid" data-uk-grid-match>
 					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
 					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="selling-points">
 			<div class="page-center">
 				<div class="uk-grid" data-uk-grid-match>
-					<div class="uk-width-medium-3-10">30 TAGE RÜCKGABERECHT</div>
-					<div class="uk-width-medium-3-10 uk-text-center">KOSTENLOSER VERSAND & RÜCKVERSAND</div>
-					<div class="uk-width-medium-4-10 uk-text-right">VIELE PRODUKTE 40% REDUZIERT</div>
+					<div class="uk-width-3-10">DEUTSCHLAND<a class="lnk_1">Kitchen Systems</a></div>
+					<div class="uk-width-3-10 uk-text-center"><span class="franke_world">FRANKE WELWEIT</span></div>
+					<div class="uk-width-4-10 uk-text-right"><span class="login_button">HÄNDLER LOGIN</span>SPRACHE WECHSELN</div>
 				</div>
 			</div>
 		</div>
 		
 		<div id="page-wrap">
+			<!-- header with my account, contact, shopping cart-->
 			<div class="header">
 				<span class="accountHeader">
-					<div class="uk-grid" data-uk-grid-match>
-						<div class="uk-width-medium-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
-						<div class="uk-width-medium-4-10">
+					<div id="normalAccountHead" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-4-10">
 							<form class="uk-form">
 								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
 								<!--<img src="images/icons-05.png"/>-->
 								<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
 							</form>
 						</div>
-						<div class="uk-width-medium-4-10 user-list-info">
+						<div class="uk-width-4-10 user-list-info">
 							<span>
 								<div><img src="images/cart.png"></div>
 								<div>WARENKORB</div>
@@ -59,18 +62,47 @@
 							<span>
 								<div><img src="images/favorite.png"></div>
 								<div>MERKLISTE</div>
-							</span>
-							
-							<span>
-								<div><img src="images/contact.png"></div>
-								<div>KONTAKT</div>
-							</span>
+							</span>							
 							
 							<span>
 								<div><img src="images/account.png"></div>
 								<div>MEIN KONTO</div>
 							</span>
 						</div>
+						
+					</div>
+					
+					<div id="mobileAccount">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-2-10">
+								<div><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+									<span class="device_info">
+										<div class="device_info_slider">
+											<label>Produktfamilie</label>
+											<hr class="uk-article-divider">
+											<label>Pflegeprodukte</label>
+											<hr class="uk-article-divider">
+											<label>Zubehör</label>
+											<hr class="uk-article-divider">
+											<label>Ersatzteile</label>
+											<hr class="uk-article-divider">
+											<label>Service</label>
+										</div>	
+									</span>
+								</div>
+							</div>
+							<div class="uk-width-6-10 uk-right">
+								<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							</div>
+							<div class="uk-width-2-10">
+								<span id="mobileMyAccount">
+									<div><img src="images/account.png"></div>
+								</span>
+							</div>
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
 					</div>
 				</span>
 			</div>
@@ -79,19 +111,19 @@
 				<span class="menu">
 					<ul class="main-navigation">
 						<li>
-							<a href="">Hauptartikel</a>
+							<a href="">Produktfamilie</a>
 							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
-								<div class="uk-width-1-3">
+								<div class="uk-width-1-4">
 									Spülen<br/>
 									Armaturen<br/>
 									Hauben
 								</div>
-								<div class="uk-width-1-3">
+								<div class="uk-width-1-4">
 									Kochfelder<br/>
 									Abfallsysteme
 								</div>
-								<div class="uk-width-1-3">
-									<img src="images/category2.png"/>
+								<div class="uk-width-5-10">
+									<img src="images/image_menu.jpg">
 								</div>
 							</div>
 							
@@ -101,10 +133,11 @@
 						</li>
 						<li><a href="">Zubehör</a></li>
 						<li><a href="">Ersatzteile</a></li>
-						<li><a href="service.htm">Service</a></li>
+						<li><a href="document.htm">Service</a></li>
 					</ul>
 				</span>
 			</div>
+			
 			<div class="uk-slidenav-position slide-show" data-uk-slideshow="{autoplay:true}">
 				<ul class="uk-slideshow">
 					<li><img src="images/kitchen.jpg" width="770" height="194" alt=""></li>
@@ -174,44 +207,33 @@
 					<div class="uk-width-1-3">
 						<span class="footer_box_header">Mein Konto</span>
 						<span class="footer_box_content">
-							<a href="#">Kontakt mit Franke</a><br/>
-							<a href="#">Mein Kontakt</a><br/>
+							<a href="#">Mein Konto</a><br/>
 							<a href="#">Merkliste</a><br/>
 							<a href="#">Bestellungen</a>
 						</span>
 					</div>
 					<div class="uk-width-1-3 uk-text-center">
 						<span class="footer_box_header">
-							Kontakt Informationen
+							Service
 						</span>
-						<span class="footer_box_content">							
-							<div>
-								<strong>Telefon:</strong>
-							</div>
-							<div class="small-line-height">
-								Tel: 07761/ 52-0<br/>
-								Fax: 07761/ 52-294
-							</div>
-							<p></p>
-							<div>
-								<strong>Email:</strong>
-							</div>
-							<div class="small-line-height">
-								info.fbs@franke.com
-							</div>
+						<span class="footer_box_content">
+							<a href="#">Dokumente</a><br/>
+							<a href="#">FAQ</a><br/>
+							<a href="#">Kontakt</a><br/>
+							<a href="#">Widerrufsrecht</a>
 						</span>
 					</div>
 					<div class="uk-width-1-3 uk-text-right">
-						<span class="footer_box_header">Über Franke</span>
+						<span class="footer_box_header">Franke</span>
 						<span class="footer_box_content">
 							<a href="#">Impressum</a><br/>
 							<a href="#">Datenschutz</a><br/>
 							<a href="#">Rechtlicher Hinweis</a><br/>
-							<a href="#">Youtube</a>
+							<a href="#">B2B Franke</a>
 						</span>
 					</div>
 				</div>	
 			</div>
-		</div>			
+		</div>		
 		
 	</body>
