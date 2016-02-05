@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/shoppingcart.css">
+		<link rel="stylesheet" href="css/custom/checkbox.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">		
+		<script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>
+	
+	<body>
+	
+		<!--upper header-->
+		<div id="sh-header">
+			<div class="sh-page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10">Kitchen Systems</div>
+					<div class="uk-width-8-10">
+						<div class="sh-right">
+							<span>Contact</span>
+							<span>Dealer Search</span>
+							<span>Franke Group</span>
+							<span><i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>Deutsch</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="sh-page-wrap">
+			<!-- header with my account, contact, shopping cart-->
+			<div id="sh-content-first">
+				<span class="sh-account-header">
+					<div id="sh-normal-account-head" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-9-20">
+							<form class="uk-form">
+								<input type="text" class="uk-form-width-large" height="50">
+								<i class="sh-tello-icon sh-icon-search">&#xe800;</i>
+							</form>
+						</div>
+						<div class="uk-width-7-20 sh-user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>Warenkorb (0)</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>Merkliste</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>Mein Konto</div>
+								<div class="sh-login-menu">
+									<div class="sh-login-menu-title">Willkommen,</div>
+									Frau Tora von Collani
+									<hr class="uk-article-divider">
+									<div></div>
+									<div class="sh-login-menu-main-content">
+										<div class="sh-login-menu-title">
+											Direct links
+										</div>
+										<a>My orders</a><br/>
+										<a>My account</a><br/>
+										<a>My favorites</a>
+									</div>
+									<div id="sh-logout-button">Abmelden</div>
+								</div>
+							</span>
+						</div>						
+					</div>
+					
+					<!-- menu for mobile -->
+					<div id="sh-mobile-account">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-2-10">
+								<div><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+									<span>
+										<div class="sh-device-info-slider">
+											<label>Produktfamilie</label>
+											<hr class="uk-article-divider">
+											<label>Pflegeprodukte</label>
+											<hr class="uk-article-divider">
+											<label>Zubehör</label>
+											<hr class="uk-article-divider">
+											<label>Ersatzteile</label>
+											<hr class="uk-article-divider">
+											<label class="sh-menu-active">Service</label>
+										</div>	
+									</span>
+								</div>
+							</div>
+							<div class="uk-width-6-10 uk-right">
+								<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							</div>
+							<div class="uk-width-2-10">
+								<span id="sh-mobile-my-account">
+									<div><img src="images/account.png"></div>
+								</span>
+							</div>
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
+					</div>
+					<!-- end menu for mobile -->
+				</span>
+			</div>
+			
+			<!-- menu for big screen: desktop, tablet ... -->
+			<div id="sh-content-second">
+				<span class="sh-menu">
+					<ul class="sh-main-navigation">
+						<li>
+							<a href="">Produktfamilie</a>
+							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
+								<div class="uk-width-1-2">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-1-2">Spülen</div>
+										<div class="uk-width-1-2">Armaturen</div>
+										<div class="uk-width-1-2">Hauben</div>
+										<div class="uk-width-1-2">Kochfelder</div>
+										<div class="uk-width-1-2">Abfallsysteme</div>
+									</div>
+								</div>
+								<div class="uk-width-1-2">
+									<img src="images/image_menu.jpg">
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="clean_product.htm">Pflegeprodukte</a>
+						</li>
+						<li><a href="">Zubehör</a></li>
+						<li><a href="">Ersatzteile</a></li>
+						<li><a href="document.htm">Service</a></li>
+					</ul>
+				</span>
+			</div>
+			<!-- end menu for big screen: desktop, tablet ... -->
+			
+			<!-- main content for shopping cart -->
+			<div id="sh-content-main">
+				<div class="uk-divider-text">
+					<h2>Mein Warenkorb</h2>
+				</div>
+				
+				<div id="sh-shopping-cart-content">
+					<div class="sh-cart-header">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-medium-5-10">
+								<form class="uk-form">
+									Artikel hinzufügen: <input type="text" placeholder="Art. Nr." class="uk-form-small">
+									<span class="sh-button sh-cart-button">Hinzufügen</span>
+								</form>
+							</div>
+							<div class="uk-width-medium-5-10">
+								<span class="sh-button sh-cart-button sh-red-button sh-right">Secure checkout</span>
+							</div>
+						</div>
+					</div>
+					<div class="sh-cart-content">
+						<div class="sh-cart-content-header">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10">
+									Artikel
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									Art. Nr.
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									Menge
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									Preis
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									Gesamtpreis
+								</div>
+							</div>
+						</div>
+						
+						<div class="sh-cart-content-row">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-4-10">
+											<img src="images/1010014165.jpg"/>
+										</div>
+										<div class="uk-width-6-10">
+											Franke Twister 125ML<br/>
+											<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+											<div class="sh-cart-action">													
+												<span class="sh-remove-cart">
+													<i class="sh-tello-icon">&#xe808;</i><label>Entfernen</label>
+												</span>
+												<span class="bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">112.0048.584</label>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<form>
+										<input type="text" placeholder="" maxlength=3 onkeypress="showBtnUpdate();"><br/>
+										<span class="sh-button sh-cart-button sh-btn-cart-update">
+											<div class="arrow"></div>
+										</span>
+									</form>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">41,00 €</label>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">41,00 €</label>
+								</div>
+							</div>
+						</div>
+						
+						<div class="sh-cart-content-row">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-4-10">
+											<img src="images/1010014165.jpg"/>
+										</div>
+										<div class="uk-width-6-10">
+											Franke Twister 125ML<br/>
+											<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+											<div class="sh-cart-action">													
+												<span class="sh-remove-cart">
+													<i class="sh-tello-icon">&#xe808;</i><label>Entfernen</label>
+												</span>
+												<span class="bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">112.0048.584</label>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<form>
+										<input type="text" placeholder="" maxlength=3 onkeypress="showBtnUpdate();"><br/>
+										<span class="sh-button sh-cart-button sh-btn-cart-update">
+											<div class="arrow"></div>
+										</span>
+									</form>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">41,00 €</label>
+								</div>
+								<div class="uk-width-3-20 uk-text-center">
+									<label class="sh-cart-element-middle">41,00 €</label>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="sh-cart-summary">
+						<div class="sh-cart-summary-line">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20">Subtotal (incl. VAT):</div>
+								<div class="uk-width-3-20 uk-text-center"> 159,90 €</div>
+							</div>
+						</div>
+						<div class="sh-cart-summary-line">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20">Shipping:</div>
+								<div class="uk-width-3-20 uk-text-center"> 6,90 €</div>
+							</div>
+						</div>
+						<div class="sh-cart-summary-line">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-4-10"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20"></div>
+								<div class="uk-width-3-20">Total (incl. VAT):</div>
+								<div class="uk-width-3-20 uk-text-center"> 166,80 €</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="sh-cart-footer">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-5-10"><span class="sh-button sh-cart-button">Einkauf fortsetzen</span></div>
+							<div class="uk-width-5-10">
+								<span class="sh-button sh-cart-button sh-red-button sh-right">Secure checkout</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- start footer -->
+		<div id="sh-footer">
+			<div id="sh-footer-first-content">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-9-20">
+						<span class="sh-footer-box-header">Service und Unterstützen</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Kontaktieren Sie uns</a><br/>
+							<a href="#">FAQs</a><br/>
+							<a href="#">Garantie Informationen</a><br/>
+							<a href="#">Lieferinformationen</a><br/>
+							<a href="#">Lieferländer</a><br/>
+							<a href="#">Rückgabe & Ersatz</a>
+						</span>
+					</div>
+					<div class="uk-width-2-5">
+						<span class="sh-footer-box-header">
+							Mein Konto
+						</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Anmelden / Registrieren</a><br/>
+							<a href="#">Mein Bestellungen</a><br/>
+							<a href="#">Mein Favoriten</a>
+						</span>
+					</div>
+					<div class="uk-width-3-20">
+						<span class="sh-footer-box-header sh-right">Franke Group</span>
+						<span class="sh-footer-box-content sh-right">
+							<a href="#">Dealer Portal</a><br/>
+							<a href="#">Über uns</a><br/>
+							<a href="#">Corporate website</a><br/>
+							<a href="#">Impressum</a><br/>
+							<a href="#">Privacy Policy</a><br/>
+							<a href="#">Legal Notice</a>
+						</span>
+					</div>
+				</div>	
+			</div>
+			<div id="sh-footer-second-content">
+				<div class="sh-page-center">
+					<label>Copyright ©  2016 Franke Management AG</label>
+				</div>
+			</div>
+		</div>
+		<!-- end for footer -->
+		
+	</body>
+</html>

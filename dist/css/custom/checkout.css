@@ -1,0 +1,88 @@
+.checkout_title {
+	margin-top: 15px;
+    display: inline-block;
+    font-size: 20px;
+    /*font-weight: bold;*/
+	text-transform: uppercase
+}
+
+.checkout_header {
+	padding-top: 15px;
+	border-bottom: 1px solid #eaeaea;
+    padding-bottom: 25px;
+}
+
+.checkout_step , .payment_content_header, .payment_content {
+	border-bottom: 1px solid #eaeaea;
+	padding: 15px 0px 15px 30px;
+}
+
+.checkout_circle {
+	position: relative;
+	top: -3px;
+}
+
+/*** for payment ***/
+
+.payment_content_header {
+	height: 33px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.payment_content span {
+	display: block;
+    padding-top: 40px;
+}
+
+.payment_content span  input[type="radio"] {
+	margin-bottom: 50px;	
+}
+
+.payment_content span img {
+	margin-left: 10px;
+}
+
+.payment_info {
+	margin-top: 20px;
+}
+
+.payment_content_footer {
+	margin-top: 20px;
+}
+
+.payment_info_header {
+	display: flex;
+}
+
+.payment_info_header label:nth-of-type(1) {
+	margin-left: 10px;
+}
+
+.payment_info_header label:nth-of-type(2) {
+	cursor: pointer;
+    text-decoration: underline;
+}
+
+.payment_info_content {
+	margin-top: 20px;
+    line-height: 30px;
+}
+
+.payment_info_content u {
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+#mobile_payment {
+	display: none;
+}
+
+/*** checkout summary ***/
+.checkout_summary_content {
+	border-bottom: 1px solid #eaeaea;
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+

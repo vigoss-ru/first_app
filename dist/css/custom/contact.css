@@ -1,0 +1,117 @@
+/*** login form ***/
+.login_main_content {
+	margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+.login_main_content .login_title {
+	font-size: 20px;
+}
+
+.login_content input[type="text"] {
+	width: 220px;
+	border-color: #b6b7b7;
+	margin-top: 5px;
+}
+
+.login_content span {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.login_content div span {
+	width: 110px;
+}
+
+.login_content u {
+	font-size: 13px;
+    margin-top: 5px;
+    display: inline-block;
+    width: 220px;
+    text-align: right;
+}
+
+.login_content u:hover {
+	cursor: pointer;
+	color: #dc281e;
+}
+
+.login_content div {
+	width: 220px;
+}
+
+.login_right_content {
+	float: right;
+}
+
+.login_right_content .login_content span label {
+	line-height: 35px;
+}
+
+.login_right_content .login_content span label:nth-of-type(2){
+	margin-top: 14px;
+	display: block;
+}
+
+.login_right_content span  i {
+	margin-right: 10px;
+}
+
+.user-list-info span:hover .login_menu {
+	visibility: visible;
+}
+
+.login_menu:hover {
+	display: block;
+}
+
+.icon-angle-down {
+	margin-right: 5px;
+}
+
+.login_menu {
+	visibility: hidden;
+	position: absolute;
+    background: #fff;    
+    width: 250px;
+    
+	padding: 15px;
+    -webkit-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    -moz-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    border-radius: 0 0 2px 2px;
+    z-index: 1000;
+    border: 1px solid #fafafa;    
+    text-align: left;
+}
+
+.big_login_btn {
+	font-size: 15px;
+	margin: 0px;
+}
+
+.user-list-info .login_menu {
+	font-size: 13px;
+}
+
+.user-list-info span .login_menu div:nth-of-type(1) {
+	margin-bottom: 10px;
+}
+
+.login_menu_title {
+	color: #dc281e;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login_menu_main_content {
+	line-height: 28px;
+}
+
+.login_menu a:hover {
+	text-decoration: none;
+    color: #dc281e;
+}
+/*** end login form ***/

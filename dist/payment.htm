@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/checkout.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/article.css">
+		<link rel="stylesheet" href="css/custom/contact.css">
+		<script src="vendor/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>
+	
+	<body>
+		<div id="page-wrap">
+		<!-- Checkout header -->
+			<div class="checkout_header">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+					<div class="uk-width-8-10 uk-text-right">
+						<label class="checkout_title">Sicherheit Kasse</label>
+					</div>
+				</div>
+			</div>
+			<!-- Checkout step -->
+			<div class="checkout_step">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-1-4">
+						<div class="circle checkout_circle"><label>1</label></div>
+						Anmelden
+					</div>
+					<div class="uk-width-1-4">
+						<div class="circle checkout_circle"><label>2</label></div>
+						Adresse
+					</div>
+					<div class="uk-width-1-4">
+						<div class="circle checkout_circle circle_active"><label>3</label></div>
+						Zahlung
+					</div>
+					<div class="uk-width-1-4">
+						<div class="circle checkout_circle"><label>4</label></div>
+						Bestellübersicht
+					</div>
+				</div>
+			</div>
+			
+			<div class="uk-grid" data-uk-grid-match id="desktop_payment">
+				<div class="uk-width-7-10">
+					<div class="payment_content_header">
+						<div class="button modified_button red_button right">Weiter Einkaufen</div>
+					</div>
+					<div class="payment_content">
+						<label class="font_bold">Wählen Sie die Zahlungsmethode</label>
+						<span>
+							<form>
+								<input type="radio" name="gender" value="male"> <img src="images/visa-icon.gif">  <img src="images/master-icon.gif"> <br>
+								<input type="radio" name="gender" value="female"> <img src="images/paypal.png"><br>
+								<input type="radio" name="gender" value="other"> <img src="images/vorkasse-icon.png">
+							</form>
+						</span>
+					</div>
+					<div class="payment_content_footer">
+						<div class="button modified_button red_button right">Weiter Einkaufen</div>
+					</div>
+				</div>
+				<div class="uk-width-3-10">
+					<div class="payment_info">
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="payment_info_header">
+								<div class="font_bold">Mein Warenkorb</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="payment_info_content">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-5-10">
+										Menge
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										5
+									</div>
+									<div class="uk-width-5-10">
+										Subtotal
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										268,90 €
+									</div><div class="uk-width-5-10">
+										Shipping
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										6,90 €
+									</div>
+									<div class="uk-width-5-10">
+										Total incl. VAT
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										275,80 €
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="payment_info_header">
+								<div class="font_bold">Mein Kontakt</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="payment_info_content">
+								Hong Quang Nguyen<br/>
+								Email:  hong.quang@sharis.de<br/>
+								Tel: 015227788548
+							</div>
+						</div>
+						
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="payment_info_header">
+								<div class="font_bold">Mein Addresse</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="payment_info_content">
+								<div class="payment_delivery_address">
+									<b>Lieferadresse</b><br/>
+									Sharis GmbH<br/>
+									Max str.3a<br/>
+									13347 Berlin<br/>
+								</div>
+								<hr class="uk-article-divider">
+								<div class="payment_contract_address">
+									<b>Rechnungsadresse</b><br/>
+									Identisch mit Lieferadresse
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="mobile_payment">
+				<div class="payment_content_header">
+					<div class="button modified_button red_button right">Weiter Einkaufen</div>
+				</div>
+				<div class="payment_content">
+					<label class="font_bold">Wählen Sie die Zahlungsmethode</label>
+					<span>
+						<form>
+							<input type="radio" name="gender" value="male"> <img src="images/visa-icon.gif">  <img src="images/master-icon.gif"> <br>
+							<input type="radio" name="gender" value="female"> <img src="images/paypal.png"><br>
+							<input type="radio" name="gender" value="other"> <img src="images/vorkasse-icon.png">
+						</form>
+					</span>
+				</div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Warenkorb</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-5-10">
+									Menge
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									5
+								</div>
+								<div class="uk-width-5-10">
+									Subtotal
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									268,90 €
+								</div><div class="uk-width-5-10">
+									Shipping
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									6,90 €
+								</div>
+								<div class="uk-width-5-10">
+									Total incl. VAT
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									275,80 €
+								</div>
+								<u>ändern</u>
+							</div>
+						</div>
+					</div>
+                </div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Kontakt</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							Hong Quang Nguyen<br/>
+							Email:  hong.quang@sharis.de<br/>
+							Tel: 015227788548<br/>
+							<u>ändern</u>
+						</div>		
+					</div>
+				</div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Adresse</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							<div class="payment_delivery_address">
+								<b>Lieferadresse</b><br/>
+								Sharis GmbH<br/>
+								Max str.3a<br/>
+								13347 Berlin<br/>
+							</div>
+							<hr class="uk-article-divider">
+							<div class="payment_contract_address">
+								<b>Rechnungsadresse</b><br/>
+								Identisch mit Lieferadresse
+							</div>
+							<hr class="uk-article-divider uk-divider-custom">
+							<u>ändern</u>
+						</div>		
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</body>
+</html>

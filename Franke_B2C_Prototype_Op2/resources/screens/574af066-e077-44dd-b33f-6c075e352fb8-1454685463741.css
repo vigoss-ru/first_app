@@ -1,0 +1,30 @@
+#s-574af066-e077-44dd-b33f-6c075e352fb8 > #backgroundBox {
+  background-color: transparent;
+  background-image: none;
+  position: absolute;
+}
+#s-574af066-e077-44dd-b33f-6c075e352fb8 > #alignmentBox {
+  position: relative;
+  margin: 0 auto;
+  width: 1920px;
+  min-width: 1920px;
+  min-height: 1080px;
+}
+#s-574af066-e077-44dd-b33f-6c075e352fb8 #s-Master_item_1 div.offset {
+  position: relative;
+  top: -57px;
+  left: -1256px;
+}
+#s-574af066-e077-44dd-b33f-6c075e352fb8 #s-Master_item_1 {
+  position: absolute;
+  top: 127px;
+  left: 490px;
+  width: 310px;
+  height: 333px;
+  overflow: visible;
+}
+#s-574af066-e077-44dd-b33f-6c075e352fb8 > #loadMark {
+  width: 1px;
+  visibility: hidden;
+  display: none;
+}

@@ -85,6 +85,21 @@ and (max-width: 1500px) {
 		width: 78%;
 		margin: 0 auto;
 	}
+	
+	.user-list-info span {
+		margin-left: 20px;
+	}
+}
+
+@media only screen
+and (max-width: 1489px) {
+	#cart_action_mobil {
+		display: inline-block;
+	}
+	
+	#cart_action {
+		display: none;
+	}
 }
 
 @media only screen 
@@ -113,6 +128,22 @@ and (max-width: 948px) {
 		display: inline-block;
 		margin-left: 13px;
 		font-size: 9px;
+	}
+}
+
+@media only screen 
+and (min-width: 865px)
+and (max-width: 1020px) {
+	.accountHeader .uk-form input[type="text"] {
+		width: 350px;
+	}
+}
+
+@media only screen 
+and (min-width: 805px)
+and (max-width: 864px) {
+	.accountHeader .uk-form input[type="text"] {
+		width: 300px;
 	}
 }
 
@@ -162,6 +193,19 @@ and (max-width: 767px) {
 }
 
 @media only screen
+and (max-width: 971px) {
+	#desktop_checkout_summary {
+		display: none;
+	}
+	#mobile_checkout_summary {
+		display: block;
+	}	
+	.payment_info_content {
+		margin-top: 0px;
+	}	
+}
+
+@media only screen
 and (max-width: 667px) { 
 	.page-center, #page-wrap, .footer_content {
 		width: 90%;
@@ -187,6 +231,18 @@ and (max-width: 667px) {
 	
 	#mobileAccount a:nth-child(2) img {
 		float: right;
+	}
+
+	/* payment page */	
+	#desktop_payment {
+		display: none;
+	}
+	
+	#mobile_payment {
+		display: block;
+	}
+	.payment_info_content {
+		margin-top: 0px;
 	}	
 }
 

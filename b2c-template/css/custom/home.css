@@ -1,0 +1,22 @@
+
+.sh-list-module {
+	margin-top: 50px;	
+}
+
+.sh-list-module .uk-grid  span {
+	background-color: white;
+	margin-bottom: 25px
+}
+
+.sh-list-module .uk-grid  span  hr {
+	margin-bottom: 15px;
+}
+
+.sh-list-module .uk-grid  span  img {
+	margin: 0 auto;
+    display: block;
+}
+
+.sh-list-module .uk-grid  span  div {
+	text-align: center;
+}

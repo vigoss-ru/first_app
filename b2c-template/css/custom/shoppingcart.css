@@ -1,0 +1,119 @@
+
+.sh-cart-header input[type="text"]{
+	margin-left: 8px;
+	height: 27px;
+    padding-left: 10px;
+}
+
+.sh-cart-button {
+	margin-right: 0px;
+    padding: 4px 7px 5px 7px;
+    text-align: center;
+    cursor: pointer;	
+}
+
+.sh-cart-content, #sh-shopping-cart-content  {
+	margin-top: 30px;
+}
+
+.sh-cart-content-header {
+	background: #f5f5f5;
+	padding: 10px 0 10px 15px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #b6b7b7;
+}
+
+.sh-cart-content-row {
+	padding: 20px 0 20px 8px;
+	border-bottom: 1px solid;
+    border-color: #b6b7b7;
+}
+
+.sh-cart-small-title {
+	font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.sh-cart-action .bookmark {
+	margin-top: 0px;
+}
+
+.sh-cart-action {
+	display: inline-block;
+    margin-top: 20px;
+	font-size: 12px;
+}
+
+.sh-remove-cart {
+	margin-right: 50px;
+}
+
+.sh-remove-cart:hover, .sh-cart-action .bookmark:hover {
+	color: #DC281E;
+	cursor: pointer;
+}
+
+.sh-remove-cart i, .sh-cart-action .bookmark i {
+	font-size: 16px;
+}
+
+.sh-remove-cart label, .sh-cart-action .bookmark label {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.sh-cart-content-row input[type="text"] {
+	width: 35px;
+    height: 25px;
+    text-align: center;
+    margin-left: 8px;
+	margin-top: 32px;
+}
+
+.sh-cart-element-middle {
+	margin-top: 40px;
+    display: inline-block;
+}
+
+.sh-cart-summary {
+	background: #f5f5f5;
+	padding: 10px 0 10px 15px;    
+    border-bottom: 1px solid;
+    border-color: #b6b7b7;
+	margin-bottom: 10px;
+}
+
+.sh-cart-summary div span:nth-of-type(1) {
+	width: 85%;
+    display: inline-block;    
+    margin-right: 72px;
+}
+
+.sh-cart-summary-line {
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sh-cart-footer {
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sh-btn-cart-update {
+	float: left;
+    left: 35%;
+    position: relative;
+    width: 21px;
+    height: 15px;
+    top: 10px;
+	display: none;
+}
+
+.sh-btn-cart-update .arrow {
+	background: url("../../images/arrow-icon.png") no-repeat scroll 3px 6px transparent;
+	height: 20px;
+    position: relative;
+    top: -4px;
+}

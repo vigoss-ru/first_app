@@ -1,0 +1,102 @@
+{
+  "comments": [
+    {
+      "canvasID": "",
+      "elementID": "",
+      "canvasURL": "",
+      "author": "Suyin",
+      "authorID" : 0,
+      "code": 1,
+      "parentCode": null,
+      "content": "Filters like the one used by Zalando:",
+      "timestamp": "1450281778709",
+      "date": "16-Dec-2015 17:02",
+      "fileName": "75626e2c-c875-4f26-a375-cd194426bfe1.png",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "s-dcf97696-fc7a-4e52-afda-be1b12dab0e2",
+      "elementID": "s-Panel_6",
+      "canvasURL": "screens/dcf97696-fc7a-4e52-afda-be1b12dab0e2",
+      "author": "Suyin",
+      "authorID" : 0,
+      "code": 2,
+      "parentCode": null,
+      "content": "Accordions from UIKit (animated)",
+      "timestamp": "1450281938149",
+      "date": "16-Dec-2015 17:05",
+      "fileName": "7865fd02-a777-4b53-9699-a16a8ddb91ae.png",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "",
+      "elementID": "",
+      "canvasURL": "",
+      "author": "Suyin",
+      "authorID" : 0,
+      "code": 3,
+      "parentCode": null,
+      "content": "filters like Zalando",
+      "timestamp": "1450349865388",
+      "date": "17-Dec-2015 11:57",
+      "fileName": "05f1d9b3-69b1-4975-892a-6950c5d1fc1b.png",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "s-dcf97696-fc7a-4e52-afda-be1b12dab0e2",
+      "elementID": "s-Panel_15",
+      "canvasURL": "screens/dcf97696-fc7a-4e52-afda-be1b12dab0e2",
+      "author": "Suyin",
+      "authorID" : 0,
+      "code": 4,
+      "parentCode": null,
+      "content": "Per default 7 options shown. \n\nFilters like Hornbach.de",
+      "timestamp": "1450365042442",
+      "date": "17-Dec-2015 16:10",
+      "fileName": "92c202e5-3410-4272-a66a-f460d97d8d0a.png",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "s-c31b8ba0-2e52-4516-9df9-1e08e6ab5c5e",
+      "elementID": "s-Panel_17",
+      "canvasURL": "screens/c31b8ba0-2e52-4516-9df9-1e08e6ab5c5e",
+      "author": "suyin",
+      "authorID" : 0,
+      "code": 5,
+      "parentCode": null,
+      "content": "The zoom function should be like the one used in spare part shop of Hansgrobe: https://spares.hansgrohe.co.uk/etk/UK/product/04066001/8802748051299.seam?fsid=0x00007721&lang=en_GB&wcms=UK",
+      "timestamp": "1454316430085",
+      "date": "01-Feb-2016 09:47",
+      "fileName": "",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "s-c31b8ba0-2e52-4516-9df9-1e08e6ab5c5e",
+      "elementID": "s-Panel_13",
+      "canvasURL": "screens/c31b8ba0-2e52-4516-9df9-1e08e6ab5c5e",
+      "author": "suyin",
+      "authorID" : 0,
+      "code": 7,
+      "parentCode": null,
+      "content": "the grid view does not include the explosion drawing (same as the one used in other tabs).\nFor articles without explosion drawing, the list view is like the one used in the other tabs",
+      "timestamp": "1454316681546",
+      "date": "01-Feb-2016 09:51",
+      "fileName": "",
+      "isRead": true
+    }
+    ,{
+      "canvasID": "s-37d20dc8-1882-4085-83c2-955114b26ea4",
+      "elementID": "s-Rectangle_3",
+      "canvasURL": "screens/37d20dc8-1882-4085-83c2-955114b26ea4",
+      "author": "Suyin",
+      "authorID" : 0,
+      "code": 8,
+      "parentCode": null,
+      "content": "in Franke Kitchen B2C sind keine Teillieferungen erlaubt. Das heißt,\ndass Teillieferung-Notifikation auf der Order Summary Seite nicht benötigen sind. (Achtung! Wird in B2B weiterhin benötigt)",
+      "timestamp": "1454503444246",
+      "date": "03-Feb-2016 13:44",
+      "fileName": "",
+      "isRead": true
+    }
+  ]
+}

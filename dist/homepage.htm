@@ -5,7 +5,9 @@
 		<!-- basic components -->
 		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
 		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/article.css">
 		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/contact.css">
 		<script src="vendor/jquery.js"></script>
         <script src="js/uikit.min.js"></script>
 		<!-- accordion components-->
@@ -32,9 +34,15 @@
 		<div class="selling-points">
 			<div class="page-center">
 				<div class="uk-grid" data-uk-grid-match>
-					<div class="uk-width-3-10">DEUTSCHLAND<a class="lnk_1">Kitchen Systems</a></div>
-					<div class="uk-width-3-10 uk-text-center"><span class="franke_world">FRANKE WELWEIT</span></div>
-					<div class="uk-width-4-10 uk-text-right"><span class="login_button">HÄNDLER LOGIN</span>SPRACHE WECHSELN</div>
+					<div class="uk-width-2-10">Kitchen Systems</div>
+					<div class="uk-width-8-10">
+						<div class="right">
+							<span>Contact</span>
+							<span>Dealer Search</span>
+							<span>Franke Group</span>
+							<span><i class="tello-icon icon-angle-down">&#xe802;</i>Deutsch</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -45,32 +53,46 @@
 				<span class="accountHeader">
 					<div id="normalAccountHead" class="uk-grid" data-uk-grid-match>
 						<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
-						<div class="uk-width-4-10">
+						<div class="uk-width-9-20">
 							<form class="uk-form">
-								<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
-								<!--<img src="images/icons-05.png"/>-->
-								<!--<button class="uk-button uk-button-large" type="button">Find Product</button>-->
+								<input type="text" class="uk-form-width-large" height="50">
+								<i class="tello-icon icon-search">&#xe800;</i>
 							</form>
 						</div>
-						<div class="uk-width-4-10 user-list-info">
+						<div class="uk-width-7-20 user-list-info">
+							
 							<span>
 								<div><img src="images/cart.png"></div>
-								<div>WARENKORB</div>
+								<div>Warenkorb (0)</div>
 							</span>
 							
 							<span>
 								<div><img src="images/favorite.png"></div>
-								<div>MERKLISTE</div>
+								<div>Merkliste</div>
 							</span>
 							
 							<span>
 								<div><img src="images/account.png"></div>
-								<div>MEIN KONTO</div>
+								<div>Anmelden</div>
+								<div class="login_menu">
+									<div class="button modified_button red_button normal_button big_login_btn">Anmelden</div>
+									New here? <u>Register now</u>
+									<hr class="uk-article-divider">
+									<div></div>
+									<div class="login_menu_main_content">
+										<div class="login_menu_title">
+											Direct links
+										</div>
+										<a>My orders</a><br/>
+										<a>My account</a><br/>
+										<a>My favorites</a>
+									</div>
+								</div>
 							</span>
-						</div>
-						
+						</div>						
 					</div>
 					
+					<!-- menu for mobile -->
 					<div id="mobileAccount">
 						<div class="uk-grid" data-uk-grid-match>
 							<div class="uk-width-2-10">
@@ -85,7 +107,7 @@
 											<hr class="uk-article-divider">
 											<label>Ersatzteile</label>
 											<hr class="uk-article-divider">
-											<label>Service</label>
+											<label class="menu_active">Service</label>
 										</div>	
 									</span>
 								</div>
@@ -103,6 +125,7 @@
 							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
 						</form>
 					</div>
+					<!-- end menu for mobile -->
 				</span>
 			</div>
 			
@@ -235,8 +258,7 @@
 					</div>
 				</div>	
 			</div>
-		</div>		
-		
+		</div>
 	</body>
 	
 </html>

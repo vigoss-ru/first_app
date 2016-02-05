@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/checkout.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+	</head>
+	
+	<body>
+		<div id="sh-page-wrap">
+			<!-- Checkout header -->
+			<div class="sh-checkout-header">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+					<div class="uk-width-8-10 uk-text-right">
+						<label class="sh-checkout-title">Sicherheit Kasse</label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Checkout step -->
+			<div class="sh-checkout-step">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-1-4">
+						<div class="sh-circle sh-checkout-circle"><label>1</label></div>
+						Anmelden
+					</div>
+					<div class="uk-width-1-4">
+						<div class="sh-circle sh-checkout-circle"><label>2</label></div>
+						Adresse
+					</div>
+					<div class="uk-width-1-4">
+						<div class="sh-circle sh-checkout-circle"><label>3</label></div>
+						Zahlung
+					</div>
+					<div class="uk-width-1-4">
+						<div class="sh-circle sh-checkout-circle sh-circle-active"><label>4</label></div>
+						Bestellübersicht
+					</div>
+				</div>
+			</div>
+			
+			<!-- checkout content -->
+			
+			<div class="sh-checkout-partial-headline">
+				<i class="sh-tello-icon">&#xe812;</i>
+				<label>Article out of production</label><br/>
+				<label>We are sorry, but the following articles are out of production and have been removed from your shopping cart:</label><br/>
+				<label>- Abdeckring Chrom Rotondo / Pio (133.0274.129)</label>
+			</div>
+			
+			<div class="sh-checkout-headline">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-1-2">
+						<h2>Bestellübersicht</h2>
+					</div>
+					<div class="uk-width-1-2">
+						<span class="sh-button sh-checkout-button sh-red-button sh-right">Jetzt kaufen</span>
+					</div>
+				</div>
+			</div>
+					
+			<div class="uk-grid" data-uk-grid-match id="sh-desktop-checkout-summary">			
+				<div class="uk-width-3-10">
+					<div class="sh-payment-info">
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="sh-payment-info-header">
+								<div class="sh-font-bold">Mein Warenkorb</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="sh-payment-info-content">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-5-10">
+										Menge
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										5
+									</div>
+									<div class="uk-width-5-10">
+										Subtotal
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										268,90 €
+									</div><div class="uk-width-5-10">
+										Shipping
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										6,90 €
+									</div>
+									<div class="uk-width-5-10">
+										Total incl. VAT
+									</div>
+									<div class="uk-width-5-10 uk-text-right">
+										275,80 €
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="sh-payment-info-header">
+								<div class="sh-font-bold">Mein Kontakt</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="sh-payment-info-content">
+								Hong Quang Nguyen<br/>
+								Email:  hong.quang@sharis.de<br/>
+								Tel: 015227788548
+							</div>
+						</div>
+						
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="sh-payment-info-header">
+								<div class="sh-font-bold">Mein Addresse</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="sh-payment-info-content">
+								<div class="sh-payment-delivery-address">
+									<b>Lieferadresse</b><br/>
+									Sharis GmbH<br/>
+									Max str.3a<br/>
+									13347 Berlin<br/>
+								</div>
+								<hr class="uk-article-divider">
+								<div class="sh-payment-contract-address">
+									<b>Rechnungsadresse</b><br/>
+									Identisch mit Lieferadresse
+								</div>
+							</div>
+						</div>
+						
+						<div class="uk-panel uk-panel-box uk-custom-box">
+							<div class="sh-payment-info-header">
+								<div class="sh-font-bold">Meine Zahlungsinfo</div> <label>(</label><label>ändern</label>)
+							</div>
+							<div class="sh-payment-info-content">
+								<div class="sh-payment-delivery-address">
+									<img src="images/paypal.png">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+				<div class="uk-width-7-10">
+					
+					<div class="sh-checkout-summary-content">
+						
+						
+						<div id="sh-checkout-content">
+							<div class="sh-checkout-main">
+								<div class="sh-cart-checkout-header">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-9-20">
+											Artikel
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											Art. Nr.
+										</div>
+										<div class="uk-width-1-10 uk-text-center">
+											Menge
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											Preis
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											Gesamtpreis
+										</div>
+									</div>
+								</div>
+								
+								<div class="sh-cart-content-row">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-9-20">
+											<div class="uk-grid" data-uk-grid-match>
+												<div class="uk-width-4-10">
+													<img src="images/1010014165.jpg"/>
+												</div>
+												<div class="uk-width-6-10">
+													Franke Twister 125ML<br/>
+													<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+												</div>
+											</div>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">112.0048.584</label>
+										</div>
+										<div class="uk-width-1-10 uk-text-center">
+											<label class="sh-cart-element-middle">1</label>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">41,00 €</label>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">41,00 €</label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="sh-cart-content-row">
+									<div class="sh-checkout-partial">
+										<i class="sh-tello-icon">&#xe812;</i>
+										<label>This article has partial deliveries. <a>Click here to check the estimated delivery dates</a></label>
+									</div>
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-9-20">
+											<div class="uk-grid" data-uk-grid-match>
+												<div class="uk-width-4-10">
+													<img src="images/1010014165.jpg"/>
+												</div>
+												<div class="uk-width-6-10">
+													Franke Twister 125ML<br/>
+													<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+												</div>
+											</div>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">112.0048.584</label>
+										</div>
+										<div class="uk-width-1-10 uk-text-center">
+											<label class="sh-cart-element-middle">1</label>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">41,00 €</label>
+										</div>
+										<div class="uk-width-3-20 uk-text-center">
+											<label class="sh-cart-element-middle">41,00 €</label>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							<div id="sh-checkout-summary">
+								<div class="sh-checkout-summary-line">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-3-5"></div>
+										<div class="uk-width-1-4">Subtotal (incl. VAT):</div>
+										<div class="uk-width-3-20 uk-text-center"> 159,90 €</div>
+									</div>
+								</div>
+								<div class="sh-checkout-summary-line">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-3-5"></div>
+										<div class="uk-width-1-4">Shipping:</div>
+										<div class="uk-width-3-20 uk-text-center cart_ship_price"> 6,90 €</div>
+									</div>
+								</div>
+								<div class="sh-checkout-summary-line">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-3-5"></div>
+										<div class="uk-width-1-4"><b>Total (incl. VAT):</b></div>
+										<div class="uk-width-3-20 uk-text-center"> <b>166,80 € </b></div>
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="sh-payment-content-footer">
+						<div class="sh-button sh-checkout-button sh-red-button sh-right">Jetzt kaufen</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- checkout mobile -->	
+			<div id="sh-mobile-checkout-summary">
+				<div class="sh-payment-content-header">
+					<div class="sh-button sh-checkout-button sh-red-button sh-right">Jetzt kaufen</div>
+				</div>
+				<div class="sh-checkout-summary-content">
+					<h2>Bestellübersicht</h2>
+					
+					<div id="sh-checkout-content">
+						<div class="sh-checkout-main">
+							<div class="sh-cart-checkout-header">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-9-20">
+										Artikel
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										Art. Nr.
+									</div>
+									<div class="uk-width-1-10 uk-text-center">
+										Menge
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										Preis
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										Gesamtpreis
+									</div>
+								</div>
+							</div>
+							
+							<div class="sh-cart-content-row">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-9-20">
+										<div class="uk-grid" data-uk-grid-match>
+											<div class="uk-width-4-10">
+												<img src="images/1010014165.jpg"/>
+											</div>
+											<div class="uk-width-6-10">
+												Franke Twister 125ML<br/>
+												<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">112.0048.584</label>
+									</div>
+									<div class="uk-width-1-10 uk-text-center">
+										<label class="sh-cart-element-middle">1</label>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">41,00 €</label>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">41,00 €</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="sh-cart-content-row">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-9-20">
+										<div class="uk-grid" data-uk-grid-match>
+											<div class="uk-width-4-10">
+												<img src="images/1010014165.jpg"/>
+											</div>
+											<div class="uk-width-6-10">
+												Franke Twister 125ML<br/>
+												<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">112.0048.584</label>
+									</div>
+									<div class="uk-width-1-10 uk-text-center">
+										<label class="sh-cart-element-middle">1</label>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">41,00 €</label>
+									</div>
+									<div class="uk-width-3-20 uk-text-center">
+										<label class="sh-cart-element-middle">41,00 €</label>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div id="sh-checkout-summary">
+							<div class="sh-checkout-summary-line">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-5"></div>
+									<div class="uk-width-1-4">Subtotal (incl. VAT):</div>
+									<div class="uk-width-3-20 uk-text-center"> 159,90 €</div>
+								</div>
+							</div>
+							<div class="sh-checkout-summary-line">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-5"></div>
+									<div class="uk-width-1-4">Shipping:</div>
+									<div class="uk-width-3-20 uk-text-center cart_ship_price"> 6,90 €</div>
+								</div>
+							</div>
+							<div class="sh-checkout-summary-line">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-5"></div>
+									<div class="uk-width-1-4"><b>Total (incl. VAT):</b></div>
+									<div class="uk-width-3-20 uk-text-center"> <b>166,80 € </b></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Warenkorb</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-5-10">
+									Menge
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									5
+								</div>
+								<div class="uk-width-5-10">
+									Subtotal
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									268,90 €
+								</div><div class="uk-width-5-10">
+									Shipping
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									6,90 €
+								</div>
+								<div class="uk-width-5-10">
+									Total incl. VAT
+								</div>
+								<div class="uk-width-5-10 uk-text-right">
+									275,80 €
+								</div>
+								<u>ändern</u>
+							</div>
+						</div>
+					</div>
+                </div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Kontakt</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							Hong Quang Nguyen<br/>
+							Email:  hong.quang@sharis.de<br/>
+							Tel: 015227788548<br/>
+							<u>ändern</u>
+						</div>		
+					</div>
+				</div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Mein Adresse</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							<div class="payment_delivery_address">
+								<b>Lieferadresse</b><br/>
+								Sharis GmbH<br/>
+								Max str.3a<br/>
+								13347 Berlin<br/>
+							</div>
+							<hr class="uk-article-divider">
+							<div class="payment_contract_address">
+								<b>Rechnungsadresse</b><br/>
+								Identisch mit Lieferadresse
+							</div>
+							<hr class="uk-article-divider uk-divider-custom">
+							<u>ändern</u>
+						</div>		
+					</div>
+				</div>
+				
+				<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+					<h3 class="uk-accordion-title uk-accordion-title-custom">Meine Zahlungsinfo</h3>
+					<div class="uk-accordion-content uk-accordion-content-custom">
+						<div class="payment_info_content">
+							<img src="images/paypal.png"><br><br>
+							<u>ändern</u>
+						</div>		
+					</div>
+				</div>
+			</div>
+			
+			<div id="sh-checkout-footer">
+				<label>
+					When you click the "Pay now" button, you will be redirected to the page of our payment service provider, where you will be requested to enter your payment information. We will then send you an email acknowledging the receipt of your order. 
+				</label><br/><br/>
+				<label>With your order at Franke Online Shop you agree to our Privacy Policy and Terms and Conditions.</label><br/><br/>
+				<label>You can return any product to us in its original condition within 20 days from the date you've received it. This guarantee applies in addition to your statutory right to cancel your order within two weeks of the date you received the item pursuant to the German Civil Code. For further information, see our Return Policy. You can print your order information and our terms and conditions and file them for your documentation. You can access the order information in the "My Account" section.</label>
+			</div>
+			
+		</div>
+		
+		
+		
+	</body>
+</html>

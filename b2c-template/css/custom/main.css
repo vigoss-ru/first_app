@@ -1,0 +1,438 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+/** css attributes for upper header **/
+#sh-header, #sh-footer-second-content {
+	background: #f1f1f1;
+    color: #000000;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#sh-header  .sh-page-center span {
+	margin-left: 60px;
+}
+
+#sh-header select {
+	border: none;
+    background: transparent;
+}
+
+#sh-header select:focus {
+	border-color: #dc281e;
+	outline: 0;
+	background: #f5fbfe;
+	color: #444;
+}
+
+.uk-divider-text h2 {
+    border-bottom: 1px solid;
+    border-color: #eaeaea;
+    padding: 0px 5px 3px 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/** css attributes my account, search, logo **/
+.sh-page-center, #sh-page-wrap, #sh-footer-first-content {
+	width: 1200px;
+    margin: 0 auto;
+}
+
+.sh-account-header  {
+	margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sh-account-header .uk-form  input[type="text"] {
+	width: 420px;
+    height: 35px;
+    margin-top: 6px;
+}
+
+.sh-icon-search {
+	position: relative;
+    left: -30px;
+    font-size: 16px;
+	top: 4px;
+}
+
+.sh-user-list-info span {
+	display: inline-block;
+	margin-left: 65px;
+	font-size: 12px;
+	float: right;
+}
+
+.sh-user-list-info span div:nth-of-type(1):hover, .sh-user-list-info span div:nth-of-type(2):hover {
+	cursor: pointer;
+	color: #dc281e;
+}
+
+.sh-user-list-info span  div:nth-of-type(1){
+	margin-bottom: 8px;
+}
+
+.sh-user-list-info span  div img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uk-width-4-10 span div {
+	text-align: center;	
+}
+
+/** css class for form login hover **/
+.sh-login-menu {
+	visibility: hidden;
+	position: absolute;
+    background: #fff;    
+    width: 250px;    
+	padding: 15px;
+    -webkit-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    -moz-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    border-radius: 0 0 2px 2px;
+    z-index: 1000;
+    border: 1px solid #fafafa;    
+    text-align: left;
+}
+
+.sh-user-list-info .sh-login-menu {
+	font-size: 13px;
+}
+
+.sh-user-list-info span .sh-login-menu div:nth-of-type(1) {
+	margin-bottom: 10px;
+}
+
+.sh-login-menu-title {
+	color: #dc281e;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sh-login-menu-main-content {
+	line-height: 28px;
+}
+
+#sh-logout-button {
+	padding: 10px;
+    text-align: center;    
+    border: 1px solid;
+    margin-top: 25px;
+    margin-bottom: 5px;
+	cursor: pointer;
+	background-color: #DC281E;
+	color: #fff;	
+}
+
+.sh-login-menu a:hover {
+	text-decoration: none;
+    color: #dc281e;
+}
+
+.sh-user-list-info span:hover .sh-login-menu {
+	visibility: visible;
+}
+
+/** css class menu **/
+.sh-menu {
+	margin-top: 20px;
+    display: block;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.sh-menu .sh-main-navigation {
+	font-size: 0;
+    line-height: 0;    
+    text-align: justify;    
+    position: relative;    
+    display: inline;
+}
+
+.sh-menu .sh-main-navigation  img {
+	height: 225px;
+    padding: 3px;
+}
+
+.sh-menu ul li {
+	display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 0.8px;
+	line-height: 50px;
+    font-size: 14px;
+	width: 19%;
+	text-align: center;
+}
+.sh-menu a {
+	color: black;
+}
+
+.sh-menu .sh-menu-active{
+	color: #e13b3f;
+}
+
+.uk-menu-hover {
+	visibility: hidden;
+	position: absolute;
+    background: #fff;    
+    height: auto;
+    width:700px;
+    left:65px;   
+	top: 25px;	
+	-webkit-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    -moz-box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    border-radius: 0 0 2px 2px;
+    z-index: 1000;
+	border: 1px solid #fafafa;
+	border-top: 5px solid #E13B3F;
+	text-align: left;
+}
+
+.uk-menu-hover img {
+	float: right;
+}
+
+.sh-main-navigation li a:hover {
+	color:#E13B3F;
+	text-decoration: none;
+}
+
+.sh-main-navigation li:hover .uk-menu-hover {
+	visibility: visible;	
+}
+
+#sh-content-main {
+	margin-top: 20px;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/***For footer***/
+
+#sh-footer {
+	font-family: Tahoma,Geneva,Arial,Helvetica,sans-serif;
+	background: #878787;
+	margin-top: 50px;
+	color: #fff;
+}
+#sh-footer-first-content {
+	padding-top: 30px;
+    padding-bottom: 30px;
+	
+}
+#sh-footer-first-content .sh-footer-box-header {	
+    display: block;
+    font-size: 15px;
+	font-weight: bold;
+}
+#sh-footer-first-content .sh-footer-box-content {
+	margin-top: 20px;
+    display: block;
+    font-size: 13px;
+    line-height: 30px;	
+}
+
+#sh-footer-first-content .sh-footer-box-content a {
+	color: #fff;
+}
+
+.small-line-height {
+	line-height: 22px;
+}
+
+.sh-footer-box-content img {
+	width: 60px;
+	height: 50px;
+}
+
+#sh-footer-second-content label {
+	text-align: center;
+	display: block;
+}
+
+/*** common css attribute***/
+.sh-vertical-top {
+	vertical-align: top;
+}
+
+.sh-inline-block {
+	display: block;
+}
+
+.sh-left {
+	float: left;
+}
+
+.sh-right {
+	float: right;
+}
+
+.sh-vertical-text {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    transform-origin: center center 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    height: 38px;
+    line-height: 38px;
+    width: 40px;
+    position: relative;
+    top: 35px;
+}
+
+.sh-circle {
+	width: 25px;
+    height: 25px;
+    background: #fff;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: 1px solid #9C9C9C;
+	font-size: 16px;
+    font-weight: bold;
+    color: #9C9C9C;
+	text-align: center;
+	display: inline-block;
+    margin-right: 10px;	
+}
+
+.sh-circle-active {
+	background: #dc281e;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+
+.sh-circle  label {
+	position: relative;
+	top: 3px;
+}
+
+.sh-font-bold {
+	font-weight: bold;
+}
+
+.uk-divider-custom {
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.uk-width-3-20 {
+  width: 15%;
+}
+
+.uk-width-9-20 {
+  width: 45%;
+}
+
+.uk-width-7-20 {
+  width: 35%;
+}
+
+.sh-no-border {
+	border: none;
+}
+
+@font-face {
+	font-family: 'fontello';
+	src: url('../../fonts/fontello.eot?68444519');
+	src: url('../../fonts/fontello.eot?68444519#iefix') format('embedded-opentype'),
+		 url('../../fonts/fontello.woff?68444519') format('woff'),
+	     url('../../fonts/fontello.ttf?68444519') format('truetype'),
+	     url('../../fonts/fontello.svg?68444519#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.sh-tello-icon {
+	font-family: "fontello";
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sh-icon-angle-down {
+	margin-right: 5px;
+}
+
+.border_right {
+	border-right: 1px solid #b6b7b7;
+}
+
+.sh-icon-angle-right {
+	color: red;
+	font-size: 18px;
+}
+.sh-hide-element {
+	display: none;
+}
+/*** button for shop ***/
+.sh-button {
+	padding: 0px 6px;
+    margin-left: 5px;
+    margin-right: 4px;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+    font-size: .875em;
+    font-weight: bold;
+    color: #717171;
+	background: #f8f8f8;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
+}
+
+.sh-red-button {
+	background: #DC281E;
+    color: #fff;
+	border: none;
+}
+
+.sh-button-large {
+	font-size: 15px;
+	margin: 0px;
+}
+
+.sh-button-normal {
+	margin-right: 0px;
+    padding: 5px 8px;
+    text-align: center;
+	cursor: pointer;
+	background: #DC281E;
+    color: #fff;
+	border: none;
+	height: 25px;
+    line-height: 23px;
+    font-size: 13px;
+}
+
+.sh-no-margin {
+	margin: 0px;
+}
+
+.uk-custom-box {
+	border: 1px solid #a8a8a8;
+	background: #ffffff;
+	margin-bottom: 20px;
+}
+
+.uk-accordion-content-custom {
+	position: relative;
+	top: -17px;
+	border: 1px solid #DFDFDF;
+	border-top: none;	
+	font-size: 13px;
+}
+/*** end common css attribute ***/

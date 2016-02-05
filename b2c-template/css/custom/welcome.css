@@ -1,0 +1,69 @@
+/*** login form ***/
+.sh-login-main-content {
+	margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+	margin-bottom: 90px;
+}
+
+.sh-login-main-content .sh-login-title {
+	font-size: 20px;
+}
+
+.sh-login-content input[type="text"], .sh-login-content input[type="password"] {
+	width: 220px;
+	border-color: #b6b7b7;
+	margin-top: 5px;
+	height: 33px;
+}
+
+.sh-login-content span {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.sh-login-content div span {
+	width: 110px;
+}
+
+.sh-login-content u {
+	font-size: 13px;
+    margin-top: 5px;
+    display: inline-block;
+    width: 220px;
+    text-align: right;
+}
+
+.sh-login-content u:hover {
+	cursor: pointer;
+	color: #dc281e;
+}
+
+.sh-login-content div {
+	width: 220px;
+}
+
+.sh-login-right-content {
+	float: right;
+}
+
+.sh-login-right-content .sh-login-content span label {
+	line-height: 35px;
+}
+
+.sh-login-right-content .sh-login-content span label:nth-of-type(2){
+	margin-top: 9px;
+	display: block;
+}
+
+.sh-login-right-content span  i {
+	margin-right: 10px;
+}
+
+.sh-login-menu:hover {
+	display: block;
+}
+
+
+/*** end login form ***/

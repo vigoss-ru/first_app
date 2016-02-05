@@ -1,0 +1,449 @@
+
+.sh-breadcrumb {
+	border-bottom: 1px solid #eaeaea;
+	text-align: justify;    
+    padding-left: 15px;    
+	line-height: 0;
+	padding-top: 20px;
+}
+
+#sh-article-list, #sh-article-list-content {
+	margin-top: 20px;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/** Facet menu item on left side of list article **/
+.sh-facet-box {	
+    /*-webkit-box-shadow: 0 0 8px #c8c8c8;
+    box-shadow: 0 0 8px #c8c8c8;*/
+	border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+
+.sh-facet-title {
+	position: relative;
+    padding: 0 0.75rem;
+}
+
+.sh-facet-title a {
+	display: block;
+    position: relative;
+    padding: .8rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.sh-facet-title label {
+	font-weight: 600;    
+}
+
+.sh-facet-title i {
+	margin-right: 8px;
+	color: #dc281e;	
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.sh-facet-title a:hover, .sh-facet-title a  label:hover {
+	text-decoration: none;
+	color: #dc281e;
+	cursor: pointer;
+}
+
+.sh-facet-border-top {
+	border-top: 1px solid #e6e6e6;
+}
+
+.sh-facet-content {
+	overflow: visible;
+    max-height: 5000px;
+    border-bottom: 1px solid #e6e6e6;
+	overflow: hidden;
+    position: relative;    
+    padding: 0 0.75rem;
+    -webkit-box-shadow: inset 0 -12px 12px -7px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 -12px 12px -7px rgba(0, 0, 0, 0.05);
+}
+.sh-facet-content {
+	font-size: 13px;
+}
+
+.sh-facet-content ul, .sh-facet-content table  {
+	margin: 0;
+    padding: .8rem 0;
+	line-height: 27px;
+    font-size: 13px;
+}
+
+.sh-facet-content ul  li {
+	position: relative;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sh-facet-content ul  li:hover {
+	background-color: #fbfbfb;
+}
+
+.sh-facet-box-expandable {
+    z-index: 10000;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 0 3px 15px rgba(50,50,50,0.7);
+    border-top: 4px solid #E13B3F;
+    background-color: white;
+	display: none;
+}
+
+.sh-facet-content table tr td {
+	width: 200px;
+	vertical-align: top;
+}
+
+.sh-facet-title .sh-icon-cancel {
+	float: right;
+}
+
+[id^="sh-facet-box-backup"] {
+	display: none;
+}
+
+/*** expand or collapse the additional filters in 1 facet ***/
+
+.sh-more-filter {
+	border-top: 1px solid #e6e6e6;    
+    margin-bottom: 15px;
+}
+
+.sh-more-filter label {
+	float: right;
+    padding: 10px 0px 10px 10px;
+    color: #dc281e;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.sh-article-list-title {
+	overflow: hidden;
+    margin-top: -4px;
+    position: relative;
+}
+
+.sh-article-list-title  h2, .uk-divider-text h2 {
+	border-bottom: 1px solid;
+    border-color: #eaeaea;
+	padding: 0px 5px 3px 3px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sh-articlelisting-loading, .sh-articlelisting-grid-loading {
+	display: none;
+	position: absolute;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0.8;
+}
+
+.sh-articlelisting-loading-container {	
+    padding: 15px;
+	height: 100px;
+    position: fixed;    
+    width: 860px;
+	background: url("../../images/loading_icon.gif") no-repeat scroll center transparent;
+}
+
+.sh-pager-top {
+    padding: 6px 0px 6px 0px;
+    height: 24px;
+	font-size: 11.5px;
+    color: #222;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.sh-pager-top select {
+	margin-left: 20px;
+}
+
+.sh-pager-top div {
+	display: inline-block;
+}
+
+.sh-pager-top ul li, .sh-pager-bottom ul li {
+	font-size: 0.8rem;
+}
+
+.sh-pager-top ul li  a {
+	padding: 0px 6px;
+    margin-left: 5px;
+    margin-right: 4px;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+    font-size: .875em;
+    font-weight: bold;
+    color: #717171;
+	background: #f8f8f8;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9));
+}
+
+.sh-pager-top strong {
+    display: inline-block;
+	color: #dc281e;
+}
+
+.sh-article-mode {
+	margin-left: 32px;
+}
+
+.sh-article-mode i {
+	color: #717171;
+    font-size: 22px;
+	margin-left: 8px;
+	cursor: pointer;
+}
+
+.sh-article-mode .sh-view-mode-active {
+	color: #dc281e;	
+	cursor: default;
+}
+
+#sh-list-article-content {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.sh-list-article-content {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.sh-article-image-block {
+	display: table;	
+}
+
+.sh-article-image-block  span {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.sh-article-image-block  span  img, .sh-article-grid-image-block img { 
+	display: block;
+    margin: 0 auto;
+}
+
+.sh-article-price-block {
+    text-align: right;
+}
+
+.sh-article-price-title {
+	
+}
+
+.sh-article-price, .sh-article-vat {
+	margin-top: 10px;	
+}
+
+.sh-article-price .price {
+	margin: 0px;
+    font-size: 28px;
+	margin-left: 0px;
+}
+
+.sh-article-price .currency {
+	font-size: 16px;
+}
+
+.sh-article-price .expireText {
+	color: #444;
+	margin-left: 20px;
+}
+
+.sh-active-arrow {
+	background: url("../../images/sprite_transparent.png") no-repeat scroll center -154px transparent;
+    padding-bottom: 18px;
+    display: inline-block;
+	color: #dc281e;
+	margin-left: 15px;
+}
+
+.sh-add-to-basket input {
+	width: 34px;
+    text-align: center;
+    height: 22px;
+ }
+ 
+.sh-add-to-basket  {
+	margin-top: 20px;
+	/*margin-bottom: 10px;*/	
+}
+
+.sh-add-to-basket span  {
+	display: inline-block;
+}
+
+.sh-add-to-basket .sh-button  {
+	margin-right: 0px;
+    padding: 5px 8px;
+    text-align: center;
+	cursor: pointer;
+}
+
+.range-slider-value-group  input {
+	width: 90px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sh-range-slider {
+	margin: 30px 5px 8px 5px;
+}
+
+.sh-range-slider-content {
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sh-range-slider-value label:nth-of-type(2) {
+	float: right;
+}
+
+#sh-article-list-filter {
+	margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#sh-article-list-filter  .filterValue {
+	font-weight: bold;
+}
+
+#sh-article-list-filter .filterElement {
+	margin-right: 5px;
+}
+
+#sh-article-list-filter  div {
+	display: inline;
+}
+
+#sh-article-list-filter  .filterDeleteIcon {
+	background: url("../../images/sprite_close_vpe.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 10px;
+}
+
+/*end here*/
+
+.uk-article-box {
+	position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 8px #c8c8c8;
+    box-shadow: 0 0 8px #c8c8c8;
+    background: white;
+    padding: 32px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.uk-article-box h5 {
+	margin-bottom: 5px;
+}
+
+.sh-article-art-nr {
+	margin-bottom: 15px;
+}
+
+.uk-article-box  hr {
+	margin: 0 0 10px 0;
+}
+
+.uk-article-block {
+	font-size: 12px;
+}
+
+#sh-floating-pagination {
+	display: block;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    webkit-box-shadow: 0 0 8px #c8c8c8;
+    box-shadow: 0 0 8px #c8c8c8;
+    z-index: 10000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	opacity: 0.9;
+}
+
+#sh-pagination {
+	padding: 10px;
+	box-shadow: 0 0 8px #c8c8c8;
+}
+#sh-pagination ul, #sh-floating-pagination  ul{
+	font-size: 15px;
+    text-align: center;
+	margin: 0px;
+}
+
+#sh-pagination ul  i, #sh-floating-pagination ul i {
+	font-size: 17px;
+}
+
+#sh-pagination ul  b,#sh-floating-pagination ul b {
+	color: #dc281e;
+}
+
+#sh-pagination ul li, #sh-floating-pagination ul li {
+	display: inline-block;
+    margin-right: 28px;
+    cursor: pointer;
+}
+
+#sh-reset-filter-button {
+	padding: 1rem 0;
+    text-align: center;
+    line-height: 0;
+    background: #dc281e;	
+}
+
+#sh-reset-filter-button  a {
+	color: white;
+	display: inline-block;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}
+
+#sh-reset-filter-button  a:hover, #sh-reset-filter-button  a label:hover  {
+	cursor: pointer;
+	text-decoration: none;
+	background: #fff;
+	color: #717171;
+}
+
+.sh-bookmark {
+	float: right;
+	cursor: pointer;
+    margin-top: 10px;
+}
+
+.sh-bookmark:hover {
+	color: #DC281E;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.sh-bookmark i {
+	font-size: 14px;
+}
+
+.sh-bookmark label {
+	margin-left: 10px;
+	cursor: pointer;
+}

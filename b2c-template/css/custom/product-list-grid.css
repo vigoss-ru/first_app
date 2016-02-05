@@ -1,0 +1,77 @@
+.uk-article-grid-box {	
+    height: 340px;
+    background: #ffffff;
+    font-size: 12px;
+    -webkit-box-shadow: 0 0 8px #c8c8c8;
+    box-shadow: 0 0 8px #c8c8c8;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sh-article-grid-image-block img { 
+	display: block;
+    margin: 0 auto;
+}
+
+.sh-article-grid-description-block {
+	margin-left: 12px;
+	margin-top: 10px;
+	height: 40px;
+	margin-bottom: 20px;
+    display: inline-block;
+}
+
+.sh-article-price-title {
+	width: 125px;
+	height: 20px;
+	border-bottom: 1px solid #a8a8a8;
+}
+
+.sh-article-price {
+	margin-top: 20px;
+}
+
+.sh-article-price .price {
+	margin: 0px;
+    font-size: 28px;
+	margin-left: 0px;
+}
+
+.sh-article-price .currency {
+	font-size: 16px;
+}
+
+.sh-add-to-basket-grid input  {
+	width: 34px;
+    text-align: center;
+    height: 22px;
+}
+
+.sh-add-to-basket-grid .button {
+	margin-right: 0px;
+    padding: 5px 8px;
+    width: 120px;
+    text-align: center;
+	cursor: pointer;
+	padding: 8px 8px;
+}
+
+.sh-add-to-basket-grid {
+	margin-top: 30px;
+	float: right;
+}
+
+.sh-article-grid-price-block {
+	margin: 10px 0 10px 12px;	
+}
+
+.sh-add-to-basket-grid .sh-button  {
+	margin-right: 0px;
+    padding: 8px 8px;
+    text-align: center;
+	cursor: pointer;
+}
+
+.sh-list-article-grid-content .uk-width-medium-1-3 {
+    margin-bottom: 30px;
+}
