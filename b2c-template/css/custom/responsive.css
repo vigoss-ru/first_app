@@ -1,12 +1,4 @@
-#sh-mobile-account {
-	display: none;
-}
-
-#sh-mobile-payment {
-	display: none;
-}
-
-#sh-mobile-article-header-element, #sh-mobile-checkout-summary {
+#sh-mobile-account, #sh-mobile-checkout, #sh-mobile-article-header-element, #sh-content-main-mobile {
 	display: none;
 }
 
@@ -194,15 +186,15 @@ and (max-width: 767px) {
 
 @media only screen
 and (max-width: 971px) {
-	#sh-desktop-checkout-summary {
-		display: none;
-	}
-	#sh-mobile-checkout-summary {
-		display: block;
-	}	
 	.sh-payment-info-content {
 		margin-top: 0px;
 	}	
+	#sh-content-main-mobile {
+		display: block;
+	}
+	#sh-content-main {
+		display: none;
+	}
 }
 
 @media only screen
@@ -232,13 +224,8 @@ and (max-width: 667px) {
 	#sh-mobile-account a:nth-child(2) img {
 		float: right;
 	}
-
-	/* payment page */	
-	#sh-desktop-payment {
-		display: none;
-	}
 	
-	#sh-mobile-payment {
+	#sh-mobile-checkout {
 		display: block;
 	}
 	.sh-payment-info-content {

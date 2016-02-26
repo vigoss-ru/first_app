@@ -1,0 +1,87 @@
+.sh-zoom-icon {
+    color: #DC281E;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    left: 295px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+#sh-column-content .uk-modal-dialog {
+	width: 900px;
+}
+
+#sh-modal-article-detail-left span {
+	margin-bottom: 40px;
+    display: inline-block;
+}
+
+#sh-modal-article-detail-headline {
+	margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+#sh-modal-article-detail-right img {
+	margin-left: 30px;
+}
+
+.sh-product-detail-description {
+	margin-top: 50px;
+	line-height: 25px;
+}
+
+.sh-product-detail-description a {
+	font-size: 12px;
+	color: #07D;
+}
+
+.sh-product-detail-description a:hover {	
+	color: #DC281E;
+	text-decoration: none;
+}
+
+#sh-column-content .sh-add-to-basket {
+	margin-top: 80px;
+}
+
+#sh-column-content {
+	margin-top: 30px;
+}
+
+#sh-bottom-content {
+	margin-top: 60px;
+}
+
+#sh-bottom-content .uk-tab>li>a {
+	color: #444;
+}
+
+#sh-bottom-content .uk-tab .uk-disabled a {
+	color: #999;
+}
+
+#sh-bottom-content #sh-tab-specification span, 
+#sh-bottom-content #sh-tab-document span {
+	display: block;
+    height: 38px;
+    line-height: 38px;
+	padding-left: 10px;
+}
+
+.sh-row-grey {
+	background-color: #F1F1F1;
+}
+
+#sh-bottom-content #sh-tab-document .sh-download-button {
+	display: inline-block;
+    height: 25px;
+    text-align: center;
+	padding: 4px 20px 5px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#sh-product-detail-action  .sh-bookmark {
+	float: right;	
+}

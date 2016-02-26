@@ -18,13 +18,18 @@
 	height: 33px;
 }
 
-.sh-login-content span {
+.sh-login-content span, .sh-login-content button {
 	margin-top: 30px;
 	display: inline-block;
 }
 
 .sh-login-content div span {
 	width: 110px;
+}
+
+ .sh-login-content div button {
+	width: 120px;
+	height: 35px;
 }
 
 .sh-login-content u {
@@ -64,6 +69,25 @@
 .sh-login-menu:hover {
 	display: block;
 }
-
-
 /*** end login form ***/
+
+#sh-password-main-content {
+	margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+	margin-bottom: 154px;
+}
+
+.sh-button-login-short {
+	width: 100px;
+}
+
+#sh-password-main-content button {
+	width: 120px;
+    height: 35px;
+}
+
+#sh-password-main-content .uk-alert {
+	width: 56%;
+}

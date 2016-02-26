@@ -1,10 +1,13 @@
-
-.sh-breadcrumb {
+#sh-breadcrumb {
 	border-bottom: 1px solid #eaeaea;
 	text-align: justify;    
     padding-left: 15px;    
 	line-height: 0;
-	padding-top: 20px;
+	padding-top: 4px;
+}
+
+#sh-breadcrumb a:hover, .sh-text-search-result a:hover {
+	color: #DC281E;
 }
 
 #sh-article-list, #sh-article-list-content {
@@ -218,7 +221,6 @@
 
 .sh-list-article-content {
 	margin-bottom: 20px;
-	display: inline-block;
 }
 
 .sh-article-image-block {
@@ -287,9 +289,10 @@
 
 .sh-add-to-basket .sh-button  {
 	margin-right: 0px;
-    padding: 5px 8px;
+    padding: 5px 10px;
     text-align: center;
 	cursor: pointer;
+	height: 30px;
 }
 
 .range-slider-value-group  input {
@@ -446,4 +449,34 @@
 .sh-bookmark label {
 	margin-left: 10px;
 	cursor: pointer;
+}
+
+.sh-no-longer-available  b {
+	color: #DC281E;
+	display: block;
+	text-align: right;
+}
+
+.sh-list-article-grid-content .sh-no-longer-available  {
+	height: 76px;
+    line-height: 76px;
+}
+
+.sh-no-longer-available  label {
+	font-size: 12px;	
+}
+
+#sh-article-list-content .uk-alert, .sh-text-search-result {
+	font-size: 13px;
+	line-height: 32px;
+}
+
+.sh-text-search-result i {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#sh-article-list-content .uk-alert i {
+	margin-right: 10px;
+    font-size: 18px;
 }

@@ -82,7 +82,7 @@
 										<a>My account</a><br/>
 										<a>My favorites</a>
 									</div>
-									<button class="sh-logout-button">Abmelden</button>
+									<div id="sh-logout-button">Abmelden</div>
 								</div>
 							</span>
 						</div>						
@@ -160,23 +160,31 @@
 			<!-- main content for shopping cart -->
 			<div id="sh-content-main">
 				<div class="uk-divider-text">
-					<h2>Mein Warenkorb</h2>
+					<h2>Order Confirmation</h2>
 				</div>
 				
 				<div id="sh-shopping-cart-content">
-					<div class="sh-cart-header">
-						<div class="uk-grid" data-uk-grid-match>
-							<div class="uk-width-medium-5-10">
-								<form class="uk-form">
-									Artikel hinzufügen: <input type="text" placeholder="Art. Nr." class="uk-form-small">
-									<button class="sh-button sh-cart-button">Hinzufügen</button>
-								</form>
-							</div>
-							<div class="uk-width-medium-5-10">
-								<button class="sh-button sh-cart-button sh-red-button sh-right">Secure checkout</button>
+					
+					<div class="sh-order-confirmation-content">
+						<b>Thank you for your order.</b><br/>
+						A confirmation email will shortly be sent to you.
+						<h4><b>Order Details</b></h4>
+						<div class="sh-order-confirmation-detail">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-5-10">
+									<b>Order Number:</b> 125003<br/>
+									<b>Order Date:</b> 08.12.2016<br/>
+									<b>Delivery Address:</b> Sharis GmbH, 13347 Berlin<br/>
+								</div>
+								<div class="uk-width-5-10">
+									<b>Payment method:</b> Paypal<br/>
+									<b>Email:</b> sharis@sharis.de<br/>
+									<b>Billing Address:</b> sharis@sharis.de<br/>
+								</div>
 							</div>
 						</div>
 					</div>
+					
 					<div class="sh-cart-content">
 						<div class="sh-cart-content-header">
 							<div class="uk-grid" data-uk-grid-match>
@@ -208,14 +216,6 @@
 										<div class="uk-width-6-10">
 											Franke Twister 125ML<br/>
 											<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
-											<div class="sh-cart-action">													
-												<span class="sh-remove-cart">
-													<i class="sh-tello-icon">&#xe808;</i><label>Entfernen</label>
-												</span>
-												<span class="sh-bookmark">
-													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
-												</span>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -223,12 +223,7 @@
 									<label class="sh-cart-element-middle">112.0048.584</label>
 								</div>
 								<div class="uk-width-3-20 uk-text-center">
-									<form>
-										<input type="text" placeholder="" maxlength=3 onkeyup="showUpdateBasket('systemId1', this);"><br/>
-										<span class="sh-button sh-cart-button sh-btn-cart-update" id="sh-update-basket-systemId1">
-											<i class="sh-tello-icon">&#xe817;</i>
-										</span>
-									</form>
+									<label class="sh-cart-element-middle">1</label>
 								</div>
 								<div class="uk-width-3-20 uk-text-center">
 									<label class="sh-cart-element-middle">41,00 €</label>
@@ -249,14 +244,6 @@
 										<div class="uk-width-6-10">
 											Franke Twister 125ML<br/>
 											<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label>
-											<div class="sh-cart-action">													
-												<span class="sh-remove-cart">
-													<i class="sh-tello-icon">&#xe808;</i><label>Entfernen</label>
-												</span>
-												<span class="sh-bookmark sh-text-red">
-													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
-												</span>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -264,12 +251,7 @@
 									<label class="sh-cart-element-middle">112.0048.584</label>
 								</div>
 								<div class="uk-width-3-20 uk-text-center">
-									<form>
-										<input type="text" placeholder="" maxlength=3 onkeypress="showUpdateBasket('systemId2', this);"><br/>
-										<span class="sh-button sh-cart-button sh-btn-cart-update" id="sh-update-basket-systemId2">
-											<i class="sh-tello-icon">&#xe817;</i>
-										</span>
-									</form>
+									<label class="sh-cart-element-middle">1</label>
 								</div>
 								<div class="uk-width-3-20 uk-text-center">
 									<label class="sh-cart-element-middle">41,00 €</label>
@@ -306,21 +288,126 @@
 								<div class="uk-width-3-20"></div>
 								<div class="uk-width-3-20"></div>
 								<div class="uk-width-3-20"><b>Total (incl. VAT):</b></div>
-								<div class="uk-width-3-20 uk-text-center"><b> 166,80 € </b></div>
+								<div class="uk-width-3-20 uk-text-center"><b> 166,80 €</b></div>
 							</div>
 						</div>
 						
 					</div>
-					<div class="sh-cart-footer">
-						<div class="uk-grid" data-uk-grid-match>
-							<div class="uk-width-5-10">
-								<button class="sh-button sh-cart-button">Einkauf fortsetzen</button>
-							</div>
-							<div class="uk-width-5-10">
-								<button class="sh-button sh-cart-button sh-red-button sh-right">Secure checkout</button>
+					
+				</div>
+				
+			</div>
+			
+			<!-- checkout mobile -->	
+			<div id="sh-content-main-mobile">
+				<div class="uk-divider-text">
+					<h2>Order Confirmation</h2>
+				</div>
+				
+				<div id="sh-shopping-cart-content">
+					<div class="sh-order-confirmation-content">
+						<b>Thank you for your order.</b><br/>
+						A confirmation email will shortly be sent to you.
+						<h4><b>Order Details</b></h4>
+						<div class="sh-order-confirmation-detail">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-5-10">
+									<b>Order Number:</b> 125003<br/>
+									<b>Order Date:</b> 08.12.2016<br/>
+									<b>Delivery Address:</b> Sharis GmbH, 13347 Berlin<br/>
+								</div>
+								<div class="uk-width-5-10">
+									<b>Payment method:</b> Paypal<br/>
+									<b>Email:</b> sharis@sharis.de<br/>
+									<b>Billing Address:</b> sharis@sharis.de<br/>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+				
+				<div class="sh-cart-content">
+					<div class="sh-cart-content-header">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10">
+								Artikel
+							</div>							
+							<div class="uk-width-2-10 uk-text-center">
+								Menge
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								Preis
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								Gesamtpreis
+							</div>
+						</div>
+					</div>
+					
+					<div class="sh-cart-content-row">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10">
+								Franke Twister 125ML<br/>
+								<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label><br/>
+								(112.0048.584)
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">1</label>
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">41,00 €</label>
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">41,00 €</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="sh-cart-content-row">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10">
+								Franke Twister 125ML<br/>
+								<label class="sh-cart-small-title">Twister mit Schwamm 125ml Franke</label><br/>
+								(112.0048.584)
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">1</label>
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">41,00 €</label>
+							</div>
+							<div class="uk-width-2-10 uk-text-center">
+								<label class="sh-cart-element-middle">41,00 €</label>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="sh-cart-summary">
+					<div class="sh-cart-summary-line">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10"></div>
+							<div class="uk-width-4-10">Subtotal (incl. VAT):</div>
+							<div class="uk-width-2-10 uk-text-center"> 159,90 €</div>
+						</div>
+					</div>
+					
+					<div class="sh-cart-summary-line">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10"></div>
+							<div class="uk-width-4-10">Shipping:</div>
+							<div class="uk-width-2-10 uk-text-center"> 6,90 €</div>
+						</div>
+					</div>
+					
+					<div class="sh-cart-summary-line">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-4-10"></div>
+							<div class="uk-width-4-10"><b>Total (incl. VAT):</b></div>
+							<div class="uk-width-2-10 uk-text-center"><b> 166,80 €</b></div>
+						</div>
+					</div>					
 				</div>
 				
 			</div>

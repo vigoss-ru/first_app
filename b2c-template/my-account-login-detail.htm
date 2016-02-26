@@ -5,31 +5,24 @@
 		<!-- basic components -->
 		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
 		<link rel="stylesheet" href="css/custom/main.css">
-		<link rel="stylesheet" href="css/custom/home.css">
-		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/my-account.css">		
+		<link rel="stylesheet" href="css/custom/responsive.css">		
 		<script src="js/jquery.js"></script>
         <script src="js/uikit.min.js"></script>
-		<!-- accordion components-->
-		<script src="js/components/accordion.js"></script>
-		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
-		<!-- range slider components -->
-		<link href="css/custom/nouislider.min.css" rel="stylesheet">
-		<script src="js/custom/nouislider.min.js"></script>
-		<!--  Slide show components-->
-		<script src="js/components/slideshow.js"></script>
-		<script src="js/components/slideshow-fx.js"></script>
-		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+		<script src="js/custom/main.js"></script>
 	</head>
-	
 	<body>
-		<!--<div class="cookie">
+		<!--
+		<div class="cookie">
 			<div class="page-center">
 				<div class="uk-grid" data-uk-grid-match>
 					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
 					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
 				</div>
 			</div>
-		</div> -->
+		</div>
+		-->
+		<!--upper header-->
 		<div id="sh-header">
 			<div class="sh-page-center">
 				<div class="uk-grid" data-uk-grid-match>
@@ -39,14 +32,14 @@
 							<span>Contact</span>
 							<span>Dealer Search</span>
 							<span>Franke Group</span>
-							<span><i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>Deutsch</span>							
+							<span><i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>Deutsch</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<div id="sh-page-wrap">
+		<div id="sh-page-wrap">			
 			<!-- header with my account, contact, shopping cart-->
 			<div id="sh-content-first">
 				<span class="sh-account-header">
@@ -88,6 +81,7 @@
 									<button class="sh-logout-button">Abmelden</button>
 								</div>
 							</span>
+							
 						</div>						
 					</div>
 					
@@ -159,46 +153,117 @@
 				</span>
 			</div>
 			<!-- end menu for big screen: desktop, tablet ... -->
-			<br/>
-			<div class="uk-slidenav-position slide-show" data-uk-slideshow="{autoplay:true, height: 300, autoplayInterval: 5000}">
-				<ul class="uk-slideshow">
-					<li><img src="images/kitchen.jpg" width="770" height="194" alt=""></li>
-					<li><img src="images/kitchen2.jpg" width="770" height="194" alt=""></li>
-					<li><img src="images/kitchen3.jpg" width="770" height="194" alt=""></li>
-					<li><img src="images/kitchen4.jpg" width="770" height="194" alt=""></li>
-				</ul>
-			</div>
 			
-			<!-- main content for login page -->
+			<!-- main content -->			
 			<div id="sh-content-main">
-				<div class="sh-list-module">
+				<div class="sh-breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="">Home</a></li>
+						<li><a href="">My Account</a></li>
+						<li><span>Favorites</span></li>
+					</ul>
+				</div>
+				
+				<div>
 					<div class="uk-grid" data-uk-grid-match>
-						<div class="uk-width-1-3">
-							<span class="uk-panel uk-panel-box">
-								<img src="images/BoxAccessories-06.png">
-								<hr class="uk-article-divider">
-								<div>Ersatzteile</div>
-							</span>
+						<div class="uk-width-medium-3-10">
+							<div id="sh-menu-account">
+								<span><div><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label><a href="#">My Account</a></label></div></span>
+								<span><label><a href="#">Account Details</a></label></span>
+								<span><label><b><a href="#">Login Details</a></b></label></span>
+								<span><label><a href="#">Addresses</a></label></span>
+								<span><label><a href="#">Orders</a></label></span>
+								<span><label><a href="#">Returns</a></label></span>
+								<span><label><a href="#">Favorites</a></label></span>
+							</div>
 						</div>
-						<div class="uk-width-1-3">
-							<span class="uk-panel uk-panel-box">
-								<img src="images/BoxCleaningProducts-02.png">
-								<hr class="uk-article-divider">
-								<div>Pflegeprodukte</div>
-							</span>
+						<div class="uk-width-medium-7-10">
+							<div class="sh-my-account-detail">
+								<h3>Login Details</h3>
+								<form class="uk-form">
+									<h4><b>Email</b></h4>
+									<span>
+										<label class="sh-text-red">Email</label><label class="sh-asterisk-left">*</label><br/>
+										<input type="text" class="uk-form-small sh-border-red">
+										<span class="uk-alert uk-alert-danger">Invalid data</span>
+									</span>
+									<div id="sh-account-form-footer">
+										<button type="submit" class="sh-button sh-button-normal sh-right">Save</button>
+									</div>
+									<hr class="uk-article-divider">
+									<h4><b>Change password</b></h4>
+									<span>
+										<label>Old password</label><label class="sh-asterisk-left">*</label><br/>
+										<input type="text" class="uk-form-small">
+										<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+									</span>
+									<span>
+										<label>New password</label><label class="sh-asterisk-left">*</label><br/>
+										<input type="text" class="uk-form-small">
+										<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+									</span>
+									<div id="sh-account-form-footer">
+										<label class="sh-asterisk-right">*</label><label>Required fields</label>
+										<button type="submit" class="sh-button sh-button-normal sh-right">Save</button>
+									</div>
+								</form>
+							</div>
 						</div>
-						<div class="uk-width-1-3">
-							<span class="uk-panel uk-panel-box">
-								<img src="images/BoxNewsletter-09.png">
-								<hr class="uk-article-divider">
-								<div>Zubehör</div>
-							</span>
-						</div>					
 					</div>
 				</div>
 			</div>
-			<!-- end main content for login page -->
-		</div>	
+						
+			<!-- start article list for mobile  -->	
+			<div id="sh-content-main-mobile">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-3-10">
+						<div id="sh-menu-account">
+							<span><div><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label><a href="#">My Account</a></label></div></span>
+							<span><label><a href="#">Account Details</a></label></span>
+							<span><label><b><a href="#">Login Details</a></b></label></span>
+							<span><label><a href="#">Addresses</a></label></span>
+							<span><label><a href="#">Orders</a></label></span>
+							<span><label><a href="#">Returns</a></label></span>
+							<span><label><a href="#">Favorites</a></label></span>
+						</div>
+					</div>
+					<div class="uk-width-medium-7-10">
+						<div class="sh-my-account-detail">
+							<h3>Login Details</h3>
+							<form class="uk-form">
+								<h4><b>Email</b></h4>
+								<span>
+									<label class="sh-text-red">Email</label><label class="sh-asterisk-left">*</label><br/>
+									<input type="text" class="uk-form-small sh-border-red">
+									<span class="uk-alert uk-alert-danger">Invalid data</span>
+								</span>
+								<div id="sh-account-form-footer">
+									<button type="submit" class="sh-button sh-button-normal sh-right">Save</button>
+								</div>
+								<hr class="uk-article-divider">
+								<h4><b>Change password</b></h4>
+								<span>
+									<label>Old password</label><label class="sh-asterisk-left">*</label><br/>
+									<input type="text" class="uk-form-small">
+									<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+								</span>
+								<span>
+									<label>New password</label><label class="sh-asterisk-left">*</label><br/>
+									<input type="text" class="uk-form-small">
+									<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+								</span>
+								<div id="sh-account-form-footer">
+									<label class="sh-asterisk-right">*</label><label>Required fields</label>
+									<button type="submit" class="sh-button sh-button-normal sh-right">Save</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end article list for mobile  -->	
+			
+		</div>
 		
 		<!-- start footer -->
 		<div id="sh-footer">
@@ -246,6 +311,6 @@
 		</div>
 		<!-- end for footer -->
 		
+		<script src="js/custom/main.js"></script>
 	</body>
-	
 </html>

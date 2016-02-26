@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/checkout.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<!-- accordion components-->
+		<script src="js/components/accordion.js"></script>
+		<link rel="stylesheet" href="css/components/accordion.almost-flat.css">
+		<!-- range slider components -->
+		<link href="css/custom/nouislider.min.css" rel="stylesheet">
+		<script src="js/custom/nouislider.min.js"></script>
+		<!--  Slide show components-->
+		<script src="js/components/slideshow.js"></script>
+		<script src="js/components/slideshow-fx.js"></script>
+		<link id="data-uikit-theme" rel="stylesheet" href="css/components/slideshow.almost-flat.css">
+	</head>
+	
+	<body>
+		<div id="sh-page-wrap">
+		<!-- Checkout header -->
+			<div id="sh-content-first">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+					<div class="uk-width-8-10 uk-text-center">
+						<label class="sh-checkout-title">Sicherheit Kasse</label>
+					</div>
+				</div>
+			</div>
+			<!-- Checkout step -->
+			<div id="sh-content-second">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-4-10">
+						<div class="sh-circle sh-checkout-circle sh-circle-active"><label>1</label></div>
+						Adresse
+					</div>
+					<div class="uk-width-4-10">
+						<div class="sh-circle sh-checkout-circle"><label>2</label></div>
+						Zahlung
+					</div>
+					<div class="uk-width-2-10 uk-text-right">
+						<div class="sh-circle sh-checkout-circle"><label>3</label></div>
+						Bestellübersicht
+					</div>
+				</div>
+			</div>
+						
+			<!-- address checkout content -->
+			<div id="sh-content-main">
+				<div class="sh-checkout-address-content">
+					<form class="uk-form">
+						<div class="sh-border-bottom">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-1-2">
+									<h2>Addresses</h2>
+								</div>
+								<div class="uk-width-1-2">
+									<button class="sh-button sh-checkout-button sh-red-button sh-right" type="submit">Continue to payment</button>
+								</div>
+							</div>
+						</div>
+						<span>
+							<h4><b>Add a new address</b></h4>
+						</span>
+						
+						<span>
+							<label>Title</label><label class="sh-asterisk-left">*</label><br/>
+							<select>
+								<option>Mr.</option>
+								<option>Mrs.</option>
+							</select>
+							<span class="uk-alert uk-alert-danger">Invalid data</span>
+						</span>
+						<span>
+							<label class="sh-text-red">First name</label><label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small sh-border-red">
+							<span class="uk-alert uk-alert-danger">Invalid data</span>
+						</span>
+						<span>
+							<label>Last name</label><label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small">
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Company name (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label>Street and house no.</label> <label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small">
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Address affix (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span class="sh-medium">
+							<div>
+								<label>ZIP</label><label class="sh-asterisk-left">*</label><br/>
+								<input type="text" class="uk-form-small">
+								<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+							</div>
+							<div>
+								<label>City</label><label class="sh-asterisk-left">*</label><br/>
+								<input type="text" class="uk-form-small">
+								<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+							</div>
+							
+						</span>
+						<span>
+							<label>Country</label><label class="sh-asterisk-left">*</label><br/>
+							<select class="sh-select-long">
+								<option>Germany</option>
+								<option>Switzland</option>
+								<option>France</option>
+							</select>
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Phone number (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label>Mobile number (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label class="sh-asterisk-right">*</label><label>Required fields</label>
+						</span>
+					
+						<div class="sh-payment-content-footer">
+							<button class="sh-button sh-checkout-button sh-red-button sh-right" type="submit">Continue to payment</button>
+						</div>
+						
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="sh-content-main-mobile">
+				<div class="sh-checkout-address-content">
+					<form class="uk-form">
+						<div class="sh-border-bottom">
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-1-2">
+									<h2>Addresses</h2>
+								</div>
+								<div class="uk-width-1-2">
+									<button class="sh-button sh-checkout-button sh-red-button sh-right" type="submit">Continue to payment</button>
+								</div>
+							</div>
+						</div>
+						<span>
+							<h4><b>Add a new address</b></h4>
+						</span>
+						
+						<span>
+							<label>Title</label><label class="sh-asterisk-left">*</label><br/>
+							<select>
+								<option>Mr.</option>
+								<option>Mrs.</option>
+							</select>
+							<span class="uk-alert uk-alert-danger">Invalid data</span>
+						</span>
+						<span>
+							<label class="sh-text-red">First name</label><label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small sh-border-red">
+							<span class="uk-alert uk-alert-danger">Invalid data</span>
+						</span>
+						<span>
+							<label>Last name</label><label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small">
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Company name (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label>Street and house no.</label> <label class="sh-asterisk-left">*</label><br/>
+							<input type="text" class="uk-form-small">
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Address affix (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span class="sh-medium">
+							<div>
+								<label>ZIP</label><label class="sh-asterisk-left">*</label><br/>
+								<input type="text" class="uk-form-small">
+								<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+							</div>
+							<div>
+								<label>City</label><label class="sh-asterisk-left">*</label><br/>
+								<input type="text" class="uk-form-small">
+								<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+							</div>
+						</span>
+						<span>
+							<label>Country</label><label class="sh-asterisk-left">*</label><br/>
+							<select class="sh-select-long">
+								<option>Germany</option>
+								<option>Switzland</option>
+								<option>France</option>
+							</select>
+							<!--<span class="uk-alert uk-alert-danger">Invalid data</span>-->
+						</span>
+						<span>
+							<label>Phone number (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label>Mobile number (Optional)</label><br/>
+							<input type="text" class="uk-form-small">
+						</span>
+						<span>
+							<label class="sh-asterisk-right">*</label><label>Required fields</label>
+						</span>
+					
+						<div class="sh-payment-content-footer">
+							<button class="sh-button sh-checkout-button sh-red-button sh-right" type="submit">Continue to payment</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+			
+		</div>
+		<br/><br/>
+	</body>
+</html>

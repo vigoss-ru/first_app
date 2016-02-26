@@ -4,9 +4,9 @@
 		<title>Demotration shop</title>
 		<!-- basic components -->
 		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
-		<link rel="stylesheet" href="css/custom/main.css">		
+		<link rel="stylesheet" href="css/custom/main.css">
 		<link rel="stylesheet" href="css/custom/welcome.css">
-		<link rel="stylesheet" href="css/custom/responsive.css">		
+		<link rel="stylesheet" href="css/custom/responsive.css">
 		<script src="js/jquery.js"></script>
 		<script src="js/custom/main.js"></script>
         <script src="js/uikit.min.js"></script>
@@ -71,7 +71,7 @@
 								<div><img src="images/account.png"></div>
 								<div>Anmelden</div>
 								<div class="sh-login-menu">
-									<div class="sh-button sh-button-normal sh-button-large">Anmelden</div>
+									<button class="sh-button sh-button-login">Anmelden</button><br/><br/>
 									New here? <u>Register now</u>
 									<hr class="uk-article-divider">
 									<div></div>
@@ -162,10 +162,14 @@
 				<div class="uk-divider-text">
 					<h2>Anmelden</h2>
 				</div>
-				<div class="sh-login-main-content">
+				<div class="uk-alert uk-alert-success" data-uk-alert>
+					<a href="" class="uk-alert-close uk-close"></a>
+					<p><i class="sh-tello-icon">&#xe81a;</i> You will shortly receive an email with a link that allows you to reset your password. Please make sure to check your spam folders as well.</p>
+				</div>
+				<div class="sh-login-main-content">					
 					<div class="uk-grid" data-uk-grid-match>
 						<div class="uk-width-5-10 border_right">
-							<div class="sh-login-title ">Bereits Kunde</div>
+							<div class="sh-login-title">Bereits Kunde</div>
 							<div class="sh-login-content">
 								<form class="uk-form">
 									<span>
@@ -177,7 +181,9 @@
 										<input type="password" class="uk-form-small">
 									</span>
 									</br><u>Passwort vergessen?</u>
-									<div><span class="sh-button sh-button-normal right">Anmelden</span></div>
+									<div>
+										<button type="submit" class="sh-button sh-button-normal sh-right">Anmelden</button>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -192,7 +198,10 @@
 										<label><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i>Follow up your order</label>
 									</span>
 									<br/><br/>
-									<div><span class="sh-button sh-button-normal">Registrieren</span></div>
+									<div>
+										<!-- <span class="sh-button sh-button-normal">Registrieren</span> -->
+										<button class="sh-button sh-button-normal">Registrieren</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -200,6 +209,61 @@
 				</div>
 			</div>
 			<!-- end main content for login page -->
+			
+			<!-- main content for mobile -->
+			<div id="sh-content-main-mobile">
+				<div class="uk-divider-text">
+					<h2>Anmelden</h2>
+				</div>
+				<div class="sh-login-main-content">
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-1-1">
+							<div class="sh-login-title">Bereits Kunde</div>
+							<div class="sh-login-content">
+								<form class="uk-form">
+									<span>
+										<label>Email</label><br/>
+										<input type="text" class="uk-form-small">
+									</span><br/>
+									<span>
+										<label>Passwort</label><br/>
+										<input type="password" class="uk-form-small">
+									</span>
+									</br><u>Passwort vergessen?</u>
+									<div>
+										<button type="submit" class="sh-button sh-button-normal sh-right">Anmelden</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="uk-width-1-1">
+							<br/>
+							<hr class="uk-article-divider">
+							<br/>
+						</div>
+						<div class="uk-width-1-1">
+							<div class="sh-login-right-content">
+								<div class="sh-login-title">Neu hier? Jetzt registrieren</div>
+								<div class="sh-login-content">	
+									<span>
+										<label>Having an account with Franke allows you to</label>:<br/>
+										<label><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i>Manage your account and addresses<br/></label>
+										<label><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i>Save your favorites<br/></label>
+										<label><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i>Follow up your order</label>
+									</span>
+									<br/><br/>
+									<div>
+										<!-- <span class="sh-button sh-button-normal">Registrieren</span> -->
+										<button class="sh-button sh-button-normal">Registrieren</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- end main content for mobile -->
 		</div>			
 		
 		<!-- start footer -->

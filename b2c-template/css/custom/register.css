@@ -1,0 +1,73 @@
+#sh-register-main-content {
+	margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+	margin-bottom: 154px;
+}
+
+.sh-register-content span label {
+	line-height: 30px;
+}
+
+.sh-register-content span i {
+    margin-right: 10px;
+}
+
+#sh-register-footer {
+	width: 63%;
+	display: inline-block;
+	margin-top: 50px;
+}
+
+#sh-register-footer span {
+	margin: 0px;
+}
+
+.sh-register-content input[type="text"], .sh-register-content input[type="password"] {
+	width: 310px;
+	border-color: #b6b7b7;
+	margin-top: 5px;
+	height: 33px;
+}
+
+.sh-register-content select {
+	border-color: #b6b7b7;
+    width: 90px;
+}
+
+.sh-register-content span:nth-of-type(1){
+	margin-top: 0px;
+}
+
+.sh-register-content span {
+	margin-top: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+.sh-register-content div span {
+	width: 110px;
+}
+
+#sh-register-footer-end {
+	color: #7B7B7B;
+    font-size: 13px;
+    width: 75%;
+    margin-top: 35px;
+}
+
+.sh-register-line {
+	line-height: 50px;
+}
+
+#sh-register-footer .sh-button {
+	width: 120px;
+    height: 35px;	
+}
+
+#sh-register-main-content .uk-alert {
+	width: 59%;
+    margin-top: 8px;
+	margin-bottom: 0px;
+}

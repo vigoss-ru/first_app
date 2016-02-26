@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/my-account.css">
+		<link rel="stylesheet" href="css/custom/product-list.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/checkbox.css">
+		<script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+	</head>
+	<body>
+		<!--
+		<div class="cookie">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
+					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
+				</div>
+			</div>
+		</div>
+		-->
+		<!--upper header-->
+		<div id="sh-header">
+			<div class="sh-page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10">Kitchen Systems</div>
+					<div class="uk-width-8-10">
+						<div class="sh-right">
+							<span>Contact</span>
+							<span>Dealer Search</span>
+							<span>Franke Group</span>
+							<span><i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>Deutsch</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="sh-page-wrap">			
+			<!-- header with my account, contact, shopping cart-->
+			<div id="sh-content-first">
+				<span class="sh-account-header">
+					<div id="sh-normal-account-head" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-9-20">
+							<form class="uk-form">
+								<input type="text" class="uk-form-width-large" height="50">
+								<i class="sh-tello-icon sh-icon-search">&#xe800;</i>
+							</form>
+						</div>
+						<div class="uk-width-7-20 sh-user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>Warenkorb (0)</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>Merkliste</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>Mein Konto</div>
+								<div class="sh-login-menu">
+									<div class="sh-login-menu-title">Willkommen,</div>
+									Frau Tora von Collani
+									<hr class="uk-article-divider">
+									<div></div>
+									<div class="sh-login-menu-main-content">
+										<div class="sh-login-menu-title">
+											Direct links
+										</div>
+										<a>My orders</a><br/>
+										<a>My account</a><br/>
+										<a>My favorites</a>
+									</div>
+									<button class="sh-logout-button">Abmelden</button>
+								</div>
+							</span>
+							
+						</div>						
+					</div>
+					
+					<!-- menu for mobile -->
+					<div id="sh-mobile-account">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-2-10">
+								<div><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+									<span>
+										<div class="sh-device-info-slider">
+											<label>Produktfamilie</label>
+											<hr class="uk-article-divider">
+											<label>Pflegeprodukte</label>
+											<hr class="uk-article-divider">
+											<label>Zubehör</label>
+											<hr class="uk-article-divider">
+											<label>Ersatzteile</label>
+											<hr class="uk-article-divider">
+											<label class="sh-menu-active">Service</label>
+										</div>	
+									</span>
+								</div>
+							</div>
+							<div class="uk-width-6-10 uk-right">
+								<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							</div>
+							<div class="uk-width-2-10">
+								<span id="sh-mobile-my-account">
+									<div><img src="images/account.png"></div>
+								</span>
+							</div>
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
+					</div>
+					<!-- end menu for mobile -->
+				</span>
+			</div>
+			
+			<!-- menu for big screen: desktop, tablet ... -->
+			<div id="sh-content-second">
+				<span class="sh-menu">
+					<ul class="sh-main-navigation">
+						<li>
+							<a href="">Produktfamilie</a>
+							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
+								<div class="uk-width-1-2">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-1-2">Spülen</div>
+										<div class="uk-width-1-2">Armaturen</div>
+										<div class="uk-width-1-2">Hauben</div>
+										<div class="uk-width-1-2">Kochfelder</div>
+										<div class="uk-width-1-2">Abfallsysteme</div>
+									</div>
+								</div>
+								<div class="uk-width-1-2">
+									<img src="images/image_menu.jpg">
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="clean_product.htm">Pflegeprodukte</a>
+						</li>
+						<li><a href="">Zubehör</a></li>
+						<li><a href="">Ersatzteile</a></li>
+						<li><a href="document.htm">Service</a></li>
+					</ul>
+				</span>
+			</div>
+			<!-- end menu for big screen: desktop, tablet ... -->
+			
+			<!-- main content -->			
+			<div id="sh-content-main">
+				<div class="sh-breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="">Home</a></li>
+						<li><a href="">My Account</a></li>
+						<li><span>Favorites</span></li>
+					</ul>
+				</div>
+				
+				<div>
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-medium-3-10">
+							<div id="sh-menu-account">
+								<span><div><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label><b><a href="#">My Account</a></b></label></div></span>
+								<span><label>Account Details</label></span>
+								<span><label>Login Details</label></span>
+								<span><label>Addresses</label></span>
+								<span><label>Orders</label></span>
+								<span><label>Returns</label></span>
+								<span><label>Favorites</label></span>
+							</div>
+						</div>
+						<div class="uk-width-medium-7-10">
+							<div id="sh-my-account-content">
+								<h3>My Account</h3>
+								<img src="images/franke-hero.png"/>
+								<div class="uk-panel uk-panel-box uk-custom-box" id="sh-account-direct-link">
+									<h4><b>Direct Links</b></h4>
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>New orders</label>
+										</div>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Return items</label>
+										</div>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Change my account details</label>
+										</div>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Change password</label>
+										</div>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Add a new delivery address</label>
+										</div>
+										<div class="uk-width-medium-1-3">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Add a new billing address</label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-medium-1-2">
+										<div class="uk-panel uk-panel-box uk-custom-box">
+											<h4><b>Personal Details</b></h4>
+											<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+												<div class="uk-width-medium-3-10">
+													<img src="images/my-account-person.png"/>
+												</div>
+												<div class="uk-width-medium-7-10">
+													Manage your personal data and your addresses
+												</div>
+											</div>
+											<div class="sh-right">
+												<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-medium-1-2">
+										<div class="uk-panel uk-panel-box uk-custom-box">
+											<h4><b>Favorites</b></h4>
+											<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+												<div class="uk-width-medium-3-10">
+													<img src="images/my-account-favorites.png"/>
+												</div>
+												<div class="uk-width-medium-7-10">
+													Manage your favorites products
+												</div>
+											</div>
+											<div class="sh-right">
+												<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-medium-1-2">
+										<div class="uk-panel uk-panel-box uk-custom-box">
+											<h4><b>Orders</b></h4>
+											<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+												<div class="uk-width-medium-3-10">
+													<img src="images/my-account-orders.png"/>
+												</div>
+												<div class="uk-width-medium-7-10">
+													Manage the orders you have made and download a copy of the invoices
+												</div>
+											</div>
+											<div class="sh-right">
+												<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-medium-1-2">
+										<div class="uk-panel uk-panel-box uk-custom-box">
+											<h4><b>Returns</b></h4>
+											<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+												<div class="uk-width-medium-3-10">
+													<img src="images/my-account-returns.png"/>
+												</div>
+												<div class="uk-width-medium-7-10">
+													Manage the returns you have made
+												</div>
+											</div>
+											<div class="sh-right">
+												<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- start content main for mobile -->
+			<div id="sh-content-main-mobile">
+				<div class="sh-breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="">Home</a></li>
+						<li><a href="">My Account</a></li>
+						<li><span>Favorites</span></li>
+					</ul>
+				</div>
+				
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-3-10">
+						<div id="sh-menu-account">
+							<span><div><i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label><b><a href="#">My Account</a></b></label></div></span>
+							<span><label>Account Details</label></span>
+							<span><label>Login Details</label></span>
+							<span><label>Addresses</label></span>
+							<span><label>Orders</label></span>
+							<span><label>Returns</label></span>
+							<span><label>Favorites</label></span>
+						</div>
+					</div>
+					<div class="uk-width-medium-7-10">
+						<div id="sh-my-account-content">
+							<h3>My Account</h3>
+							<img src="images/franke-hero.png"/>
+							<div class="uk-panel uk-panel-box uk-custom-box" id="sh-account-direct-link">
+								<h4><b>Direct Links</b></h4>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>New orders</label>
+									</div>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Return items</label>
+									</div>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Change my account details</label>
+									</div>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Change password</label>
+									</div>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Add a new delivery address</label>
+									</div>
+									<div class="uk-width-medium-1-3">
+										<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>Add a new billing address</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="uk-grid" data-uk-grid-match>
+								<div class="uk-width-medium-1-2">
+									<div class="uk-panel uk-panel-box uk-custom-box">
+										<h4><b>Personal Details</b></h4>
+										<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+											<div class="uk-width-medium-3-10">
+												<img src="images/my-account-person.png"/>
+											</div>
+											<div class="uk-width-medium-7-10">
+												Manage your personal data and your addresses
+											</div>
+										</div>
+										<div class="sh-right">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-medium-1-2">
+									<div class="uk-panel uk-panel-box uk-custom-box">
+										<h4><b>Favorites</b></h4>
+										<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+											<div class="uk-width-medium-3-10">
+												<img src="images/my-account-favorites.png"/>
+											</div>
+											<div class="uk-width-medium-7-10">
+												Manage your favorites products
+											</div>
+										</div>
+										<div class="sh-right">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-medium-1-2">
+									<div class="uk-panel uk-panel-box uk-custom-box">
+										<h4><b>Orders</b></h4>
+										<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+											<div class="uk-width-medium-3-10">
+												<img src="images/my-account-orders.png"/>
+											</div>
+											<div class="uk-width-medium-7-10">
+												Manage the orders you have made and download a copy of the invoices
+											</div>
+										</div>
+										<div class="sh-right">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-medium-1-2">
+									<div class="uk-panel uk-panel-box uk-custom-box">
+										<h4><b>Returns</b></h4>
+										<div class="uk-grid sh-account-box-content" data-uk-grid-match>
+											<div class="uk-width-medium-3-10">
+												<img src="images/my-account-returns.png"/>
+											</div>
+											<div class="uk-width-medium-7-10">
+												Manage the returns you have made
+											</div>
+										</div>
+										<div class="sh-right">
+											<i class="sh-tello-icon sh-icon-angle-right">&#xe801;</i><label>View</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- end content main for mobile -->
+			
+		</div>
+		
+		<!-- start footer -->
+		<div id="sh-footer">
+			<div id="sh-footer-first-content">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-9-20">
+						<span class="sh-footer-box-header">Service und Unterstützen</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Kontaktieren Sie uns</a><br/>
+							<a href="#">FAQs</a><br/>
+							<a href="#">Garantie Informationen</a><br/>
+							<a href="#">Lieferinformationen</a><br/>
+							<a href="#">Lieferländer</a><br/>
+							<a href="#">Rückgabe & Ersatz</a>
+						</span>
+					</div>
+					<div class="uk-width-2-5">
+						<span class="sh-footer-box-header">
+							Mein Konto
+						</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Anmelden / Registrieren</a><br/>
+							<a href="#">Mein Bestellungen</a><br/>
+							<a href="#">Mein Favoriten</a>
+						</span>
+					</div>
+					<div class="uk-width-3-20">
+						<span class="sh-footer-box-header sh-right">Franke Group</span>
+						<span class="sh-footer-box-content sh-right">
+							<a href="#">Dealer Portal</a><br/>
+							<a href="#">Über uns</a><br/>
+							<a href="#">Corporate website</a><br/>
+							<a href="#">Impressum</a><br/>
+							<a href="#">Privacy Policy</a><br/>
+							<a href="#">Legal Notice</a>
+						</span>
+					</div>
+				</div>	
+			</div>
+			<div id="sh-footer-second-content">
+				<div class="sh-page-center">
+					<label>Copyright ©  2016 Franke Management AG</label>
+				</div>
+			</div>
+		</div>
+		<!-- end for footer -->
+		
+		<script src="js/custom/main.js"></script>
+	</body>
+</html>

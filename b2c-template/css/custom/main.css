@@ -1,5 +1,9 @@
-html {
+html, button  {
 	font-family: 'Open Sans', sans-serif;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 a {
@@ -22,8 +26,12 @@ a {
 }
 
 #sh-header select {
-	border: none;
+    border: none;
     background: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1px;
 }
 
 #sh-header select:focus {
@@ -38,6 +46,7 @@ a {
     border-color: #eaeaea;
     padding: 0px 5px 3px 3px;
     font-family: 'Open Sans', sans-serif;
+	margin-top: 15px;
 }
 
 /** css attributes my account, search, logo **/
@@ -53,16 +62,34 @@ a {
 }
 
 .sh-account-header .uk-form  input[type="text"] {
-	width: 420px;
+	width: 415px;
     height: 35px;
     margin-top: 6px;
 }
 
+.sh-account-header .sh-icon-cancel {
+	font-size: 22px;
+    position: relative;
+    left: -80px;
+    top: 7px;
+    color: #C5C5C5;
+}
+
 .sh-icon-search {
 	position: relative;
-    left: -30px;
-    font-size: 16px;
-	top: 4px;
+    left: -7px;
+    font-size: 18px;
+    top: 6px;
+    background-color: #DC281E;
+    color: #fff;
+    width: 40px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+	cursor: pointer;
 }
 
 .sh-user-list-info span {
@@ -115,6 +142,10 @@ a {
 	margin-bottom: 10px;
 }
 
+.sh-user-list-info span .sh-login-menu div:nth-of-type(1):hover {
+	cursor: default;
+}
+
 .sh-login-menu-title {
 	color: #dc281e;
     font-size: 16px;
@@ -125,20 +156,26 @@ a {
 	line-height: 28px;
 }
 
-#sh-logout-button {
+.sh-logout-button {
 	padding: 10px;
-    text-align: center;    
+    text-align: center;
     border: 1px solid;
     margin-top: 25px;
     margin-bottom: 5px;
 	cursor: pointer;
 	background-color: #DC281E;
-	color: #fff;	
+	color: #fff;
+    width: 250px;
 }
 
 .sh-login-menu a:hover {
 	text-decoration: none;
     color: #dc281e;
+}
+
+#sh-content-first .sh-login-menu .sh-button-large:hover {
+	color: #fff;
+	cursor: pointer;
 }
 
 .sh-user-list-info span:hover .sh-login-menu {
@@ -213,8 +250,8 @@ a {
 	visibility: visible;	
 }
 
-#sh-content-main {
-	margin-top: 20px;
+#sh-main-content, #sh-content-main, #sh-content-main-mobile {
+	margin-top: 15px;
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -330,6 +367,10 @@ a {
     margin-bottom: 10px;
 }
 
+.uk-width-1-20 {
+  width: 5%;
+}
+
 .uk-width-3-20 {
   width: 15%;
 }
@@ -398,6 +439,8 @@ a {
 	background: #DC281E;
     color: #fff;
 	border: none;
+	height: 30px;
+    padding: 4px 12px 5px 12px;
 }
 
 .sh-button-large {
@@ -422,6 +465,12 @@ a {
 	margin: 0px;
 }
 
+.sh-custom-box {
+	border: 1px solid #D4C9C9;
+	background: #ffffff;
+	margin-bottom: 20px;
+}
+
 .uk-custom-box {
 	border: 1px solid #a8a8a8;
 	background: #ffffff;
@@ -435,4 +484,73 @@ a {
 	border-top: none;	
 	font-size: 13px;
 }
+
+.sh-link:hover,
+.sh-link a:hover {
+    cursor: pointer;
+    color: #dc281e;
+    text-decoration: none;
+}
+.sh-underlined-link:hover,
+.sh-underlined-link a:hover {
+    cursor: pointer;
+    color: #dc281e;
+    text-decoration: underline;
+}
+
+.sh-asterisk-left {
+	margin-left: 5px;
+	color: #DC281E;
+}
+
+.sh-asterisk-right {
+	margin-right: 5px;
+	color: #DC281E;
+}
+
+.sh-breadcrumb{
+	border-bottom: 1px solid #eaeaea;
+}
+.sh-breadcrumb ul {
+	margin-bottom: 10px;
+}
+
+.sh-text-red {
+	color: #DC281E;
+}
+
+#sh-content-main .sh-border-red {
+	border: solid 1px #Dc281E;
+}
+
+.sh-disable-element {
+	pointer-events:none;
+	opacity: 0.5;
+}
+
+.sh-button-login {
+	background: #DC281E;
+	color: #fff;
+	border: none;
+	font-size: 13px;
+	line-height: 0px;
+	height: 33px;
+	width: 250px;
+	margin: 0px;
+}
+
+.sh-fixed-button {
+	width: 100px;
+}
+
+.sh-border-bottom {
+	border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+}
+
+.uk-alert-success i {
+	font-size: 22px;
+	margin-right: 5px;
+}
+
 /*** end common css attribute ***/

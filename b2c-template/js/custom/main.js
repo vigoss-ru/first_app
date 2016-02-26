@@ -97,3 +97,12 @@ function documentAccordion() {
     });	
 }
 
+function showUpdateBasket(systemId, txtObj) {
+	var obj = $('#sh-update-basket-'+systemId);
+	if($(txtObj).val() == '' || $(txtObj).val() == null){
+		obj.css('display', 'none');
+		return;
+	}
+	if(obj.css('display') == 'none')
+		obj.css('display', 'block');
+}

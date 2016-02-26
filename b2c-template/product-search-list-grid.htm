@@ -6,6 +6,7 @@
 		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
 		<link rel="stylesheet" href="css/custom/main.css">
 		<link rel="stylesheet" href="css/custom/product-list.css">
+		<link rel="stylesheet" href="css/custom/product-list-grid.css">
 		<link rel="stylesheet" href="css/custom/responsive.css">
 		<link rel="stylesheet" href="css/custom/checkbox.css">
 		<script src="js/jquery.js"></script>
@@ -171,133 +172,27 @@
 				<div class="sh-breadcrumb">
 					<ul class="uk-breadcrumb">
 						<li><a href="">Startseite</a></li>
-						<li><a href="">Spülen</a></li>
-						<li><span>Pflegeprodukte</span></li>
+						<li><span>Search result for "Ablauf"</span></li>
 					</ul>
 				</div>
 				
 				<div id="sh-article-list-content">
 					<div class="uk-grid" data-uk-grid-match>
-						<div class="uk-width-medium-3-10">
-							<!-- start facetten -->			
-							<div class="sh-facet-box sh-facet-border-top" id="sh-facet-box-0">
-								<div class="sh-facet-title" onclick="showHideFacetContent('sh-facet-box-0')">
-									<a>
-										<i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>
-										<i class="sh-tello-icon sh-icon-angle-up sh-hide-element" >&#xe805;</i>
-										<label>Material</label>
-									</a>
-								</div>
-								<div class="sh-facet-content">
-									<ul>
-										<li>
-											<input type="checkbox" id="cbo1"> 
-											<label for="cbo1">Material 1</label>
-										</li>
-										<li>
-											<input type="checkbox" id="cbo2"> 
-											<label for="cbo2">Material 2</label>
-										</li>
-										<li>
-											<input type="checkbox" id="cbo3"> 
-											<label for="cbo3">Material 3</label>
-										</li>
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 4</label>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="sh-facet-box" id="sh-facet-box-1">
-								<div class="sh-facet-title" onclick="showHideFacetContent('sh-facet-box-1')">
-									<a>
-										<i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>
-										<i class="sh-tello-icon sh-icon-angle-up sh-hide-element" >&#xe805;</i>
-										<label>Material</label>
-									</a>
-								</div>
-								<div class="sh-facet-content">
-									<ul>
-										<li>
-											<input type="checkbox" id="cbo3"> 
-											<label for="cbo3">Material 1</label>
-										</li>
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>
-										
-										<li>
-											<input type="checkbox" id="cbo4"> 
-											<label for="cbo4">Material 2</label>											
-										</li>										
-									</ul>
-																		
-								</div>
-							</div>
-							
-							<div class="sh-facet-box" id="sh-facet-box-2">
-								<div class="sh-facet-title" onclick="showHideFacetContent('sh-facet-box-2')">
-									<a>
-										<i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>
-										<i class="sh-tello-icon sh-icon-angle-up sh-hide-element" >&#xe805;</i>
-										<label>Material</label>
-									</a>
-								</div>
-								<div class="sh-facet-content sh-range-slider-content">
-									<div class="sh-range-slider" id="range-slider-product-length"></div>
-									<div id="sh-range-slider-value">
-										<label>0 mm</label>
-										<label>1000 mm</label>
-									</div>
-								</div>
-							</div>	
-							<!-- end facetten here -->
-							<div id="sh-reset-filter-button">
-								<a>
-									<i class="sh-tello-icon">&#xe801;</i>
-									<label>Filter löschen</label>
-									<i class="sh-tello-icon">&#xe806;</i>
-								</a>
-							</div>
-						</div>
-						
-						<div class="uk-width-medium-7-10">
+						<div class="uk-width-medium-1-1">
 							<div id="sh-content-contaier">
 								<div class="sh-article-list-title">
-									<h2>Pflegeprodukte</h2>
+									<h2>Search result</h2>
 								</div>
+								<div class="uk-alert uk-alert-warning" data-uk-alert>
+									<a href="" class="uk-alert-close uk-close"></a>
+									<p>
+										<i class="sh-tello-icon">&#xe81b;</i>
+										Your search result "Oblauf" did not match with any product. We show you result for "Ablauf"
+									</p>
+								</div>
+								<label class="sh-text-search-result">
+									<b>6</b> search result for " <b>Ablauf</b> "
+								</label>
 								<div id="sh-article-list">
 									<div id="sh-articlelisting-loading" class="sh-articlelisting-loading">
 										<div class="sh-articlelisting-loading-container" id="sh-articlelisting-loading-container">
@@ -322,135 +217,145 @@
 										
 										<div class="sh-right">
 											<div class="sh-article-mode">
-												<i class="sh-tello-icon sh-view-mode-active">&#xe804;</i>
-												<i class="sh-tello-icon">&#xe803;</i>
+												<i class="sh-tello-icon">&#xe804;</i>
+												<i class="sh-tello-icon sh-view-mode-active">&#xe803;</i>
 											</div>
 										</div>
 									</div>
 									
-									<div class="sh-list-article-content">
+									<div class="sh-list-article-grid-content">
+										<div class="uk-grid" data-uk-grid-match>
 										<!-- make a loop for list of article here-->
-										<div class="uk-panel uk-panel-box uk-article-box">
-											<div class="uk-article-block">
-												<div class="uk-grid sh-inline-block" data-uk-grid-match>
-													<div class="uk-width-medium-2-10 sh-article-image-block">
-														<span><img src="images/1010197662.jpg"/></span>
+											<div class="uk-width-medium-1-4">
+												<div class="uk-panel uk-panel-box uk-article-grid-box">
+													<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+													<div class="sh-article-grid-description-block">
+														<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+														<br/><label>110.0157.489</label>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<h5><b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b></h5>
-														<div class="sh-article-art-nr">112.0006.240</div>
-														<div>
-																AGX 260 G 625x510mm, reversibel, rostfreier Edelstahl gebürstet, mit Integral Siebkorb/Excenterventil 3 1/2", 
-																Batterieloch, Drehknopfloch und Abtropfbecken GN 1/3 gelocht Edelstahl, verdeckter Überlauf.
+													<div class="sh-article-price-block">
+														<div class="sh-article-price">
+															<label class="price">564,00</label>
+															<label class="currency">€</label>
+														</div>
+														<div class="sh-article-vat">
+															Incl. VAT, excl. Shipping
 														</div>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<div class="sh-right">
-															<div class="sh-article-price-block">
-																<div class="sh-article-price-title">
-																	Katalogpreis
-																</div>
-																<div class="sh-article-price">
-																	<label class="price">564,00</label>
-																	<label class="currency">€</label>
-																</div>
-																<div class="sh-article-vat">
-																	Incl. VAT, excl. Shipping
-																</div>
-															</div>
-															<div class="sh-add-to-basket">
-																<span>
-																	<input type="textbox"/>
-																</span>
-																<button class="sh-button sh-red-button">In den Warenkorb</button>
-															</div>
-															<div class="sh-bookmark sh-text-red">
-																<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
-															</div>
+													<div class="sh-add-to-basket-grid">
+														<input type="textbox"/>
+														<button class="sh-button sh-red-button">In den Warenkorb</button>
+														<br/>
+														<div class="sh-bookmark">
+															<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										
-										<div class="uk-panel uk-panel-box uk-article-box">
-											<div class="uk-article-block">
-												<div class="uk-grid sh-inline-block" data-uk-grid-match>
-													<div class="uk-width-medium-2-10 sh-article-image-block">
-														<span><img src="images/1010197662.jpg"/></span>
+											
+											<div class="uk-width-medium-1-4">
+												<div class="uk-panel uk-panel-box uk-article-grid-box">
+													<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+													<div class="sh-article-grid-description-block">
+														<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+														<br/><label>110.0157.489</label>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<h5><b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b></h5>
-														<div class="sh-article-art-nr">112.0006.240</div>
-														<div>
-																AGX 260 G 625x510mm, reversibel, rostfreier Edelstahl gebürstet, mit Integral Siebkorb/Excenterventil 3 1/2", 
-																Batterieloch, Drehknopfloch und Abtropfbecken GN 1/3 gelocht Edelstahl, verdeckter Überlauf.
-														</div>
+													<div class="sh-no-longer-available">
+														<b>no longer available</b><br/>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<div class="sh-right">
-															<div class="sh-no-longer-available">
-																<b>no longer available</b><br/>
-															</div>
-															<div class="sh-add-to-basket sh-disable-element">
-																<span>
-																	<input type="textbox"/>
-																</span>
-																<button class="sh-button sh-red-button">In den Warenkorb</button>
-															</div>
-															<div class="sh-bookmark sh-disable-element">
-																<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
-															</div>
+													<div class="sh-add-to-basket-grid sh-disable-element">
+														<input type="textbox"/>
+														<button class="sh-button sh-red-button">In den Warenkorb</button>
+														<br/>
+														<div class="sh-bookmark">
+															<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										
-										<div class="uk-panel uk-panel-box uk-article-box">
-											<div class="uk-article-block">
-												<div class="uk-grid sh-inline-block" data-uk-grid-match>
-													<div class="uk-width-medium-2-10 sh-article-image-block">
-														<span><img src="images/1010197662.jpg"/></span>
+											
+											<div class="uk-width-medium-1-4">
+												<div class="uk-panel uk-panel-box uk-article-grid-box">
+													<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+													<div class="sh-article-grid-description-block">
+														<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+														<br/><label>110.0157.489</label>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<h5><b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b></h5>
-														<div class="sh-article-art-nr">112.0006.240</div>
-														<div>
-																AGX 260 G 625x510mm, reversibel, rostfreier Edelstahl gebürstet, mit Integral Siebkorb/Excenterventil 3 1/2", 
-																Batterieloch, Drehknopfloch und Abtropfbecken GN 1/3 gelocht Edelstahl, verdeckter Überlauf.
+													<div class="sh-article-price-block">
+														<div class="sh-article-price">
+															<label class="price">564,00</label>
+															<label class="currency">€</label>
+														</div>
+														<div class="sh-article-vat">
+															Incl. VAT, excl. Shipping
 														</div>
 													</div>
-													<div class="uk-width-medium-4-10">
-														<div class="sh-right">
-															<div class="sh-article-price-block">
-																<div class="sh-article-price-title">
-																	Katalogpreis
-																</div>
-																<div class="sh-article-price">
-																	<label class="price">564,00</label>
-																	<label class="currency">€</label>
-																</div>
-																<div class="sh-article-vat">
-																	Incl. VAT, excl. Shipping
-																</div>
-															</div>
-															<div class="sh-add-to-basket">
-																<span>
-																	<input type="textbox"/>
-																</span>
-																<button class="sh-button sh-red-button">In den Warenkorb</button>
-															</div>
-															<div class="sh-bookmark">
-																<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
-															</div>
+													<div class="sh-add-to-basket-grid">
+														<input type="textbox"/>
+														<button class="sh-button sh-red-button">In den Warenkorb</button>
+														<br/>
+														<div class="sh-bookmark">
+															<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
-										
+											
+											<div class="uk-width-medium-1-4">
+												<div class="uk-panel uk-panel-box uk-article-grid-box">
+													<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+													<div class="sh-article-grid-description-block">
+														<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+														<br/><label>110.0157.489</label>
+													</div>
+													<div class="sh-article-price-block">
+														<div class="sh-article-price">
+															<label class="price">564,00</label>
+															<label class="currency">€</label>
+														</div>
+														<div class="sh-article-vat">
+															Incl. VAT, excl. Shipping
+														</div>
+													</div>
+													<div class="sh-add-to-basket-grid"><input type="textbox"/>
+														<button class="sh-button sh-red-button">In den Warenkorb</button>
+														<br/>
+														<div class="sh-bookmark">
+															<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="uk-width-medium-1-4">
+												<div class="uk-panel uk-panel-box uk-article-grid-box">
+													<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+													<div class="sh-article-grid-description-block">
+														<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+														<br/><label>110.0157.489</label>
+													</div>
+													<div class="sh-article-price-block">
+														<div class="sh-article-price">
+															<label class="price">564,00</label>
+															<label class="currency">€</label>
+														</div>
+														<div class="sh-article-vat">
+															Incl. VAT, excl. Shipping
+														</div>
+													</div>
+													<div class="sh-add-to-basket-grid"><input type="textbox"/>
+														<button class="sh-button sh-red-button">In den Warenkorb</button>
+														<br/>
+														<div class="sh-bookmark">
+															<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											
 										<!-- end a loop for list of article here-->	
+										</div>
+										
 									</div>
 								</div>
 								<div id="sh-floating-pagination">

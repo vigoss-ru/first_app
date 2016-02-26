@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+	<head>
+		<title>Demotration shop</title>
+		<!-- basic components -->
+		<link id="data-uikit-theme" rel="stylesheet" href="css/uikit.almost-flat.min.css">
+		<link rel="stylesheet" href="css/custom/main.css">
+		<link rel="stylesheet" href="css/custom/product-detail.css">
+		<link rel="stylesheet" href="css/custom/product-list.css">
+		<link rel="stylesheet" href="css/custom/product-list-grid.css">
+		<link rel="stylesheet" href="css/custom/responsive.css">
+		<link rel="stylesheet" href="css/custom/checkbox.css">
+		<script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script src="js/custom/main.js"></script>
+		<!-- thumbnail components -->
+		<link href="css/custom/thumbs2.css" rel="stylesheet" />
+		<link href="css/custom/thumbnail-slider.css" rel="stylesheet" type="text/css" />
+		<script src="js/custom/thumbnail-slider.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!--
+		<div class="cookie">
+			<div class="page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-medium-5-10">Für ein besseres Einkaufserlebnis nutzt FRANKE Cookies</div>
+					<div class="uk-width-medium-5-10"><a href="#">Ich bin einverstanden</a></div>
+				</div>
+			</div>
+		</div>
+		-->
+		<!--upper header-->
+		<div id="sh-header">
+			<div class="sh-page-center">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-2-10">Kitchen Systems</div>
+					<div class="uk-width-8-10">
+						<div class="sh-right">
+							<span>Contact</span>
+							<span>Dealer Search</span>
+							<span>Franke Group</span>
+							<span><i class="sh-tello-icon sh-icon-angle-down">&#xe802;</i>Deutsch</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="sh-page-wrap">			
+			<!-- header with my account, contact, shopping cart-->
+			<div id="sh-content-first">
+				<span class="sh-account-header">
+					<div id="sh-normal-account-head" class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-2-10"><a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a></div>
+						<div class="uk-width-9-20">
+							<form class="uk-form">
+								<input type="text" class="uk-form-width-large" height="50">
+								<i class="sh-tello-icon sh-icon-search">&#xe800;</i>
+							</form>
+						</div>
+						<div class="uk-width-7-20 sh-user-list-info">
+							<span>
+								<div><img src="images/cart.png"></div>
+								<div>Warenkorb (0)</div>
+							</span>
+							
+							<span>
+								<div><img src="images/favorite.png"></div>
+								<div>Merkliste</div>
+							</span>
+							
+							<span>
+								<div><img src="images/account.png"></div>
+								<div>Mein Konto</div>
+								<div class="sh-login-menu">
+									<div class="sh-login-menu-title">Willkommen,</div>
+									Frau Tora von Collani
+									<hr class="uk-article-divider">
+									<div></div>
+									<div class="sh-login-menu-main-content">
+										<div class="sh-login-menu-title">
+											Direct links
+										</div>
+										<a>My orders</a><br/>
+										<a>My account</a><br/>
+										<a>My favorites</a>
+									</div>
+									<button class="sh-logout-button">Abmelden</button>
+								</div>
+							</span>
+							
+						</div>						
+					</div>
+					
+					<!-- menu for mobile -->
+					<div id="sh-mobile-account">
+						<div class="uk-grid" data-uk-grid-match>
+							<div class="uk-width-2-10">
+								<div><img id="logo" src="images/menu_icon.png" onclick="showMenuAccount();"  width="50px" height="50px">
+									<span>
+										<div class="sh-device-info-slider">
+											<label>Produktfamilie</label>
+											<hr class="uk-article-divider">
+											<label>Pflegeprodukte</label>
+											<hr class="uk-article-divider">
+											<label>Zubehör</label>
+											<hr class="uk-article-divider">
+											<label>Ersatzteile</label>
+											<hr class="uk-article-divider">
+											<label class="sh-menu-active">Service</label>
+										</div>	
+									</span>
+								</div>
+							</div>
+							<div class="uk-width-6-10 uk-right">
+								<a href="homepage.htm"><img id="logo" src="images/logo-franke.png"></a>
+							</div>
+							<div class="uk-width-2-10">
+								<span id="sh-mobile-my-account">
+									<div><img src="images/account.png"></div>
+								</span>
+							</div>
+						</div>
+						<form class="uk-form">
+							<input type="text" placeholder="Please find your favorite products ..." class="uk-form-width-large" height="50">
+						</form>
+					</div>
+					<!-- end menu for mobile -->
+				</span>
+			</div>
+			
+			<!-- menu for big screen: desktop, tablet ... -->
+			<div id="sh-content-second">
+				<span class="sh-menu">
+					<ul class="sh-main-navigation">
+						<li>
+							<a href="">Produktfamilie</a>
+							<div class="uk-grid uk-menu-hover" data-uk-grid-match>
+								<div class="uk-width-1-2">
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-1-2">Spülen</div>
+										<div class="uk-width-1-2">Armaturen</div>
+										<div class="uk-width-1-2">Hauben</div>
+										<div class="uk-width-1-2">Kochfelder</div>
+										<div class="uk-width-1-2">Abfallsysteme</div>
+									</div>
+								</div>
+								<div class="uk-width-1-2">
+									<img src="images/image_menu.jpg">
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="clean_product.htm">Pflegeprodukte</a>
+						</li>
+						<li><a href="">Zubehör</a></li>
+						<li><a href="">Ersatzteile</a></li>
+						<li><a href="document.htm">Service</a></li>
+					</ul>
+				</span>
+			</div>
+			<!-- end menu for big screen: desktop, tablet ... -->
+			
+			<!-- main content -->			
+			<div id="sh-content-main">
+				<div id="sh-breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="">Startseite</a></li>
+						<li><a href="">Spülen</a></li>
+						<li><a href="">Argos</a></li>
+						<li><span>AGX 110-35/110-17 3 1/2" I MAV EXC</span></li>
+					</ul>
+				</div>
+				<div id="sh-column-content">
+					<div class="uk-grid" data-uk-grid-match>
+						<div class="uk-width-3-10">
+							<img src="images/product-detail/g-beige.jpg" width="250px" height="250px"/><br/>
+							<i class="sh-tello-icon sh-zoom-icon" data-uk-modal="{target:'#sh-modal-article-detail'}">&#xe800;</i>
+							<div id="sh-modal-article-detail" class="uk-modal">
+								<div class="uk-modal-dialog">
+									<button type="button" class="uk-modal-close uk-close"></button>
+									<div id="sh-modal-article-detail-headline">
+										<h2>AGX 110-35/110-17 3 1/2" I MAV EXC</h2>
+										122.0199.668
+									</div>
+									<p>
+										<div class="uk-grid" data-uk-grid-match>
+											<div class="uk-width-medium-3-10" id="sh-modal-article-detail-left">
+												<div class="uk-panel uk-panel-box sh-custom-box">
+													<span>
+														<img src="images/product-detail/g-beige-small1.jpg"/>
+													</span>
+													<span>
+														<img src="images/product-detail/g-beige-small2.jpg"/>
+													</span>
+													<span>
+														<img src="images/product-detail/g-beige-small3.jpg"/>
+													</span>
+													<span>
+														<img src="images/product-detail/g-beige-small4.jpg"/>
+													</span>
+													<span>
+														<img src="images/product-detail/g-beige-small5.jpg"/>
+													</span>
+												</div>
+											</div>
+											<div class="uk-width-medium-7-10" id="sh-modal-article-detail-right">
+												<div class="uk-panel uk-panel-box sh-custom-box">
+													<img src="images/product-detail/g-beige.jpg"/>
+												</div>
+											</div>
+										</div>
+									</p>
+								</div>
+							</div>
+							<div id="thumbnail-slider">
+								<div class="inner">
+									<ul>
+										<li>
+											<a class="thumb" href="images/product-detail/g-beige-small4.jpg"></a>
+										</li>
+										<li>
+											<a class="thumb" href="images/product-detail/g-beige-small5.jpg"></a>
+										</li>
+										<li>
+											<a class="thumb" href="images/product-detail/g-beige-small2.jpg"></a>
+										</li>
+										<li>
+											<a class="thumb" href="images/product-detail/g-beige-small1.jpg"></a>
+										</li>
+										<li>
+											<a class="thumb" href="images/product-detail/g-beige-small3.jpg"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="uk-width-4-10">
+							<div class="sh-product-detail-header">
+								<h3>AGX 110-35/110-17 3 1/2" I MAV EXC</h3>
+								122.0199.668
+							</div>
+							<div class="sh-product-detail-description">
+								AGX 110-35 und AGX 110-17, Unterbaubecken-Kombination Edelstahl gebürstet, mit Zugknopf/Excenterventil 3 1/2" und Integral Siebkorb-Stopfenventil 3 1/2"
+								<br/><a>Read more</a>
+							</div>
+						</div>
+						<div class="uk-width-3-10">
+							<div class="sh-no-longer-available">
+								<b>no longer available</b><br/>
+								<label>
+									We are sorry, but this product is no longer available in production. Please take a look at its successor products below
+								</label>
+							</div>
+							<div class="sh-right sh-disable-element">
+								<div class="sh-add-to-basket sh-right">
+									<span><input type="textbox"/></span>
+									<button class="sh-button sh-red-button">In den Warenkorb</button>
+								</div><br/>
+								<div class="sh-bookmark">
+									<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div id="sh-bottom-content">
+					 <ul class="uk-tab uk-width-medium-1-1" data-uk-tab="{connect:'#sh-product-detail-tab-content'}">
+						<li class="uk-active"><a href="#">Specifications</a></li>
+						<li><a href="#">Downloads</a></li>
+						<li class="uk-disabled"><a href="#">Installation</a></li>
+						<li><a href="#">Spare Parts</a></li>
+						<li><a href="#">Accessories / Cleaning Products</a></li>
+						<li class="uk-disabled"><a href="#">History</a></li>
+						<li class="uk-disabled"><a href="#">Primary products</a></li>
+					</ul>
+					<ul id="sh-product-detail-tab-content" class="uk-switcher uk-margin">
+						<li class="uk-active" id="sh-tab-specification">
+							<span>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-10">Product family</div>
+									<div class="uk-width-7-10">ARGOS</div>
+								</div>
+							</span>
+							<span class="sh-row-grey">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-10">Material</div>
+									<div class="uk-width-7-10">Stainless steel</div>
+								</div>
+							</span>
+							<span>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-10">Finish</div>
+									<div class="uk-width-7-10">Stainless steel</div>
+								</div>
+							</span>
+							<span class="sh-row-grey">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-3-10">Installation type</div>
+									<div class="uk-width-7-10">Built-in</div>
+								</div>
+							</span>
+						</li>
+						<li id="sh-tab-document">
+							<span>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-4-10">Explosion drawing</div>
+									<div class="uk-width-3-10">EZ_122.0199.668_V01.pdf (68 KB, pdf)</div>
+									<div class="uk-width-3-10">
+										<button class="sh-button sh-red-button sh-download-button">Download</button>
+									</div>
+								</div>
+							</span>
+							<span class="sh-row-grey">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-4-10">Assembly instructions</div>
+									<div class="uk-width-3-10">MA_122.0199.668_V01.pdf (538 KB, pdf)</div>
+									<div class="uk-width-3-10">
+										<button class="sh-button sh-red-button sh-download-button">Download</button>
+									</div>
+								</div>
+							</span>
+							<span>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-4-10">Assembly drawing</div>
+									<div class="uk-width-3-10">MZ_122.0199.668_V01.pdf (210 KB, pdf)</div>
+									<div class="uk-width-3-10">
+										<button class="sh-button sh-red-button sh-download-button">Download</button>
+									</div>
+								</div>
+							</span>
+							<span class="sh-row-grey">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-4-10">Technical drawing</div>
+									<div class="uk-width-3-10">TZ_122.0199.668_V01.pdf (78 KB, pdf)</div>
+									<div class="uk-width-3-10">
+										<button class="sh-button sh-red-button sh-download-button">Download</button>
+									</div>
+								</div>
+							</span>
+						</li>
+						<li>Bazinga 6!</li>
+						<li>
+							<div id="sh-product-list-spare-part">
+								<div class="sh-pager-top">
+									<div>
+										<span><strong>24</strong></span> |
+										<span>48</span> |
+										<span>72</span>
+									</div>
+									<div>
+										<select>														
+											<option>nach Produktname</option>
+											<option>nach Art. Nr.</option>
+										</select>
+									</div>
+									
+									<div class="sh-right">
+										<div class="sh-article-mode">
+											<i class="sh-tello-icon">&#xe804;</i>
+											<i class="sh-tello-icon sh-view-mode-active">&#xe803;</i>
+										</div>
+									</div>
+								</div>
+								<div class="sh-list-article-grid-content">
+									<!-- make a loop for list of article here-->
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										<!-- end a loop for list of article here-->	
+									</div>
+								</div>
+								
+								<div id="sh-pagination">
+									<ul>
+										<li><i class="sh-tello-icon">&#xe806;</i></li>
+										<li><b>1</b></li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li><i class="sh-tello-icon">&#xe801;</i></li>
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<div id="sh-product-list-accessory">
+								<div class="sh-pager-top">
+									<div>
+										<span><strong>24</strong></span> |
+										<span>48</span> |
+										<span>72</span>
+									</div>
+									<div>
+										<select>														
+											<option>nach Produktname</option>
+											<option>nach Art. Nr.</option>
+										</select>
+									</div>
+									
+									<div class="sh-right">
+										<div class="sh-article-mode">
+											<i class="sh-tello-icon">&#xe804;</i>
+											<i class="sh-tello-icon sh-view-mode-active">&#xe803;</i>
+										</div>
+									</div>
+								</div>
+								<div class="sh-list-article-grid-content">
+									<!-- make a loop for list of article here-->
+									<div class="uk-grid" data-uk-grid-match>
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="uk-width-medium-1-4">
+											<div class="uk-panel uk-panel-box uk-article-grid-box">
+												<div class="sh-article-grid-image-block"><img src="images/1010197662.jpg"/></div>
+												<div class="sh-article-grid-description-block">
+													<b>AGX 260 G 3 1/2" I MAV REV BL DKL AB</b>
+													<br/><label>110.0157.489</label>
+												</div>
+												<div class="sh-article-price-block">
+													<div class="sh-article-price">
+														<label class="price">564,00</label>
+														<label class="currency">€</label>
+													</div>
+													<div class="sh-article-vat">
+														Incl. VAT, excl. Shipping
+													</div>
+												</div>
+												<div class="sh-add-to-basket-grid"><input type="textbox"/>
+													<button class="sh-button sh-red-button">In den Warenkorb</button>
+												</div>
+												<div class="sh-bookmark">
+													<i class="sh-tello-icon">&#xe809;</i><label>Merken</label>
+												</div>
+											</div>
+										</div>
+										<!-- end a loop for list of article here-->	
+									</div>
+									
+								</div>
+								
+								<div id="sh-pagination">
+									<ul>
+										<li><i class="sh-tello-icon">&#xe806;</i></li>
+										<li><b>1</b></li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li><i class="sh-tello-icon">&#xe801;</i></li>
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						<li>Bazinga 3!</li>
+						<li>Bazinga 2!</li>
+					</ul>
+				</div>
+				
+				
+				<!-- start article list for mobile  -->	
+				<div id="sh-content-main-mobile">
+				
+				
+				</div>
+				<!-- end article list for mobile  -->
+			</div>
+		</div>
+		
+		<!-- start footer -->
+		<div id="sh-footer">
+			<div id="sh-footer-first-content">
+				<div class="uk-grid" data-uk-grid-match>
+					<div class="uk-width-9-20">
+						<span class="sh-footer-box-header">Service und Unterstützen</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Kontaktieren Sie uns</a><br/>
+							<a href="#">FAQs</a><br/>
+							<a href="#">Garantie Informationen</a><br/>
+							<a href="#">Lieferinformationen</a><br/>
+							<a href="#">Lieferländer</a><br/>
+							<a href="#">Rückgabe & Ersatz</a>
+						</span>
+					</div>
+					<div class="uk-width-2-5">
+						<span class="sh-footer-box-header">
+							Mein Konto
+						</span>
+						<span class="sh-footer-box-content">
+							<a href="#">Anmelden / Registrieren</a><br/>
+							<a href="#">Mein Bestellungen</a><br/>
+							<a href="#">Mein Favoriten</a>
+						</span>
+					</div>
+					<div class="uk-width-3-20">
+						<span class="sh-footer-box-header sh-right">Franke Group</span>
+						<span class="sh-footer-box-content sh-right">
+							<a href="#">Dealer Portal</a><br/>
+							<a href="#">Über uns</a><br/>
+							<a href="#">Corporate website</a><br/>
+							<a href="#">Impressum</a><br/>
+							<a href="#">Privacy Policy</a><br/>
+							<a href="#">Legal Notice</a>
+						</span>
+					</div>
+				</div>	
+			</div>
+			<div id="sh-footer-second-content">
+				<div class="sh-page-center">
+					<label>Copyright ©  2016 Franke Management AG</label>
+				</div>
+			</div>
+		</div>
+		<!-- end for footer -->
+		
+		<script src="js/custom/main.js"></script>
+	</body>
+</html>

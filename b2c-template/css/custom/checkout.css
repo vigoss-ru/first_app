@@ -1,24 +1,23 @@
 .sh-checkout-title {
 	margin-top: 15px;
     display: inline-block;
-    font-size: 20px;
-    /*font-weight: bold;*/
-	text-transform: uppercase
+    font-size: 18px;
+	text-transform: uppercase;
 }
 
-.sh-checkout-header {
+#sh-content-first {
 	padding-top: 15px;
 	border-bottom: 1px solid #eaeaea;
     padding-bottom: 25px;
 }
 
-.sh-checkout-headline {
+#sh-content-third {
     padding-top: 15px;
     border-bottom: 1px solid #eaeaea;
 	padding-bottom: 15px;
 }
 
-.sh-checkout-step , .sh-payment-content-header, .sh-payment-content {
+#sh-content-second, .sh-payment-content-header {
 	border-bottom: 1px solid #eaeaea;
 	padding: 15px 0px 15px 30px;
 }
@@ -32,7 +31,8 @@
 	margin-right: 0px;
     padding: 4px 7px 5px 7px;
     text-align: center;
-    cursor: pointer;	
+    cursor: pointer;
+	height: 30px;
 }
 
 /*** for payment ***/
@@ -62,6 +62,11 @@
 
 .sh-payment-content-footer {
 	margin-top: 20px;
+	border-top: 1px solid #eaeaea;
+}
+
+.sh-payment-content-footer button {
+	margin-top: 13px;
 }
 
 .sh-payment-info-header {
@@ -89,7 +94,7 @@
 
 /*** checkout summary ***/
 .sh-checkout-summary-content {
-	border-bottom: 1px solid #eaeaea;
+    margin-top: 28px;	
     padding-bottom: 20px;
 }
 
@@ -99,10 +104,6 @@
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: #b6b7b7;
-}
-
-#sh-checkout-content {
-	margin-top: 30px;
 }
 
 .sh-cart-content-row {
@@ -173,8 +174,8 @@
 	padding: 8px;
     border: 1px solid #FFA500;
     background: #FFF9EF;
-	margin-bottom: 15px;
-	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 .sh-checkout-partial-headline label:nth-of-type(1){
@@ -198,4 +199,140 @@
     color: #7B7B7B;
 	margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.sh-partial-content-row {
+	padding: 15px 0 15px 16px;
+	border-bottom: 1px solid;
+    border-color: #D8D8D8;
+}
+
+#modal-partial-delivery .sh-modal-text-footer {
+	margin-top: 60px;
+	color: #949494;
+    font-size: 13px;
+}
+
+#modal-partial-delivery .sh-red-button {
+	position: relative;
+    top: 20px;
+	width: 70px;
+}
+
+#sh-main-content-mobile {
+	display: none;
+}
+
+@media only screen
+and (max-width: 705px) {
+	#sh-main-content {
+		display: none;
+	}
+	
+	#sh-main-content-mobile {
+		display: block;
+	}
+}
+
+/*** checkout address ***/
+
+.sh-checkout-address-content {
+	padding: 5px 0px 20px 0px;
+    background: #ffffff;
+}
+
+.sh-checkout-address-content .uk-alert {
+	width: 31.5%;
+}
+
+.sh-checkout-address-content .sh-medium .uk-alert {
+	width: 88%;
+}
+
+.sh-checkout-address-content span label {
+	line-height: 30px;
+}
+
+.sh-checkout-address-content span i {
+    margin-right: 10px;
+}
+
+.sh-checkout-address-content input[type="text"] {
+	width: 400px;
+	border-color: #b6b7b7;
+	margin-top: 5px;
+	height: 33px;
+}
+
+.sh-checkout-address-content select {
+	border-color: #b6b7b7;
+    width: 90px;
+}
+
+.sh-checkout-address-content button {
+	height: 30px;
+}
+
+.sh-checkout-address-content span {
+	margin-top: 20px;
+	display: block;
+}
+
+.sh-register-content div span {
+	width: 110px;
+}
+
+.sh-medium  input[type="text"] {
+	width: 185px;
+}
+
+.sh-checkout-address-content .sh-medium  {
+	display: flex;
+}
+
+.sh-checkout-address-content .sh-medium  div:nth-of-type(1){
+	margin-right: 30px;
+}
+
+.sh-checkout-address-content .sh-select-long {
+	width: 400px;
+}
+
+#sh-list-delivery-address div[id^="sh-checkout-address-"]
+, #sh-list-billing-address div[id^="sh-checkout-address-"] {
+	line-height: 40px;	
+	padding: 10px;
+	border: 1px solid #a8a8a8;
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;	
+}
+
+div[id^="sh-checkout-address-"] span {
+	margin-left: 25px;
+}
+
+#sh-main-content  div[id^="sh-checkout-address-"] input[type="radio"]:checked+div {
+	border: 1px solid #dc281e;
+}
+
+.sh-checkout-address-action {
+	text-align: right;
+}
+
+.sh-checkout-address-action label {
+	margin-left: 50px;
+	cursor: pointer;	
+}
+.sh-checkout-address-action label:hover {
+	color: #DC281E
+}
+
+.sh-checkout-address-action label  i {
+	margin-right: 8px;
+}
+
+#sh-list-billing-address {
+	margin-top: 40px;
+	display: none;
 }

@@ -1,0 +1,157 @@
+/*left menu for my account*/
+#sh-menu-account span {
+	width: 75%;
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eaeaea;
+	padding-left: 80px;
+}
+
+#sh-menu-account span:nth-of-type(1) div {
+	position: relative;
+    right: 50px;
+}
+
+#sh-menu-account span:nth-of-type(1) label {
+	margin-left: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#sh-menu-account b a, #sh-menu-account a:hover, .sh-account-address-action label:hover {
+	color: #DC281E;
+	text-decoration: none;
+}
+
+/*for favorite*/
+#sh-list-favorite h3 {
+	border-bottom: 1px solid #eaeaea;
+    padding-top: 11px;
+    padding-bottom: 10px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.sh-remove-favorite {
+	float: right;    
+    margin-top: 10px;
+}
+
+.sh-remove-favorite:hover, .sh-remove-favorite label:hover {
+	cursor: pointer;
+	color: #DC281E;
+}
+
+.sh-remove-favorite i {
+	margin-right: 8px;
+	font-size: 14px;
+}
+/*for my account*/
+#sh-my-account-content h3, .sh-my-account-detail h3 {
+	border-bottom: 1px solid #eaeaea;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    font-weight: bold;    
+}
+
+#sh-account-direct-link  i, #sh-my-account-content i {
+	margin-right: 10px;
+}
+
+#sh-account-direct-link {
+	line-height: 40px;
+    margin-top: 30px;    
+}
+
+#sh-account-direct-link label:hover {
+	color: #DC281E;
+	cursor: pointer;
+}
+
+.sh-account-box-content {
+	margin-top: 30px;
+    margin-bottom: 20px;
+    line-height: 30px;
+	height: 90px;
+}
+
+#sh-my-account-content .uk-width-medium-1-2 {
+	margin-bottom: 20px;
+}
+/*account detail*/
+.sh-my-account-detail span {
+	margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sh-my-account-detail input[type="text"], .sh-my-account-detail input[type="password"] {
+    width: 400px;
+    border-color: #b6b7b7;
+    margin-top: 5px;
+    height: 33px;
+	display: block;
+}
+
+.sh-my-account-detail select {
+	border-color: #b6b7b7;
+    width: 150px;
+	display: block;
+}
+
+.sh-my-account-detail .uk-alert {
+	width: 45.6%;
+	margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+#sh-account-form-footer, #sh-account-address-footer {
+	margin-top: 20px;
+    display: inline-block;
+    width: 48.3%;
+}
+
+#sh-account-form-footer button {
+	width: 120px;
+    height: 35px;
+}
+/**my account address**/
+#sh-account-address-footer button {
+	height: 35px;	
+}
+
+.sh-my-account-detail span label {
+    line-height: 30px;
+} 
+	
+.sh-my-account-detail .sh-medium {
+	display: flex;
+}
+
+.sh-my-account-detail .sh-medium input[type="text"] {
+	width: 185px;
+}
+
+.sh-my-account-detail .sh-medium div:nth-of-type(1) {
+    margin-right: 30px;
+}
+
+#sh-content-main div[id^="sh-account-address-delivery"],
+#sh-content-main div[id^="sh-account-address-billing"] {
+	line-height: 40px;	
+	padding: 10px;
+	border: 1px solid #a8a8a8;
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;	
+}
+
+.sh-account-address-action label {
+	margin-left: 50px;
+    cursor: pointer;	
+}
+
+.sh-account-address-action label  i {
+	margin-right: 8px;
+}
