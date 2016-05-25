@@ -17,7 +17,6 @@ a:hover{
 	text-decoration: none;
 }
 
-
 .inline_block {
 	display: block;
 }
@@ -40,7 +39,6 @@ a:hover{
 	width: 940px;
 	margin: 0 auto;
 }
-
 
 #header .content_block  span:nth-child(2){
 	float: right;
@@ -65,10 +63,14 @@ body {
     padding-bottom: 21px;
 }
 
+#header .uk-grid .uk-button-dropdown {
+	margin-left: 35px;
+	padding-left: 0px;
+}
+
 .content_slider {
 	background-color: #f0f0f0;
-	display: none;
-	/*background-color: #eaeef2;*/
+	display: none;	
     box-shadow: inset 0 6px 8px #dde3ea;
 	margin-top: 20px;
 }
@@ -95,11 +97,6 @@ body {
 .content_summary .summary_content {
 	margin-top:15px;
 	margin-bottom: 30px;
-}
-
-.summary_content label:nth-child(1) {
-	/*height: 185px;
-    display: inline-block;*/
 }
 
 .footer_header {
@@ -163,11 +160,21 @@ body {
 .content_box ul  li:before {
     font-family: FontAwesome;
     content: "\f00c";
-    /*color: #f47421;*/
 	color: #C01B0D;
 	position: absolute;
     top: 2px;
     left: 0;
     font-size: 16px;
     line-height: 24px!important;
+}
+
+#header .dropdown-menu:hover .uk-dropdown {
+	top: 0px;
+}
+
+.uk-nav-dropdown>li>a:hover{
+	background:#fff;
+	color:#e13b3f;
+	
+	box-shadow: none;
 }
