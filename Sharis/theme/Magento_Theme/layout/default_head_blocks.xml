@@ -1,0 +1,18 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- The following two ways to add local JavaScript files are equal -->
+        <script src="Magento_Catalog::js/main.js"/>
+        
+		
+    	<!-- Add external resources -->
+	    <!--<css src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" src_type="url" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" src_type="url" />
+        <link src="http://fonts.googleapis.com/css?family=Montserrat" src_type="url" /> -->
+		<!-- Add local resources -->		
+    	<css src="css/sharis-custom.css"/>
+		<css src="css/owl.carousel.css"/>
+
+		
+
+    </head>
+</page>

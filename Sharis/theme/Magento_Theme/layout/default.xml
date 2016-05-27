@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+			<referenceBlock name="my-account-link" remove="true" />
+            <!--<referenceBlock name="register-link" remove="true" />-->           <!--for Create Account Link-->
+			<referenceBlock name="wish-list-link" remove="true" />          <!--for WishList Link-->
+			<referenceBlock name="advanced-search-link" remove="true"/>     <!--for Advanced Search-->
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+				<!--<argument name="logo_file" xsi:type="string">images/logo-franke.png</argument>-->
+                <argument name="logo_img_width" xsi:type="number">111</argument>
+                <argument name="logo_img_height" xsi:type="number">49.75</argument>
+            </arguments>
+        </referenceBlock>
+		<referenceContainer name="header-wrapper">
+			<!--<block class="Magento\Framework\View\Element\Html\Link\Current" name="contact-us-link" before="minicart">
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">Contact us</argument>
+					<argument name="path" xsi:type="string">#</argument>
+				</arguments>
+			</block> -->
+			<block class="Magento\Framework\View\Element\Template" name="contact-us-content" template="Magento_Theme::html/test.phtml">
+				<arguments>
+					<argument name="target" xsi:type="string">contentarea</argument>
+					<argument name="label" translate="true" xsi:type="string">Contact us</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="switch/stores.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="copyright" destination="before.body.end"/>
+		
+		<!-- <move element="top.search" destination="header.panel" before="header.links"/>
+		<move element="minicart" destination="header.panel" after="top.links"/>  -->		
+    </body>
+</page>
