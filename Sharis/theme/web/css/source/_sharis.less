@@ -1,3 +1,22 @@
+
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+    background: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    height: 38px;
+    line-height: 1.4;
+    padding: 10px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
 @media (min-width: 768px) {
 	.page-header .panel.wrapper {
 		border-bottom: none;
@@ -102,7 +121,7 @@
 		max-width: 1280px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 1280px;
+		width: 100%;
 	}
 	
 	.navigation .level0 > .level-top span {
@@ -122,11 +141,11 @@
 		padding: 0 20px;
 	}
 	
-	.page-main {
+	/*.page-main {
 		max-width: 100%;
 		margin: 0px;
 		padding: 0px;
-	}
+	}*/
 	
 	.homepage-bar {
 		border-top: 1px solid #e1e1e1;
@@ -135,20 +154,192 @@
 	}
 	
 	.container {
-		width: 1280px;
+		max-width: 1280px;
+		wdith: 100%;		
 	}
 	
 	.homepage-bar .col-md-1-3 {
 		border-left: 1px solid #e1e1e1;
 		padding-top: 20px;
 		padding-bottom: 21px;
+		display: inline-block;
 	}
 	
 	.homepage-bar .col-md-1-3:first-child {
 		border-left: 0;
+	}
+			
+	.bestsell-block {
+		margin-left: -10px; 
+		margin-right: -10px;
+		display: inline-flex;
 	}	
+	
+	.form.create.account > .fieldset {
+		width: 50%;    
+		float: left;
+		margin: 0 0 10px;
+	}
+	
+	.fieldset > .field:not(.choice) > .label {
+		text-align: left;
+		font-weight: 400;
+		font-size: 1.4rem;
+		margin: 0 0 8px;
+		display: inline-block;
+	}
+	
+	.fieldset > .field:not(.choice) > .control {
+		width: 85%;
+	}
+	
+	.fieldset > .field.choice:before {
+		padding: 0;
+		width: 100%;
+		float: right;
+	}
+	
+	.column:not(.sidebar-main) form .actions-toolbar, .column:not(.sidebar-additional) form .actions-toolbar {
+		margin-left: 0%;
+		clear: both;
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+	
+	.login-container .fieldset:after {
+		margin-left: 0%;
+	}
+}
+
+.fieldset > .legend {
+    padding: 0;
+    border: 0;
+    color: #08c;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }	
+
+.icon-truck:before {
+	content: '\f0d1';
+    font-family: 'FontAwesome';
+    font-size: 36px;
+    position: relative;
+    top: 5px;
+}
+
+.icon-dollar:before {
+	content: '\f155';
+    font-family: 'FontAwesome';
+    font-size: 36px;
+    position: relative;
+    top: 5px;
+}
+
+.icon-lifebuoy:before {
+	content: '\f1cd';
+    font-family: 'FontAwesome';
+    font-size: 36px;
+    position: relative;
+    top: 5px;
+}
+
+.homepage-bar .text-area {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.homepage-bar h3 {
+    color: #313131;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.homepage-bar p {
+    font-size: 12px;
+}
+
+.owl-controls {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -37px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+    pointer-events: none;
+}
+
+.col-md-1-4 {
+	width: 25%;
+}
+
+.display-flex {
+	display: flex;
+}
 	
 .col-md-1-3 {
-    width: 33.33333333%;
+    width: 29.5%;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 30px;
+}
+
+.filterproduct-title {	
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 42px;
+    margin: 0;
+    color: #313131;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.filterproduct-title .content strong {
+    background-color: #fff;
+    padding-right: 20px;
+    display: inline;
+}
+
+.filterproduct-title .content img {
+	width: 84%;	
+}
+
+.login-container, .form.create.account, .form.password.forget
+,.form.search.advanced, .form.form-orders-search
+,.form.contact {
+	display: block;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    background: #fff;
+    border-top: 4px solid #08c;
+    padding: 35px 25px 0;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.08);
+	font-size: 1.3rem;
+}
+
+.page-main > .page-title-wrapper .page-title {
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #08c;
+    font-weight: 500;
+}
+
+.form.create.account {
+	width: 96.4%;
 }

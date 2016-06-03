@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="top.links">
-			<referenceBlock name="my-account-link" remove="true" />
+			<!--<referenceBlock name="my-account-link" remove="true" />-->
             <!--<referenceBlock name="register-link" remove="true" />-->           <!--for Create Account Link-->
 			<referenceBlock name="wish-list-link" remove="true" />          <!--for WishList Link-->
 			<referenceBlock name="advanced-search-link" remove="true"/>     <!--for Advanced Search-->
