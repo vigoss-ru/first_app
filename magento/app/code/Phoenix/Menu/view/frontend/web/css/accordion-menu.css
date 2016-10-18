@@ -1,0 +1,141 @@
+﻿/* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
+
+#accordion {
+    visibility:hidden;
+}
+
+/* root UL */
+#accordion ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+/* sub UL */
+#accordion ul ul {
+    /*background:#f5f5f5;*/
+    padding:0px 0;
+}
+
+/*---------- Indents ------*/
+
+/*top-level*/
+#accordion .top > a, #accordion .top > div {
+    padding-top:18px;
+	padding-bottom:18px;
+    border-bottom: 1px solid #cccccc;
+    /*width: 206px;*/
+    /*padding-left:20px;*/
+    /*background: url(../images/nav-menu-line.jpg) repeat-x bottom;*/
+}
+
+#accordion .top > div a {
+    color: black;
+}
+
+#accordion .active > div a {
+    font-weight: bold;
+}
+
+/*2nd-level*/
+#accordion li li > a, #accordion li li > div {
+    /*padding-left:30px;*/
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+/*3rd-level*/
+#accordion li li li > a, #accordion li li li > div { padding-left:20px; }
+
+
+/*---------- Other styles ------*/
+
+/* headings */
+#accordion li > div{
+    /*font-family:'Lucida Grande', Geneva, Candara, Tahoma, sans-serif;*/
+    font-weight:bold;
+    font-size:large;
+    color:black;
+	display: flex;
+}
+#accordion .active > div{
+    color:#333;
+}
+
+#accordion li {
+    font-family:Arial, sans-serif;
+    font-size:13px;
+	padding: 0;
+    margin:0;
+    overflow:hidden;
+	cursor: pointer;
+}
+
+#accordion li>.active {
+    font-weight: bold;
+}
+
+/* No double borders between LIs*/
+#accordion li.top + li.top {
+    border-top:0;
+}
+
+/* links */
+#accordion a {
+    /*color:black;*/
+    font-weight:normal;
+    font-size:13px;
+    text-decoration:none;
+    display:block;
+    line-height:1;
+    transition:color 0.3s;
+}
+
+#accordion a:hover, #accordion a.active {
+    /*background-color:#eee;/*#ffda3f;*/
+}
+
+/* carets */
+#accordion div.caret {
+    background: url(../images/arrow.png) no-repeat;
+    width: 10px;
+    margin-top: 3px;
+}
+
+#accordion div.caret.active {
+    background: url(../images/arrow-hover-active.png) no-repeat;
+    width: 15px;
+}
+
+#accordion li {
+    -ms-user-select:none;
+    -mos-user-select:none;
+    -webkit-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+    #accordion li li > a, #accordion li li > div {
+        padding-left: 0px;
+    }
+
+    #accordion .top > a, #accordion .top > div {
+        padding-left: 0px;
+    }
+
+    #accordion li li li > a, #accordion li li li > div {
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Add borders to the top LIs */
+    #accordion .top {
+        /*background: url(../images/nav-menu-line.jpg) repeat-x bottom;*/
+        /*width: 206px;*/
+    }
+}

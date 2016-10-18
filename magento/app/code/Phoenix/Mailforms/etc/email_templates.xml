@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="phoenix_mailforms_email_template_call_back"
+              label="Phoenix Mailforms - Callback email" file="call_back.html" type="html" module="Phoenix_Mailforms" area="frontend"/>
+    <template id="phoenix_mailforms_email_template_contact"
+              label="Phoenix Mailforms - Contact email" file="contact.html" type="html" module="Phoenix_Mailforms" area="frontend"/>
+</config>

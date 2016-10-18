@@ -1,0 +1,51 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/* @var $block \Magento\Framework\View\Element\Template */
+?>
+
+<div id="left-under-menu-nav">
+    <a href="<?php echo $this->getUrl('zahlung');?>">
+        <img id="callout_payment" src="<?php echo $block->getViewFileUrl('images/callout_payment.gif'); ?>"/>
+    </a>
+
+    <?php echo $this->getLayout()->createBlock("Phoenix\Mailforms\Block\ContactForm")->setTemplate("Phoenix_Mailforms::html/call_back.phtml")->toHtml();?>
+    <!-- newsletter -->
+    <div id="left-newsletter">
+        <div class="title"><div class="left-newsletter-icon"></div><span><?php echo __('Newsletter');?></span></div>
+        <div class="newsletter-content">
+            Abonnieren Sie unseren Newsletter<br/>
+            (Abmeldung jederzeit möglich):
+            <?php echo $this->getLayout()->createBlock("Magento\Newsletter\Block\Subscribe")->setTemplate("Magento_Newsletter::subscribe.phtml")->toHtml();?>
+        </div>
+    </div>
+    <!-- recent view product -->
+    <div id="left-recentview">
+        <div class="title"><span><?php echo __('Recently Viewed Products');?></span></div>
+        <div class="recentview-content"><a href="#"></a></div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+{"[data-role=compare-products-sidebar]": {"Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout();?>}}
+</script>
+
+<script>
+    require(
+        [
+            'jquery'
+        ],
+        function($) {
+            var title = localStorage.getItem("recentview-product");
+            var link = localStorage.getItem("recentlink-product");
+            if(title != null && title != '') {
+                $('#left-recentview').css('display','block');
+                $('#left-recentview .recentview-content a').html(title);
+                $('#left-recentview .recentview-content a').attr("href", link);
+            }
+        }
+    );
+</script>

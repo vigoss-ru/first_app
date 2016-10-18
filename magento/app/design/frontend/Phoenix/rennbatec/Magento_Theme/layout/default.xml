@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="contactus-link" after="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">contact us</argument>
+                    <argument name="path" xsi:type="string">contacts/mail/index</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="merchants-link" before="contactus-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Merchants</argument>
+                    <argument name="path" xsi:type="string">haendler</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="home-link" before="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Home</argument>
+                    <argument name="path" xsi:type="string">home</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <referenceBlock name="register-link" remove="true" />
+        </referenceBlock>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">180</argument>
+                <argument name="logo_img_height" xsi:type="number">100</argument>
+            </arguments>
+        </referenceBlock>
+        <move element="minicart" destination="header.panel" before="-"/>
+
+        <referenceContainer name="footer-container">
+            <referenceBlock name="store_switcher" remove="true" />
+            <referenceBlock name="footer_links" remove="true" />
+            <referenceBlock name="copyright" remove="true" />
+            <referenceBlock name="report.bugs" remove="true" />
+            <referenceBlock name="form.subscribe" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="rennbatec-footer" template="Magento_Theme::html/rennbatec-footer.phtml" />
+        </referenceContainer>
+
+        <referenceBlock name="sale.reorder.sidebar" remove="true" />
+        <referenceBlock name="paypal.partner.right.logo" remove="true" />
+        <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true" />
+        <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="true" />
+        <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true" />
+
+        <move element="product.price.render.bundle.customization" destination="bundle.summary" before="-" />
+    </body>
+</page>

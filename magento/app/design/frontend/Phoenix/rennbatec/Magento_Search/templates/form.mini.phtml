@@ -1,0 +1,83 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+?>
+<div class="menu-header-components">
+    <!-- menu -->
+    <ul class="horizontal-menu" id="horizontal-menu">
+        <li class="selected"><a href="<?php echo $this->getBaseUrl() ?>maschinen.html">Maschinen</a></li>
+        <li><a href="<?php echo $this->getBaseUrl() ?>einrichtung.html">Einrichtung</a></li>
+        <li><a href="<?php echo $this->getBaseUrl() ?>zubehoer.html">Zubehör</a></li>
+    </ul>
+    <!-- block search -->
+    <div class="block block-search">
+        <div class="block block-title"><strong><?php /* @escapeNotVerified */ echo __('Search'); ?></strong></div>
+        <div class="block block-content">
+            <form class="form minisearch" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+                <div class="field search">
+                    <label class="label" for="search" data-role="minisearch-label">
+                        <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                    </label>
+                    <div class="control">
+                        <input id="search"
+                               data-mage-init='{"quickSearch":{
+                                    "formSelector":"#search_mini_form",
+                                    "url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest'); ?>",
+                                    "destinationSelector":"#search_autocomplete"}
+                               }'
+                               type="text"
+                               name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+                               value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+                               placeholder="<?php /* @escapeNotVerified */ echo __('Search entire store here...'); ?>"
+                               class="input-text"
+                               maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+                               role="combobox"
+                               aria-haspopup="false"
+                               aria-autocomplete="both"
+                               autocomplete="off"/>
+                        <div id="search_autocomplete" class="search-autocomplete"></div>
+                        <?php echo $block->getChildHtml() ?>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="submit"
+                            title="<?php echo $block->escapeHtml(__('Search')) ?>"
+                            class="action search">
+                        <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- header contact image -->
+    <div class="header-contact-image"></div>
+
+    <script>
+        require(
+            [
+                'jquery'
+            ],
+            function($) {
+                var clickedMenuURL = window.location.href;
+                if(clickedMenuURL.match(/.html/g) != null && clickedMenuURL.match(/.html/g).length == 2)
+                    clickedMenuURL = clickedMenuURL.replace('.html','');
+                if(clickedMenuURL != null) {
+                    var element = $('#horizontal-menu a[href="'+clickedMenuURL+'"]');
+                    if(element.parent().is("li")) {
+                        $("#horizontal-menu li").removeClass('selected');
+                        $(element).parent().addClass('selected');
+                    }
+                }
+            }
+        );
+    </script>
+</div>

@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<div id="registration" data-bind="scope:'registration'">
+    <br />
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#registration": {
+                "Magento_Ui/js/core/app": {
+                   "components": {
+                        "registration": {
+                            "component": "Magento_Checkout/js/view/registration",
+                            "config": {
+                                "registrationUrl": "<?php /* @escapeNotVerified */ echo $block->getCreateAccountUrl(); ?>",
+                                "email": "<?php /* @escapeNotVerified */ echo $block->getEmailAddress(); ?>"
+                            },
+                            "children": {
+                                "errors": {
+                                    "component": "Magento_Ui/js/view/messages",
+                                    "sortOrder": 0,
+                                    "displayArea": "messages",
+                                    "config": {
+                                        "autoHideTimeOut": -1
+                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+
+<script type="text/javascript">
+    setTimeout(function(){
+        jQuery('#registration div p:nth-child(1)').html("<?php echo __('You can track your order status by creating an account.'); ?>");
+        jQuery('#registration div p:nth-child(2) span:nth-child(1)').html("<?php echo __('Email Address'); ?>");
+        jQuery('#registration div form input').val("<?php echo __('Create an Account'); ?>");
+        jQuery('#registration div form input').live('click', function() {
+            setTimeout(function(){
+                jQuery('#registration div p:nth-child(1)').html("<?php echo __('A letter with further instructions will be sent to your email.'); ?>");
+            }, 6500);
+        });
+    }, 2500);
+</script>

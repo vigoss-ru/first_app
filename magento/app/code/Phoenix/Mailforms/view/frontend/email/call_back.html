@@ -1,0 +1,9 @@
+{{template config_path="design/email/header_template"}}
+<!--@subject {{trans "Rückrufwunsch"}}  @-->
+
+<h1>{{trans "Im Online-Shop wurde ein Rückrufwunsch aufgenommen:"}}</h1>
+
+<p>{{trans "Name"}}:           {{var data.name}}<p/>
+<p>{{trans "Telefon"}}:      {{var data.telephone}}<p/>
+<p>{{trans "Nachricht"}}:        {{var data.subject}}</p>
+

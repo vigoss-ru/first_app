@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <phoenix_mailforms>
+            <call_back>
+                <recipient_email>
+                    <![CDATA[hello@example.de]]>
+                </recipient_email>
+                <sender_email_identity>custom2</sender_email_identity>
+                <email_template>phoenix_mailforms_email_template_call_back</email_template>
+            </call_back>
+            <contact>
+                <recipient_email>
+                    <![CDATA[hello@example.de]]>
+                </recipient_email>
+                <sender_email_identity>custom2</sender_email_identity>
+                <email_template>phoenix_mailforms_email_template_contact</email_template>
+            </contact>
+        </phoenix_mailforms>
+    </default>
+</config>

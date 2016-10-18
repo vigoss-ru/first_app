@@ -1,0 +1,57 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Aktualisierung zu Ihrer %store_name Rechnung" store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var order.getCustomerName()":"Customer Name",
+"var comment":"Invoice Comment",
+"var invoice.increment_id":"Invoice Id",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">
+                <strong>
+                    {{trans "Sehr geehrte/r %customer_name," customer_name=$order.getCustomerName()}}
+                </strong>
+            </p>
+            <p>
+                {{trans
+                    "Ihre Rechnung Nr. #%increment_id wurde atkualisiert. Neuer Status: <strong>%order_status</strong>."
+
+                    increment_id=$order.increment_id
+                    order_status=$order.getStatusLabel()
+                |raw}}
+                {{trans 'Sie können den aktuellen Status Ihrer Bestellung jederzeit in <a href="%account_url">Ihrem Kundenbereich</a> einsehen.' account_url=$this.getUrl($store,'customer/account/',[_nosid:1]) |raw}}
+            </p>
+            <p>
+                {{trans 'Sollten Sie Fragen zu Ihrer Bestellung haben, senden Sie uns eine E-Mail an <a href="mailto:%store_email">%store_email</a>.' store_email=$store_email |raw}}
+            </p>
+        </td>
+    </tr>
+    <tr class="email-information">
+        <td>
+            {{depend comment}}
+            <table class="message-info">
+                <tr>
+                    <td>
+                        {{var comment|escape|nl2br}}
+                    </td>
+                </tr>
+            </table>
+            {{/depend}}
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}
+
+{{block class="Magento\\Cms\\Block\\Block" area='frontend' block_id="email-agb"}}

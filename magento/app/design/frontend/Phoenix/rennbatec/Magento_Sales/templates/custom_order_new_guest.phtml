@@ -1,0 +1,37 @@
+<?php
+    $order = $block->getOrder();
+    $store_email=$block->getStoreEmail();
+    $store_phone=$block->getStorePhone();
+    $store = $block->getStore();
+    
+?>
+
+    <tr class="email-intro">
+        <td>
+            <p class="greeting">
+                Sehr geehrte/r
+                <?php
+                    echo $order->getBillingAddress()->getName();
+                ?>,
+            </p>
+            <p>
+                Vielen Dank für Ihre Bestellung bei <?php echo $store->getFrontendName(); ?>, deren Eingang wir hiermit bestätigen.
+                Sobald Ihr Auftrag bearbeitet wurde, erhalten Sie per E-Mail weitere Informationen zu Bezahlung und Versand.
+            </p>
+            <p>
+                Sollten Sie Fragen zu Ihrem Kundenkonto oder Ihrer Bestellung haben, senden Sie uns eine E-Mail an <a href="mailto:<?php echo $store_email?>"><?php echo $store_email?></a>
+            </p>
+            <p>Diese E-Mail wird automatisch versendet und stellt noch keine Annahme des Kaufangebotes dar. Der Kaufvertrag kommt mit unserer separaten Auftragsbestätigung per E-Mail zustande.</p>
+            <p>Mit freundlichen Grüßen<br>
+                Rennhak Bäckerei-Technik GmbH
+            </p>
+            <p>Nachfolgend finden Sie eine Übersicht Ihrer Bestellung:</p>
+        </td>
+    </tr>
+
+    <tr class="email-summary">
+        <td>
+            <h1>Ihre Bestellnummer <span class="no-link"><?php echo $order->getIncrementId(); ?></span></h1>
+            <p>Aufgegeben am <span class="no-link"><?php echo $order->getCreatedAtFormatted(2); ?></span></p>
+        </td>
+    </tr>

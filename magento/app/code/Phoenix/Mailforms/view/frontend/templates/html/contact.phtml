@@ -1,0 +1,137 @@
+<?php
+/**
+ * Contact Form
+ *
+ * @var $block \Phoenix\Mailforms\Block\ContactForm
+ */
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $om->get('Magento\Customer\Model\Session');
+$custEmail = $customerSession->getCustomer()->getEmail();
+?>
+<div id="contact-main" class="home-main-content">
+    <div class="banner-img">
+        <img src="<?php echo $block->getViewFileUrl('images/kv_maschinen_einrichtung_zu.jpg'); ?>"/>
+    </div>
+    <div class="main-content">
+        <div class="head related">
+            <h4><?php /* @escapeNotVerified */ echo __('Contact Us') ?></h4>
+        </div>
+        <form id="contact-form"
+              data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+              data-mage-init='{"validation":{}}'>
+              <div class="contact-main-form">
+                  <div class="columns">
+                      <div class="col-1">
+                          <div class="input-box">
+                              <label for="accountno"><?php /* @escapeNotVerified */ echo __('Account no.') ?></label><br>
+                              <input name="accountno" id="accountno" type="text" tabindex="1" autofocus>
+                          </div>
+                          <div class="input-box">
+                              <label for="salutation"><?php /* @escapeNotVerified */ echo __('Anrede') ?><span class="asterisk">*</span></label><br>
+                              <select name="salutation" id="salutation" tabindex="3">
+                                  <option value="Frau">Mrs.</option>
+                                  <option value="Herr">Mr.</option>
+                              </select>
+                          </div>
+                          <div class="input-box">
+                              <label for="firstname"><?php /* @escapeNotVerified */ echo __('First Name') ?><span class="asterisk">*</span></label><br>
+                              <input name="firstname" id="firstname" type="text" data-validate="{required:true}" tabindex="4">
+                          </div>
+                          <div class="input-box">
+                              <label for="street"><?php /* @escapeNotVerified */ echo __('Street') ?> <span class="asterisk">*</span></label><br>
+                              <input name="street" id="street" type="text" data-validate="{required:true}" tabindex="6">
+                          </div>
+                          <div class="input-box">
+                              <label for="country"><?php /* @escapeNotVerified */ echo __('Country') ?> <span class="asterisk">*</span></label><br>
+                              <input name="country" id="country" type="text" data-validate="{required:true}" tabindex="8">
+                          </div>
+                          <div class="input-box">
+                              <label for="telephone"><?php /* @escapeNotVerified */ echo __('Telephone') ?> <span class="asterisk">*</span></label><br>
+                              <input name="telephone" id="telephone" type="text" data-validate="{required:true}" tabindex="10">
+                          </div>
+                          <div class="input-box">
+                              <label for="contacttype"><?php /* @escapeNotVerified */ echo __('How would you like to be contacted?') ?> <span class="asterisk">*</span></label><br>
+                              <select name="contacttype" id="contacttype" tabindex="12">
+                                  <option value="E-Mail">E-Mail</option>
+                                  <option value="Telefon">Telefon</option>
+                                  <option value="Fax">Fax</option>
+                                  <option value="Mail">Mail</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="input-box">
+                              <label for="company"><?php /* @escapeNotVerified */ echo __('Company') ?><span class="asterisk">*</span></label><br>
+                              <input name="company" id="company" type="text" data-validate="{required:true}" tabindex="2">
+                          </div>
+                          <div class="input-box" style="visibility: hidden;" id="useless-input-box">
+                              <label for="name1"><?php /* @escapeNotVerified */ echo __('Name') ?> <span class="asterisk">*</span></label><br>
+                              <input name="name1" id="name1" type="text">
+                          </div>
+                          <div class="input-box">
+                              <label for="name"><?php /* @escapeNotVerified */ echo __('Name') ?> <span class="asterisk">*</span></label><br>
+                              <input name="name" id="name" type="text" data-validate="{required:true}" tabindex="5">
+                          </div>
+                          <div class="input-box">
+                              <label for="zipcity"><?php /* @escapeNotVerified */ echo __('ZIP and city') ?> <span class="asterisk">*</span></label><br>
+                              <input name="zipcity" id="zipcity" type="text" data-validate="{required:true}" tabindex="7">
+                          </div>
+                          <div class="input-box">
+                              <label for="email"><?php /* @escapeNotVerified */ echo __('Email') ?> <span class="asterisk">*</span></label><br>
+                              <input name="email" id="email" type="text" data-validate="{required:true, 'validate-email':true}" value="<?php echo $custEmail;?>" tabindex="9">
+                          </div>
+                          <div class="input-box">
+                              <label for="fax"><?php /* @escapeNotVerified */ echo __('Fax') ?></label><br>
+                              <input name="fax" id="fax" type="text" tabindex="11">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="input-box">
+                      <label for="comment"><?php /* @escapeNotVerified */ echo __('Message') ?> <span class="asterisk">*</span></label><br>
+                      <textarea name="comment" id="comment" data-validate="{required:true}" cols="50" rows="5" tabindex="13"></textarea>
+                  </div>
+              </div>
+              <div class="contact-form-bottom">
+                    <div class="col-1">
+                        <label>* <?php /* @escapeNotVerified */ echo __('This is a required field.') ?></label>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="action save primary" id="btn-contact" tabindex="14">
+                            <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
+                        </button>
+                    </div>
+              </div>
+        </form>
+    </div>
+
+    <script>
+        require(
+            [
+                'jquery',
+                'mage/translate'
+            ],
+            function($) {
+                $("#btn-contact").unbind().click(function(e) {
+                    if (!$('#contact-form').valid()) {
+                        $('.mage-error').html('<?php /* @escapeNotVerified */ echo __('This is a required field.') ?>');
+                        return;
+                    }
+                    var url = "<?php /* @escapeNotVerified */ echo $block->getContactAction(); ?>";
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: $("#contact-form").serialize(), // serializes the form's elements.
+                        success: function(data)
+                        {
+                            $('#contact-form input').val('');
+                            $('#contact-form textarea').val('');
+                            var body = $('html, body');
+                            body.stop().animate({scrollTop:0}, '600', 'swing');
+                        }
+                    });
+                });
+            }
+        );
+    </script>
+
+</div>

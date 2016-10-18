@@ -1,0 +1,23 @@
+<?php
+    $order = $block->getOrder();
+    $text = $block->getText();
+
+    switch ($text) {
+        case 'billing':
+            echo 'Rechnungsadresse';
+            break;
+        case 'shipping':
+            echo 'Versandadresse';
+            break;
+        case 'payment_method':
+            echo 'Zahlungsmethode';
+            break;
+        case 'shipping_method':
+            echo 'Versandart';
+            break;
+        case 'subject':
+            echo 'Rennbatec.de: Zugangsbestätigung Bestellung Nr. '.$order->getIncrementId();
+            break;
+    }
+
+?>

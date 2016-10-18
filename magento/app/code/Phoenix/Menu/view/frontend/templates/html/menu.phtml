@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/* @var $block \Phoenix\Menu\Block\Html\Menu */
+?>
+
+<?php $_menu_accordion = $block->getHtml(); ?>
+
+<div>
+    <div class="left-accordion-menu-hidden">
+        <div id="accordion">
+            <ul>
+                <?php /* @escapeNotVerified */ echo $_menu_accordion; ?>
+            </ul>
+        </div>
+    </div>
+    <div class="left-accordion-menu">
+        <div id="accordion">
+
+        </div>
+    </div>
+</div>
+
+<script>
+require(['jquery', 'jquery/ui'], function($){
+    //your js code here
+    //$('.sidebar.sidebar-additional').css('display','none');
+    //$('.left-accordion-menu-hidden #accordion').css('display','none');
+    //$('.left-accordion-menu #accordion').html($('.left-accordion-menu-hidden #accordion').html());
+
+    //$('.sidebar.sidebar-additional').append($('#left-under-menu-nav').html());
+    // your script
+
+
+});
+</script>

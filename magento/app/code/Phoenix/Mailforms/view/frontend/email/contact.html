@@ -1,0 +1,22 @@
+{{template config_path="design/email/header_template"}}
+<!--@subject {{trans "Kontaktinformationen"}}  @-->
+<h1>{{trans "Contact"}}</h1>
+
+<p>{{trans "Kundennummer"}}:      {{var data.accountno}}</p>
+<p>{{trans "Anrede"}}:      {{var data.salutation}}</p>
+<p>{{trans "Vorname"}}:      {{var data.firstname}}</p>
+<p>{{trans "Name"}}:      {{var data.name}}</p>
+<p>{{trans "Firma"}}:      {{var data.company}}</p>
+<p>{{trans "Straße"}}:      {{var data.street}}</p>
+<p>{{trans "PLZ und Ort"}}:      {{var data.zipcity}}</p>
+<p>{{trans "Land"}}:      {{var data.country}}</p>
+<p>{{trans "Telefon"}}:      {{var data.telephone}}</p>
+<p>{{trans "Fax"}}:      {{var data.fax}}</p>
+<p>{{trans "E-Mail"}}:      {{var data.email}}</p>
+<p>{{trans "Wie möchten Sie bevorzugt kontaktiert werden?"}}:      {{var data.contacttype}}</p>
+
+<p>{{trans "Kommentar"}}:      {{var data.comment}}</p>
+
+
+{{template config_path="design/email/footer_template"}}
+

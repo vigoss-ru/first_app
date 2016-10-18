@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Sales\Block\Order\Totals
+ * @see \Magento\Sales\Block\Order\Totals
+ */
+$_order = $block->getOrder();
+
+?>
+
+    <?php foreach ($block->getTotals() as $_code => $_total): ?>
+
+        <?php if ($_total->getBlockName()): ?>
+            <?php echo $block->getChildHtml($_total->getBlockName(), false); ?>
+        <?php else:?>
+            <tr class="<?php /* @escapeNotVerified */ echo $_code?>">
+                <th <?php /* @escapeNotVerified */ echo $block->getLabelProperties()?> scope="row">
+
+                    <?php if ($_total->getStrong()):?>
+                        <?php if ($_total->getLabel() == 'Grand Total'):?>
+                            <strong>Gesamtsumme</strong>
+                        <?php else:?>
+                            <strong><?php echo $block->escapeHtml($_total->getLabel());?></strong>
+                        <?php endif;?>
+
+                    <?php else:?>
+
+                        <?php if($_total->getLabel() == 'Subtotal'):?>
+                            Zwischensumme
+                        <?php elseif($_total->getLabel() == 'Shipping & Handling'):?>
+                            Versand & Bearbeitung
+                        <?php else:?>
+                            <?php echo $block->escapeHtml($_total->getLabel());?>
+                        <?php endif;?>
+
+                    <?php endif?>
+                </th>
+                <td <?php /* @escapeNotVerified */ echo $block->getValueProperties()?> data-th="<?php echo $block->escapeHtml($_total->getLabel());?>">
+                    <?php if ($_total->getStrong()):?>
+                        <strong><?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?></strong>
+                    <?php else:?>
+                        <?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?>
+                    <?php endif?>
+                </td>
+            </tr>
+        <?php endif?>
+    <?php endforeach?>

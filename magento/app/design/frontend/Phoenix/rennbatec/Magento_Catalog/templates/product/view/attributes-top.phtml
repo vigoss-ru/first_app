@@ -1,0 +1,84 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product additional attributes template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Attributes
+ */
+?>
+<?php
+    $_helper = $this->helper('Magento\Catalog\Helper\Output');
+    $_product = $block->getProduct();
+    $string = preg_replace('#[^0-9a-z]+#i', '-', $_product->getAttributeText('manufacturer'));
+    $string = trim(strtolower($string), '-');
+?>
+<?php if ($_additional = $block->getAdditionalData()): ?>
+    <div class="additional-attributes-wrapper table-wrapper">
+        <table class="data table additional-attributes" id="product-detail-attribute-top">
+            <caption class="table-caption"><?php /* @escapeNotVerified */ echo __('More Information') ?></caption>
+            <tbody>
+
+
+                        <tr>
+                            <td class="col label" scope="row"><?php echo $block->escapeHtml(__('Manufacturer')); ?></td>
+                            <td>
+                                <?php
+                                if(trim($_product->getAttributeText('manufacturer')) != '') {
+                                    echo $_product->getAttributeText('manufacturer');
+                                } else {
+                                    echo 'OHNE';
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                        <tr>
+                           <td class="col label" scope="row">SKU</td>
+                           <td class="col data" data-th="Breite"><?php echo $_product->getData('sku');?></td>
+                        </tr>
+                        <?php if(trim($_product->getData('baujahr')) != '') {?>
+                           <tr>
+                               <td class="col label" scope="row">Baujahr</td>
+                               <td class="col data" data-th="Breite"><?php echo $_product->getData('baujahr');?></td>
+                           </tr>
+                        <?php } ?>
+                        <tr>
+                           <td class="col label" scope="row"><?php echo $block->escapeHtml(__('Delivery Time')); ?></td>
+                           <td class="col data" data-th="Breite"><?php echo $_product->getData('delivery_time');?></td>
+                        </tr>
+
+            </tbody>
+        </table>
+
+        <?php $imagePath = $block->getViewFileUrl('images/'.$string.'.jpg');?>
+        <span class="manu-logo">
+            <img src="#"/>
+        </span>
+
+        <script>
+            require(
+                [
+                    'jquery'
+                ],
+                function($) {
+                    var path = '<?php echo $imagePath; ?>';
+                    var string = '<?php echo $string; ?>';
+                    if(string != '') {
+                        $.ajax({
+                            url: path,
+                            success: function() {
+                                $('.manu-logo img').addClass('dislay-block');
+                                $('.manu-logo img').attr('src', path);
+                            }
+                        });
+                    }
+                }
+            );
+        </script>
+    </div>
+<?php endif;?>

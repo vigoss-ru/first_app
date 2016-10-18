@@ -1,0 +1,105 @@
+<?php
+/**
+ * Callback Form
+ *
+ * @var $block \Phoenix\Mailforms\Block\ContactForm
+ */
+
+/*$om = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $om->get('Magento\Customer\Model\Session');
+$name = $customerSession->getFirstname().' '.$customerSession->getLastname();
+$id = $customerSession->getCustomer()->getGender();
+$resourceConnection = $om->get('Magento\Framework\App\ResourceConnection');
+$conn = $resourceConnection->getConnection();
+$select = $conn->select()
+    ->from(
+        ['eaov' => 'eav_attribute_option_value']
+    )
+    ->where('eaov.option_id=?', $id);
+$data = $conn->fetchAll($select);*/
+
+?>
+
+<div id="left-callback">
+    <a href="javascript:void(0);"><?php echo __('Request a call');?></a>
+</div>
+<!--<button type="button" id="openModel" class="btn btn-primary">Open Model</button> -->
+<div id="home-call-back">
+    <form id="call-back-form"
+          data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+          data-mage-init='{"validation":{}}'>
+        <p><label>Tragen Sie hier einfach Ihre Rufnummer, Ihren Namen und ggf. den Betreff Ihrer Anfrage ein - wir rufen Sie zurück:</label></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label><?php /* @escapeNotVerified */ echo __('Telephone') ?></label><label class="asterisk">*</label>
+                    </td>
+                    <td>
+                        <input type="text" name="telephone" data-validate="{required:true}">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label><?php /* @escapeNotVerified */ echo __('Name') ?></label><label class="asterisk">*</label></td>
+                    <td>
+                        <input type="text" name="name" data-validate="{required:true}" id="callback-name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><?php /* @escapeNotVerified */ echo __('Subject') ?></td>
+                    <td>
+                        <textarea name="subject"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="action save primary" id="btn-callback">
+            <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
+        </button>
+        
+    </form>
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal',
+            'mage/translate'
+        ],
+        function($,modal) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: '<?php /* @escapeNotVerified */ echo __('Request a call') ?>',
+                buttons: []
+            };
+            var popup = modal(options, $('#home-call-back'));
+            $("#left-callback a").on("click",function(){
+                $('#home-call-back').modal('openModal');
+                $('#home-call-back').css('display', 'block');
+                $('#callback-name').val($('#custome-welcome-name').html());
+            });
+
+            $("#btn-callback").unbind().click(function(e) {
+                if (!$('#call-back-form').valid()) {
+                    $('.mage-error').html('<?php /* @escapeNotVerified */ echo __('This is a required field.') ?>');
+                    return;
+                }
+                var url = "<?php /* @escapeNotVerified */ echo $block->getCallbackAction(); ?>";
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $("#call-back-form").serialize(), // serializes the form's elements.
+                    success: function(data)
+                    {
+                        $("#call-back-form input").val('');
+                        $("#call-back-form textarea").val('');
+                        $('#home-call-back').modal('closeModal');
+                    }
+                });
+            });
+        }
+    );
+</script>

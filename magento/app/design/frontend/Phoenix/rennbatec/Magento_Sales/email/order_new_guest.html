@@ -1,0 +1,70 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{layout handle="sales_billing" order=$order store=$store text="subject" area="frontend"}} @-->
+<!--@vars {
+"var formattedBillingAddress|raw":"Billing Address",
+"var order.getEmailCustomerNote()":"Email Order Note",
+"var order.getBillingAddress().getName()":"Guest Customer Name",
+"var order.getCreatedAtFormatted(1)":"Order Created At (datetime)",
+"var order.increment_id":"Order Id",
+"layout handle=\"sales_email_order_items\" order=$order":"Order Items Grid",
+"var payment_html|raw":"Payment Details",
+"var formattedShippingAddress|raw":"Shipping Address",
+"var order.getShippingDescription()":"Shipping Description"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<table>
+    {{layout handle="sales_custom_order_new_guest" order=$order storeEmail=$store_email storePhone=$store_phone store=$store area="frontend"}}
+
+    <tr class="email-information">
+        <td>
+            {{depend order.getEmailCustomerNote()}}
+            <table class="message-info">
+                <tr>
+                    <td>
+                        {{var order.getEmailCustomerNote()|escape|nl2br}}
+                    </td>
+                </tr>
+            </table>
+            {{/depend}}
+            <table class="order-details">
+                <tr>
+                    <td class="address-details">
+                        <h3>{{layout handle="sales_billing" order=$order text="billing" area="frontend"}}</h3>
+                        <p>{{var formattedBillingAddress|raw}}</p>
+                    </td>
+                    {{depend order.getIsNotVirtual()}}
+                    <td class="address-details">
+                        <h3>{{layout handle="sales_billing" order=$order text="shipping" area="frontend"}}</h3>
+                        <p>{{var formattedShippingAddress|raw}}</p>
+                    </td>
+                    {{/depend}}
+                </tr>
+                <tr>
+                    <td class="method-info">
+                        <h3>{{layout handle="sales_billing" order=$order text="payment_method" area="frontend"}}</h3>
+                        {{var payment_html|raw}}
+                    </td>
+                    {{depend order.getIsNotVirtual()}}
+                    <td class="method-info">
+                        <h3>{{layout handle="sales_billing" order=$order text="shipping_method" area="frontend"}}</h3>
+                        <p>{{var order.getShippingDescription()}}</p>
+                    </td>
+                    {{/depend}}
+                </tr>
+            </table>
+            {{layout handle="sales_email_order_items" order=$order}}
+        </td>
+    </tr>
+
+    {{layout handle="order_new_footer" order=$order area="frontend"}}
+
+</table>
+
+
+{{block class="Magento\\Cms\\Block\\Block" area='frontend' block_id="email-agb"}}

@@ -1,0 +1,65 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+$welcomeMessage = $block->getWelcome();
+?>
+
+<?php switch ($block->getShowPart()):
+    case 'welcome': ?>
+        <!--<li class="greet welcome" data-bind="scope: 'customer'">
+            <span data-bind="text: customer().fullname ? $t('Welcome, %1!').replace('%1', customer().fullname) : '<?=$block->escapeHtml($welcomeMessage) ?>'"></span>
+        </li> -->
+        <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "customer": {
+                            "component": "Magento_Customer/js/view/customer"
+                        }
+                    }
+                }
+            }
+        }
+        </script>
+    <?php break; ?>
+
+    <?php case 'other': ?>
+        <?php echo $block->getChildHtml(); ?>
+    <?php break; ?>
+
+<?php endswitch; ?>
+
+<script>
+    require(
+        [
+            'jquery'
+        ],
+        function($) {
+            $(window).load(function () {
+                var baseURL = '<?php echo $this->getBaseUrl(); ?>';
+                var currURL = window.location.href;
+                var catalogSearch = baseURL + 'catalogsearch/';
+                if(currURL.indexOf(catalogSearch) == -1) {
+                    var filterObjDE = $('#narrow-by-list .filter-options-item:contains("Kategorie")');
+                    var filterObjEN = $('#narrow-by-list .filter-options-item:contains("Category")');
+                    filterObjDE.css('display', 'none');
+                    filterObjEN.css('display', 'none');
+                    if($('#narrow-by-list .filter-options-item').length == 1
+                        && ($(filterObjDE).css('display') !== undefined || $(filterObjEN).css('display') !== undefined )) {
+                        $('.filter .block-subtitle').css('display', 'none');
+                    }
+                }
+                localStorage.setItem("baseURL", baseURL);
+            });
+        }
+    );
+</script>

@@ -1,0 +1,50 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Willkommen bei %store_name." store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p class="greeting">
+    <strong>
+        {{trans "Sehr geehrte/r %customer_name," customer_name=$customer.name}}
+    </strong>
+</p>
+<p>{{trans "herzlich willkommen in unserem Shop %store_name." store_name=$store.getFrontendName()}}</p>
+<p>
+    {{trans
+        'Um sich bei Ihrem nächsten Besuch in unserem Shop einzuloggen, klicken Sie einfach auf <a href="%customer_url">Login</a> oder <a href="%customer_url">Mein Kundenkonto</a> im oberen Bereich jeder Seite, und geben Sie Ihre E-Mail-Adresse und Passwort ein.'
+
+        customer_url=$this.getUrl($store,'customer/account/',[_nosid:1])
+    |raw}}
+</p>
+<p>
+    Mit folgenden Zugangsdaten können Sie sich anmelden:
+</p>
+<ul>
+    <li><strong>{{trans "E-Mail:"}}</strong> {{var customer.email}}</li>
+    <li><strong>{{trans "Passwort:"}}</strong> <em>{{trans "Passwort, das Sie während der Kontoeinrichtung gesetzt haben"}}</em></li>
+</ul>
+<p>{{trans "Nach erfolgreichem Login auf unserer Seite haben Sie die folgenden Möglichkeiten:"}}</p>
+<ul>
+    <li>{{trans "Schnellerer Bezahlvorgang beim nächsten Einkauf"}}</li>
+    <li>{{trans "Alle laufenden Bestellungen im Auge behalten"}}</li>
+    <li>{{trans "Verlauf der vergangenen Bestellungen"}}</li>
+    <li>{{trans "Verwalten der Kundenkonto-Einstellungen"}}</li>
+    <li>{{trans "Ihr Passwort ändern"}}</li>
+    <li>{{trans "Verschiedene Adressen für den Versand an Familienmitglieder und Freunde sowie Rechnungsadressen speichern"}}</li>
+</ul>
+<p>
+    {{trans 'Sollten Sie Fragen zu Ihrem Kundenkonto oder andere Anfragen haben, senden Sie uns eine E-Mail an <a href="mailto:%store_email">%store_email</a>.' store_email=$store_email |raw}}
+</p>
+{{template config_path="design/email/footer_template"}}
+
+{{block class="Magento\\Cms\\Block\\Block" area='frontend' block_id="email-agb"}}

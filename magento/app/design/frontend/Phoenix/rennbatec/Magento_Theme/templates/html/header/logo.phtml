@@ -1,0 +1,141 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<span data-action="toggle-nav" class="action nav-toggle"><span><?php /* @escapeNotVerified */ echo __('Toggle Nav') ?></span></span>
+<?php if ($block->isHomePage()):?>
+    <strong class="logo">
+<?php else: ?>
+    <a class="logo" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+<?php endif ?>
+        <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+             alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+             <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+             <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+        />
+<?php if ($block->isHomePage()):?>
+    </strong>
+<?php else:?>
+    </a>
+<?php endif?>
+
+<!-- // this one is not good solution, but when we upgrade to newest Magenton version, we shall remove that //last checkout page -->
+<input id="textPlaceOrder" type="hidden" value="<?php echo __('Place Order'); ?>">
+<input id="textBillingAddress" type="hidden" value="<?php echo __('My billing and shipping address are the same'); ?>">
+<input id="textPaypalTitle" type="hidden" value="<?php echo __('What is PayPal?'); ?>">
+<input id="textPaypalRedirect" type="hidden" value="<?php echo __('You will be redirected to the PayPal website.'); ?>">
+<input id="textPaypalAgrement" type="hidden" value="<?php echo __('Sign a billing agreement to streamline further purchases with PayPal.'); ?>">
+<input id="textDiscountCode" type="hidden" value="<?php echo __('Apply Discount Code'); ?>">
+<input id="textDiscountTextbox" type="hidden" value="<?php echo __('Enter discount code'); ?>">
+<input id="textDiscountApply" type="hidden" value="<?php echo __('Apply Discount'); ?>">
+<input id="textItemInCart" type="hidden" value="<?php echo __('Items in Cart'); ?>">
+<input id="textShipTo" type="hidden" value="<?php echo __('Ship To:'); ?>">
+<input id="textShipMethod" type="hidden" value="<?php echo __('Shipping Method:'); ?>">
+<input id="textQty" type="hidden" value="<?php echo __('Qty'); ?>">
+<input id="textEdit" type="hidden" value="<?php echo __('Edit'); ?>">
+<input id="textNewAddress" type="hidden" value="<?php echo __('New Address'); ?>">
+<input id="textSaveNewAddress" type="hidden" value="<?php echo __('Save in address book'); ?>">
+
+<!-- // this one is not good solution, but when we upgrade to newest Magenton version, we shall remove that // before last checkout page -->
+<input id="textShipping" type="hidden" value="<?php echo __('Shipping'); ?>">
+<input id="textSaveAddressBook" type="hidden" value="<?php echo __('Save in address book'); ?>">
+<input id="textReviewPayment" type="hidden" value="<?php echo __('Review & Payments'); ?>">
+<input id="textShippingAddress" type="hidden" value="<?php echo __('Shipping Address'); ?>">
+<input id="textNewAddress" type="hidden" value="<?php echo __('New Address'); ?>">
+<input id="textShippingMethods" type="hidden" value="<?php echo __('Shipping Methods'); ?>">
+<input id="textOrderSummary" type="hidden" value="<?php echo __('Order Summary'); ?>">
+<input id="textItemsInCart" type="hidden" value="<?php echo __('Items in Cart'); ?>">
+<input id="textNotCalculate" type="hidden" value="<?php echo __('Not yet calculated'); ?>">
+<input id="textExclTax" type="hidden" value="<?php echo __('Excl. Tax'); ?>">
+<input id="textEmailAddress" type="hidden" value="<?php echo __('Email Address'); ?>">
+<input id="textPassword" type="hidden" value="<?php echo __('Password'); ?>">
+<input id="textAlreadyAcc" type="hidden" value="<?php echo __('You already have an account with us. Sign in or continue as guest.'); ?>">
+<input id="textCreateAcc" type="hidden" value="<?php echo __('You can create an account after checkout.'); ?>">
+<input id="textForgotPassword" type="hidden" value="<?php echo __('Forgot Password'); ?>">
+<input id="textSignIn" type="hidden" value="<?php echo __('Sign In'); ?>">
+<input id="textLogin" type="hidden" value="<?php echo __('Login'); ?>">
+<input id="textPassword" type="hidden" value="<?php echo __('Password'); ?>">
+<input id="textNext" type="hidden" value="<?php echo __('Next'); ?>">
+<input id="textClose" type="hidden" value="<?php echo __('Close'); ?>">
+<script>
+
+    require([ 'jquery', 'jquery/ui'], function($){
+        minicartClick($);
+        searchClick($);
+        passwordReset($);
+        btnSubmit($);
+
+        $('#shipping-new-address-form select[name=prefix]').on('change', function() {
+            alert('12345');
+        });
+
+    });
+
+    function btnSubmit($) {
+        $('.actions-toolbar .primary button').live('click', function() {
+            setTimeout(function(){
+                $('.mage-error').html('<?php /* @escapeNotVerified */ echo __('This is a required field.') ?>');
+                $('.mage-error#password-error').html('<?php /* @escapeNotVerified */ echo __('Please enter 6 or more characters. Leading or trailing spaces will be ignored.') ?>');
+                $('.mage-error#password-confirmation-error').html('<?php /* @escapeNotVerified */ echo __('Please enter the same value again.') ?>');
+            }, 10);
+        });
+    }
+
+    function minicartClick($) {
+        $('#minicart-large-device .bg-right a').click(function() {
+            $('#minicart-content-wrapper .block-content .items-total span:nth-child(2)').html('<?php echo __('item'); ?>');
+            $('#minicart-content-wrapper .subtotal .label span').html('<?php echo __('Cart Subtotal'); ?>');
+            $('#minicart-content-wrapper #top-cart-btn-checkout span').html('<?php echo __('Go to Checkout'); ?>');
+            $('#minicart-content-wrapper .actions .secondary .viewcart span span').html('<?php echo __('View and edit cart'); ?>');
+            $('#minicart-content-wrapper .block-content .subtitle.empty span').html('<?php echo __('You have no items in your shopping cart.'); ?>');
+            $('#minicart-content-wrapper .minicart-items .product-item-pricing .details-qty label').html('<?php echo __('Qty'); ?>');
+            $('#minicart-content-wrapper .minicart-items .product-item-pricing .details-qty button span').html('<?php echo __('Update'); ?>');
+            $('#minicart-content-wrapper a.action.delete').click(function() {
+                setTimeout(function(){
+                    $('.modal-content div').html('<?php echo __('Are you sure you would like to remove this item from the shopping cart?'); ?>');
+                    $('.modal-footer .action-dismiss span').html('<?php echo __('Cancel'); ?>');
+                }, 100);
+            });
+
+        });
+
+    }
+
+    function searchClick($) {
+        var obj = $('#search_mini_form .control input');
+        var objLabel = $('#search_mini_form .field.search label');
+        objLabel.unbind().click(function() {
+            obj.css('position') ==  'static'?obj.css('position', 'absolute'):obj.css('position', 'static');
+        });
+    }
+    
+    function passwordReset($) {
+        var obj = $('.form.password.reset button');
+        obj.unbind().click(function() {
+            setTimeout(function(){
+                var valPassError = $('#password-error').html();
+                if(valPassError == 'This is a required field.') {
+                    $('#password-error').html('<?php echo __('This is a required field.'); ?>');
+                } else if (valPassError == 'Please enter 6 or more characters. Leading or trailing spaces will be ignored.') {
+                    $('#password-error').html('<?php echo __('Please enter 6 or more characters. Leading or trailing spaces will be ignored.'); ?>');
+                }
+                var confirmPassError = $('#password-confirmation-error').html();
+                if(confirmPassError == 'This is a required field.') {
+                    $('#password-confirmation-error').html('<?php echo __('This is a required field.'); ?>');
+                } else if(confirmPassError == 'Please enter the same value again.') {
+                    $('#password-confirmation-error').html('<?php echo __('Please enter the same value again.'); ?>');
+                }
+            }, 50);
+        });
+    }
+
+</script>

@@ -1,0 +1,74 @@
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-rennhak')->toHtml();?>
+
+<div id="rennbactec-footer-mobile" class="page-main">
+    <div class="footer-mobile-row">
+        <div class="footer-mobile-column">
+            <ul>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <li><a href="<?php echo $this->getUrl('zahlung');?>"><?php /* @escapeNotVerified */ echo __('Payment') ?></a></li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('lieferung');?>"><?php /* @escapeNotVerified */ echo __('Freight') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('qualitaetssiegel');?>"><?php /* @escapeNotVerified */ echo __('Quality Seal') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('bestellung');?>"><?php /* @escapeNotVerified */ echo __('Order Procedure') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('agb');?>"><?php /* @escapeNotVerified */ echo __('Conditions') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('datenschutz');?>"><?php /* @escapeNotVerified */ echo __('Privacy') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('impressum');?>"><?php /* @escapeNotVerified */ echo __('Imprint') ?></a>
+                                </li>
+                            </td>
+                            <td>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('catalogsearch/advanced');?>"><?php /* @escapeNotVerified */ echo __('Search') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('contacts/mail/index');?>"><?php /* @escapeNotVerified */ echo __('Contact') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('unternehmen');?>"><?php /* @escapeNotVerified */ echo __('Company') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('haendler');?>"><?php /* @escapeNotVerified */ echo __('Merchants') ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->getUrl('hilfe');?>"><?php /* @escapeNotVerified */ echo __('Help') ?></a>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>
+                                Angebot nur für Industrie, Handwerk, Handel und Gewerbe. Preise in Euro zzgl. Mwst. Es gelten unsere <a href="<?php echo $this->getUrl('agb');?>">AGB</a>
+                                . Alle Artikel sind, soweit nicht anders gekennzeichnet, gebraucht.
+                            </td>
+                            <td>
+                                <b><label>Rennhak Bäckerei-Technik GmbH</label></b><br/>
+                                Industriestr. 30<br/>
+                                59192 Bergkamen-Rünthe<br/>
+                                Telefon: <a href="tel://49023892757">+49 (0) 23 89 / 27 57</a><br/>
+                                Telefax: +49 (0) 23 89 / 92 89 440<br/>
+                                E-Mail: <a href="mailto:info@rennbatec.de">info@rennbatec.de</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-mobile-row">
+        <div class="footer-mobile-img">
+            <img src="<?php echo $block->getViewFileUrl('images/logo_footer.png'); ?>"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+    </head>
+    <update handle="catalog_product_opengraph" />
+    <update handle="page_calendar"/>
+    <body>
+        <referenceBlock name="product.info.review" remove="true"></referenceBlock>
+        <referenceBlock name="product.info.stock.sku" remove="true"></referenceBlock>
+        <referenceBlock name="product.info.sku" remove="true"></referenceBlock>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.top.attributes" template="product/view/attributes-top.phtml" before="product.info.price"/>
+            <block class="Magento\Framework\View\Element\Template" name="product.tax.info" template="Magento_Catalog::product/view/tax-info.phtml" after="product.info.price"/>
+        </referenceContainer>
+        <referenceBlock name="product.info.overview" remove="true"/>
+        <referenceBlock name="reviews.tab" remove="true"/>
+    </body>
+</page>

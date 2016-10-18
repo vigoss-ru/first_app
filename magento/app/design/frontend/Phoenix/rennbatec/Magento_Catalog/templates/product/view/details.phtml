@@ -1,0 +1,82 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')):?>
+    <div class="product info detailed">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="product data items col-1" data-mage-init='{"tabs":{"openedState":"active"}}'>
+            <?php foreach ($detailedInfoGroup as $name):?>
+                <?php
+                    $html = $layout->renderElement($name);
+                    if (!trim($html)) {
+                        continue;
+                    }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                ?>
+                <div class="data item title"
+                     aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title"
+                     data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#<?php /* @escapeNotVerified */ echo $alias; ?>"
+                       id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title">
+                        <?php /* @escapeNotVerified */ echo $label; ?>
+                    </a>
+                </div>
+                <div class="data item content" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content">
+                    <?php /* @escapeNotVerified */ echo $html; ?>
+                </div>
+            <?php endforeach;?>
+        </div>
+        <div class="col-2">
+            <img src="<?php echo $block->getViewFileUrl('images/logos_product_advice.jpg'); ?>"/>
+            <div>
+                <b><?php /* @escapeNotVerified */ echo __('Technical Advice') ?></b><br>
+                <?php
+                    $_product = $block->getProduct();
+                    echo $_product->getData('technical_advice');
+                    $_link = $_product->getUrlModel()->getUrl($_product);
+                ?>
+            </div>
+        </div>
+    </div>
+
+<?php endif; ?>
+
+<script>
+    require(
+        [
+            'jquery'
+        ],
+        function($) {
+            // recent view product
+            var title = $('.product-info-main .page-title-wrapper .page-title span').html();
+            var url = '<?php echo $_link; ?>';
+            localStorage.setItem("recentview-product", title);
+            localStorage.setItem("recentlink-product", url);
+            // open vertical menu on left side
+            var obj = $('.breadcrumbs ul li').eq(-2);
+            var url = obj.find('a').attr('href');
+            var element = $('#accordion a[href="'+url+'"]');
+            var firstUL = $(element).parent().parent();
+            setTimeout(function(){
+                if(firstUL.is('ul')) {
+                    $(firstUL).css('display', 'block').css('height', 'auto');
+                    $(firstUL).parent().parent().css('display', 'block').css('height', 'auto')
+                } else {
+                    var obj = $(firstUL).find('ul').first();
+                    $(firstUL).parent().css('display', 'block').css('height', 'auto');
+                    obj.css('display', 'block').css('height', 'auto');
+                }
+            }, 500);
+        }
+    );
+</script>
+
